@@ -2,6 +2,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import { Providers } from './providers';
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import clsx from "clsx";
@@ -16,11 +17,11 @@ export const metadata = {
 		{ media: "(prefers-color-scheme: light)", color: "white" },
 		{ media: "(prefers-color-scheme: dark)", color: "black" },
 	],
-	icons: {
-		icon: "/favicon.ico",
+	// icons: {
+	// 	icon: "/favicon.ico",
 		// shortcut: "/favicon-16x16.png",
 		// apple: "/apple-touch-icon.png",
-	},
+	// },
 };
 
 
@@ -39,10 +40,7 @@ export default function RootLayout({ children }) {
 						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
 							{children}
 						</main>
-						<footer className="w-full flex items-center justify-center py-3">
-              <span className="text-default-600">Copyright 2023</span>
-              <p className="text-primary">Jeremy Traini</p>
-						</footer>
+						<Footer />
 					</div>
         </Providers>
       </body>

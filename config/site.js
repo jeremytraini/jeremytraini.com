@@ -4,7 +4,8 @@ export const siteConfig = {
 	description: "My website",
 	links: {
 		github: "https://github.com/jeremytraini",
-		linkedin: "https://www.linkedin.com/in/jeremy-traini-884a56174/"
+		linkedin: "https://www.linkedin.com/in/jeremy-traini-884a56174/",
+		dribbble: "https://dribbble.com/jeremytraini",
 	},
 	navItems: [],
 	navMenuItems: []
