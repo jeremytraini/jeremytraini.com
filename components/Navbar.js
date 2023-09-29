@@ -21,7 +21,8 @@ import clsx from "clsx";
 import { DarkModeSwitch } from "@/components/DarkModeSwitch";
 import {
 	GithubIcon,
-	LinkedinIcon
+	LinkedinIcon,
+	DribbbleIcon
 } from "@/components/Icons";
 
 export const Navbar = () => {
@@ -62,6 +63,9 @@ export const Navbar = () => {
 					</Link>
 					<Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
 						<LinkedinIcon className="text-default-500" />
+					</Link>
+					<Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
+						<DribbbleIcon className="text-default-500" />
 					</Link>
 					{/* Gap */}
 
