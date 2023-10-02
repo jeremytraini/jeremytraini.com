@@ -9,13 +9,15 @@ export default function ProjectCard({ project, ...props }) {
         <h4 className="font-bold text-large">{project.title}</h4>
         <small className="text-default-500">{project.subtitle}</small>
       </CardHeader>
-      <CardBody className="overflow-visible py-2">
+      <CardBody className="overflow-hidden py-2">
         <Image
           alt="Project Thumbnail"
           className="object-cover rounded-xl"
           src={project.imageUrl}
-          width={'100%'}
-          height={300}
+          // width="100%"
+          fill
+          // style={{ objectFit:"cover" }}
+          isZoomed
         />
       </CardBody>
       <CardFooter>
