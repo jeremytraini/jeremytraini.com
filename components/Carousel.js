@@ -16,11 +16,8 @@ const Carousel = ({ technologies }) => {
 
         mainTicker.on('dragStart', pause);
         mainTicker.on('dragEnd', play);
-
-        // mainTicker.on('mouseEnter', pause);
-        // mainTicker.on('mouseLeave', play);
       }
-    }, 100);
+    }, 200);
 
     return () => {
       if (requestId) {
@@ -32,7 +29,7 @@ const Carousel = ({ technologies }) => {
   function play() {
     const mainTicker = flickityRef.current && flickityRef.current.flkty;
     if (mainTicker) {
-      mainTicker.x -= 0.01;
+      mainTicker.x -= 0.02;
       mainTicker.settle(mainTicker.x);
       requestId = window.requestAnimationFrame(play);
     }
@@ -43,11 +40,35 @@ const Carousel = ({ technologies }) => {
     requestId = undefined;
   }
 
+  function wrapAroundList(list) {
+    const wrapLength = 10;
+
+    // If the list is empty, return an array of 20 undefined items
+    if (list.length === 0) {
+      return new Array(wrapLength).fill(undefined);
+    }
+
+    // If the list has more than 20 items, leave it
+    if (list.length > wrapLength) {
+      return list;
+    }
+
+    // If the list has fewer than 20 items, repeat it until it reaches 20 items
+    let result = [];
+    while (result.length < wrapLength) {
+      result = result.concat(list);
+    }
+
+    // Truncate the result to 20 items in case it's longer
+    return result.slice(0, wrapLength);
+}
+
+  const content = wrapAroundList(technologies);
+
   return (
     <Flickity
       ref={flickityRef}
-      static // Ensure Flickity doesn't re-initialize
-      className="js-main-slider"
+      static
       options={{
         accessibility: true,
         resize: true,
@@ -58,7 +79,7 @@ const Carousel = ({ technologies }) => {
         setGallerySize: true,
       }}
     >
-      {technologies.map((tech, index) => (
+      {content.map((tech, index) => (
         <div key={index} className="mr-2">
           <BrandChip brand={tech} />
         </div>
