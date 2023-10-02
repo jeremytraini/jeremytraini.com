@@ -43,11 +43,6 @@ const Carousel = ({ technologies }) => {
   function wrapAroundList(list) {
     const wrapLength = 10;
 
-    // If the list is empty, return an array of 20 undefined items
-    if (list.length === 0) {
-      return new Array(wrapLength).fill(undefined);
-    }
-
     // If the list has more than 20 items, leave it
     if (list.length > wrapLength) {
       return list;
@@ -58,9 +53,8 @@ const Carousel = ({ technologies }) => {
     while (result.length < wrapLength) {
       result = result.concat(list);
     }
-
-    // Truncate the result to 20 items in case it's longer
-    return result.slice(0, wrapLength);
+    
+    return result;
 }
 
   const content = wrapAroundList(technologies);
