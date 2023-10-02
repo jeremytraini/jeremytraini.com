@@ -15,10 +15,13 @@ export default function Home() {
       <div className="inline-block max-w-lg text-left">
         <h2>Projects</h2>
       </div>
+      {/* Infinite horiz scroll */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+        {
+          projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))
+        }
       </div>
     </section>
   )
