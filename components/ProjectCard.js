@@ -1,19 +1,21 @@
-'use client';
-import { Card, CardHeader, CardBody, CardFooter, Image, Chip } from "@nextui-org/react";
-import { TbBrandReact } from "react-icons/tb";
+import React from 'react';
+import { Card, CardHeader, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 import BrandChip from "./BrandChip";
 
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+
+import { FreeMode, Pagination } from 'swiper/modules';
 
 export default function ProjectCard({ project, ...props }) {
   return (
-    <Card
-      className="py-4"
-      {...props}
-    >
+    <Card className="py-4" {...props}>
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <h4 className="font-bold text-large">{project.title}</h4>
         <small className="text-default-500">{project.subtitle}</small>
-        {/* <h4 className="font-bold text-large">Frontend Radio</h4> */}
       </CardHeader>
       <CardBody className="overflow-visible py-2">
         <Image
@@ -30,31 +32,35 @@ export default function ProjectCard({ project, ...props }) {
           {project.technologies &&
             <>
               <h5 className="font-bold text-medium py-2">Tech used</h5>
-              <div className="overflow-hidden max-w-full">
-                <div className="whitespace-nowrap w-500 inline-block animate-marquee hover:pause">
-                  {project.technologies?.map((tech) => (
-                    <div className="inline-block pl-2">
-                      <BrandChip
-                        key={tech}
-                        brand={tech}
-                      />
-                    </div>
-                  ))}
-                  {project.technologies?.map((tech) => (
-                    <div className="inline-block pl-2">
-                      <BrandChip
-                        key={tech}
-                        brand={tech}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <Swiper
+                // scrollbar={{
+                //   hide: true,
+                // }}
+                slidesPerView='auto'
+                spaceBetween={10}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 1000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                loopedSlides={4}
+                freeMode={true}
+                modules={[FreeMode, Pagination]}
+              >
+                <SwiperSlide><BrandChip brand="React.js" /></SwiperSlide>
+                <SwiperSlide><BrandChip brand="React.js2" /></SwiperSlide>
+                <SwiperSlide><BrandChip brand="React.js3" /></SwiperSlide>
+                <SwiperSlide><BrandChip brand="React.js4" /></SwiperSlide>
+                {/* {project.technologies.map((tech, index) => (
+                  <SwiperSlide key={index}>
+                    <BrandChip brand={tech} />
+                  </SwiperSlide>
+                ))} */}
+              </Swiper>
             </>
           }
         </div>
-        {/* Technologies */}
-        
       </CardFooter>
     </Card>
   );
