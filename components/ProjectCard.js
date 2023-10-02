@@ -1,44 +1,6 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter, Image } from "@nextui-org/react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Flickity from 'react-flickity-component';
-import BrandChip from "./BrandChip";
-
-import "flickity/css/flickity.css";
-
-const flickityOptions = {
-  initialIndex: 3,
-  wrapAround: true,
-  freeScroll: true,
-  contain: true,
-  prevNextButtons: false,
-  // selectedAttraction: 1,
-  // friction: 1,
-  // freeScrollFriction: 0.05,
-  // autoPlay: true,
-  // autoPlay: 3000,
-  // pauseAutoPlayOnHover: true,
-}
-
-const Carousel = ({ technologies }) => {
-  return (
-    <Flickity
-      elementType="div"
-      options={flickityOptions}
-      // disableImagesLoaded={false}
-      // reloadOnUpdate
-    >
-      {technologies.map((tech, index) => (
-        <div
-          key={index}
-          className="mr-2"
-        >
-          <BrandChip brand={tech} />
-        </div>
-      ))}
-    </Flickity>
-  );
-}
+import Carousel from './Carousel';
 
 export default function ProjectCard({ project, ...props }) {
   return (
