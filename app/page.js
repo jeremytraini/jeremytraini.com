@@ -1,23 +1,14 @@
 'use client';
 import { Divider } from "@nextui-org/react";
 import ProjectCard from "@/components/ProjectCard";
-
-const projects = [
-  {
-    title: "Project 1",
-    description: "Description for project 1.",
-    imageUrl: "https://placehold.co/600x100/png",
-    projectLink: "https://example.com/project1"
-  },
-  
-];
+import projects from "@/data/projects";
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-lg justify-center">
         <div>
-          <h1>Hi, I&apos;m Jeremy Traini. More to come.</h1>
+          <h1>Hi, I&apos;m Jeremy Traini. Here&apos;s what I&apos;ve been working on lately.</h1>
         </div>
       </div>
       <Divider />
