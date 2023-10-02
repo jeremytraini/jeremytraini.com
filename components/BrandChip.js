@@ -148,12 +148,10 @@ const BrandChip = ({ brand, ...props }) => {
   return (
     <Chip
       classNames={{
-        base: color+" transition shadow-black-500/30 select-none hover:text-white",
-        content: "drop-shadow shadow-black"
+        base: color+" transition hover:text-white",
+        content: ""
       }}
-      // size="mini"
       startContent={icon}
-      variant='shadow'
       {...props}
     >
       {brand}
