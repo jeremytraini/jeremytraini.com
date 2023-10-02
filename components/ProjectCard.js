@@ -19,14 +19,12 @@ export default function ProjectCard({ project, ...props }) {
         />
       </CardBody>
       <CardFooter>
-        <div className="max-w-full">
+        <div className="w-full">
           <small className="text-default-500">{project.description}</small>
           {project.technologies && (
             <>
               <h5 className="font-bold text-medium py-2">Tech used</h5>
-              <div
-                className="max-h-16 overflow-y-hidden"
-              >
+              <div className="max-h-[28px]">
                 <Carousel technologies={project.technologies} />
               </div>
             </>
