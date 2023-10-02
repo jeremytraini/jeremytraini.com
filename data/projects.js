@@ -4,7 +4,7 @@ const projects = [
     title: "Tekkerz PDP",
     subtitle: "Player Development Platform",
     description: "A soccer coaching app that seamlessly integrates player engagement, skill-building, and performance tracking, enabling players to master soccer skills at home with real-time feedback from their coaches and peers.",
-    technologies: ["Figma", "React Native", "ExpressJS", "Firebase"],
+    technologies: ["Figma", "React Native", "Express.js", "Firebase"],
     imageUrl: "https://placehold.co/600x100/png",
     projectLink: "https://example.com/project1"
   },
