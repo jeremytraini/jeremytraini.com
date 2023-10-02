@@ -17,13 +17,9 @@ import {
   TbBrandGitlab,
   TbBrandBitbucket,
   TbBrandFigma,
-  TbBrandAdobephotoshop,
   TbBrandFirebase,
-  TbBrandHeroku,
-  TbBrandNetlify,
   TbBrandVercel,
   TbBrandAws,
-  TbBrandGooglecloud,
   TbBrandDocker,
   TbBrandStripe,
   TbBrandPython,
@@ -102,21 +98,9 @@ const BrandChip = ({ brand, ...props }) => {
       color: "hover:bg-[#9747ff]",
       icon: <TbBrandFigma size={18} />,
     },
-    'Adobe Photoshop': {
-      color: "hover:bg-[#000000]",
-      icon: <TbBrandAdobephotoshop size={18} />,
-    },
     'Firebase': {
       color: "hover:bg-[#FFCA28]",
       icon: <TbBrandFirebase size={18} />,
-    },
-    'Heroku': {
-      color: "hover:bg-[#79589f]",
-      icon: <TbBrandHeroku size={18} />,
-    },
-    'Netlify': {
-      color: "hover:bg-[#00ad9f]",
-      icon: <TbBrandNetlify size={18} />,
     },
     'Vercel': {
       color: "hover:bg-[#000000]",
@@ -129,10 +113,6 @@ const BrandChip = ({ brand, ...props }) => {
     'AWS': {
       color: "hover:bg-[#ff9900]",
       icon: <TbBrandAws size={18} />,
-    },
-    'Google Cloud': {
-      color: "hover:bg-[#4285f4]",
-      icon: <TbBrandGooglecloud size={18} />,
     },
     'Docker': {
       color: "hover:bg-[#000000]",
