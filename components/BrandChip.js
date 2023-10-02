@@ -11,7 +11,6 @@ import {
   TbBrandHtml5,
   TbBrandCss3,
   TbBrandTailwind,
-  TbBrandPostgresql,
   TbBrandMongodb,
   TbBrandGit,
   TbBrandGithub,
@@ -27,129 +26,155 @@ import {
   TbBrandGooglecloud,
   TbBrandDocker,
   TbBrandStripe,
+  TbBrandPython,
 } from "react-icons/tb";
-import { LiaDigitalOcean } from "react-icons/lia";
+import {
+  SiDigitalocean,
+  SiPostgresql,
+  SiFastapi,
+  SiJira,
+  SiConfluence,
+} from "react-icons/si";
 
-const BrandChip = ({ brand }) => {
+const BrandChip = ({ brand, ...props }) => {
   const brands = {
     'React.js': {
-      color: "#00d8ff",
+      color: "hover:bg-[#00d8ff]",
       icon: <TbBrandReact size={18} />,
     },
     'Next.js': {
-      color: "#000000",
+      color: "hover:bg-[#000000]",
       icon: <TbBrandNextjs size={18} />,
     },
     'Node.js': {
-      color: "#215732",
+      color: "hover:bg-[#215732]",
       icon: <TbBrandNodejs size={18} />,
     },
     'React Native': {
-      color: "#00d8ff",
+      color: "hover:bg-[#00d8ff]",
       icon: <TbBrandReactNative size={18} />,
     },
     'TypeScript': {
-      color: "#007acc",
+      color: "hover:bg-[#007acc]",
       icon: <TbBrandTypescript size={18} />,
     },
     'JavaScript': {
-      color: "#f0db4f",
+      color: "hover:bg-[#f0db4f]",
       icon: <TbBrandJavascript size={18} />,
     },
     'HTML5': {
-      color: "#e34f26",
+      color: "hover:bg-[#e34f26]",
       icon: <TbBrandHtml5 size={18} />,
     },
     'CSS3': {
-      color: "primary",
+      color: "hover:bg-[#000000]",
       icon: <TbBrandCss3 size={18} />,
     },
     'Tailwind CSS': {
-      color: "#38bdf8",
+      color: "hover:bg-[#38bdf8]",
       icon: <TbBrandTailwind size={18} />,
     },
     'PostgreSQL': {
-      color: "#336791",
-      icon: <TbBrandPostgresql size={18} />,
+      color: "hover:bg-[#336791]",
+      icon: <SiPostgresql size={18} />,
     },
     'MongoDB': {
-      color: "#4db33d",
+      color: "hover:bg-[#4db33d]",
       icon: <TbBrandMongodb size={18} />,
     },
     'Git': {
-      color: "primary",
+      color: "hover:bg-[#000000]",
       icon: <TbBrandGit size={18} />,
     },
     'GitHub': {
-      color: "#4078c0",
+      color: "hover:bg-[#4078c0]",
       icon: <TbBrandGithub size={18} />,
     },
     'GitLab': {
-      color: "primary",
+      color: "hover:bg-[#000000]",
       icon: <TbBrandGitlab size={18} />,
     },
     'Bitbucket': {
-      color: "#205081",
+      color: "hover:bg-[#205081]",
       icon: <TbBrandBitbucket size={18} />,
     },
     'Figma': {
-      color: "#9747ff",
+      color: "hover:bg-[#9747ff]",
       icon: <TbBrandFigma size={18} />,
     },
     'Adobe Photoshop': {
-      color: "primary",
+      color: "hover:bg-[#000000]",
       icon: <TbBrandAdobephotoshop size={18} />,
     },
     'Firebase': {
-      color: "#FFCA28",
+      color: "hover:bg-[#FFCA28]",
       icon: <TbBrandFirebase size={18} />,
     },
     'Heroku': {
-      color: "#79589f",
+      color: "hover:bg-[#79589f]",
       icon: <TbBrandHeroku size={18} />,
     },
     'Netlify': {
-      color: "#00ad9f",
+      color: "hover:bg-[#00ad9f]",
       icon: <TbBrandNetlify size={18} />,
     },
     'Vercel': {
-      color: "#000000",
+      color: "hover:bg-[#000000]",
       icon: <TbBrandVercel size={18} />,
     },
     'Digital Ocean': {
-      color: "#008bcf",
-      icon: <LiaDigitalOcean size={18} />,
+      color: "hover:bg-[#008bcf]",
+      icon: <SiDigitalocean size={18} />,
     },
     'AWS': {
-      color: "#ff9900",
+      color: "hover:bg-[#ff9900]",
       icon: <TbBrandAws size={18} />,
     },
     'Google Cloud': {
-      color: "#4285f4",
+      color: "hover:bg-[#4285f4]",
       icon: <TbBrandGooglecloud size={18} />,
     },
     'Docker': {
-      color: "primary",
+      color: "hover:bg-[#000000]",
       icon: <TbBrandDocker size={18} />,
     },
     'Stripe': {
-      color: "#00afe1",
+      color: "hover:bg-[#00afe1]",
       icon: <TbBrandStripe size={18} />,
+    },
+    'Python': {
+      color: "hover:bg-[#ffde57]",
+      icon: <TbBrandPython size={18} />,
+    },
+    'FastAPI': {
+      color: "hover:bg-[#ffde57]",
+      icon: <SiFastapi size={18} />,
+    },
+    'Jira': {
+      color: "hover:bg-[#003366]",
+      icon: <SiJira size={18} />,
+    },
+    'Confluence': {
+      color: "hover:bg-[#003366]",
+      icon: <SiConfluence size={18} />,
     },
   };
 
-  const { color, icon } = brands[brand] || {
-    color: "default",
+  let { color, icon } = brands[brand] || {
+    color: "hover:bg-[#000000]",
     icon: <TbDeviceDesktop size={18} />,
   };
 
   return (
     <Chip
-      // style={{ borderColor: color }}
-      style={{ backgroundColor: color }}
-      size="mini"
+      classNames={{
+        base: color+" transition shadow-black-500/30 select-none hover:text-white",
+        content: "drop-shadow shadow-black"
+      }}
+      // size="mini"
       startContent={icon}
-      // variant="bordered"
+      variant='shadow'
+      {...props}
     >
       {brand}
     </Chip>
