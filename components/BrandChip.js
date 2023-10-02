@@ -30,6 +30,7 @@ import {
   SiFastapi,
   SiJira,
   SiConfluence,
+  SiExpress,
 } from "react-icons/si";
 
 const BrandChip = ({ brand, ...props }) => {
@@ -137,6 +138,10 @@ const BrandChip = ({ brand, ...props }) => {
     'Confluence': {
       color: "hover:bg-[#003366]",
       icon: <SiConfluence size={18} />,
+    },
+    'Express.js': {
+      color: "hover:bg-[#003366]",
+      icon: <SiExpress size={18} />,
     },
   };
 
