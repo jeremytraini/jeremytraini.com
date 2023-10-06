@@ -14,9 +14,7 @@ export default function ProjectCard({ project, ...props }) {
           alt="Project Thumbnail"
           className="object-cover rounded-xl"
           src={project.imageUrl}
-          // width="100%"
           fill
-          // style={{ objectFit:"cover" }}
           isZoomed
         />
       </CardBody>
