@@ -6,7 +6,23 @@ const octokit = new Octokit({
 })
 
 const addCollaborator = async (owner, repo, username) => {
-  
+  const response = await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
+    owner: owner,
+    repo: repo,
+    username: username,
+    permission: 'read',
+    headers: {
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
+  });
+
+  if (response.status == 201) {
+    return `Successfully added ${username} as a collaborator.`;
+  } else if (response.status == 404) {
+    return `Could not find ${username}.`;
+  } else {
+    return `Failed to add ${username}. Response: ${response.text}`;
+  }
 }
 
 
