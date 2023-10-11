@@ -2,6 +2,7 @@
 
 import { siteConfig } from "@/config/site";
 import { Link } from "@nextui-org/link";
+import { Image } from "@nextui-org/react";
 
 import {
 	GithubIcon,
@@ -36,6 +37,30 @@ export default function Home() {
             Contact me
           </Button>
         </div>
+      </div>
+      
+      <div className="flex justify-center items-center gap-6">
+        <Image
+          alt="Project Thumbnail"
+          className="object-cover rounded-xl"
+          src="https://placehold.co/500x400/png"
+          fill
+          isZoomed
+        />
+        <Image
+          alt="Project Thumbnail"
+          className="object-cover rounded-xl"
+          src="https://placehold.co/500x400/png"
+          fill
+          isZoomed
+        />
+        <Image
+          alt="Project Thumbnail"
+          className="object-cover rounded-xl"
+          src="https://placehold.co/500x400/png"
+          fill
+          isZoomed
+        />
       </div>
     </section>
   )
