@@ -26,7 +26,7 @@ export default function Home() {
             fontAzeretMono.className,
             "text-default-900 pb-6"
           )}>Jeremy Traini</h1>
-          <p className="text-xl mb-8">I'm a software engineering student in need of a job!</p>
+          <p className="text-xl mb-8">I&apos;m a software engineering student in need of a job!</p>
           <div className="flex justify-center items-center gap-6 pb-10">
             <Link isExternal href={siteConfig.links.github} aria-label="Github">
               <GithubIcon size={32} className="text-default-600" />
