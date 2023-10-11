@@ -1,4 +1,14 @@
 
+// Barker: (college-connector)
+// COMP6080: bigbrain, lurkforwork
+// COMP1531: unsw-streams
+// COMP2511: dungeon-mania, back-in-blackout
+// COMP3331: TCP client/server
+// COMP9321: weather-api, atm-classification
+// SENG2021: (churroflow)
+// Other: coodle, my-website (project showcase)
+
+
 const projects = [
   {
     title: "Tekkerz PDP",
@@ -35,7 +45,31 @@ const projects = [
     projectLink: "https://example.com/project1"
   },
   {
-    title: "Project",
+    title: "CollegeConnector",
+    subtitle: "A digital wayfinding solution for schools.",
+    description: "Project.",
+    technologies: ["Java", "Greenfoot"],
+    imageUrl: "https://placehold.co/500x500/png",
+    projectLink: "https://example.com/project"
+  },
+  {
+    title: "BigBrain",
+    subtitle: "Learning Platform",
+    description: "Developed an interactive frontend for a Kahoot-like student quiz manager.",
+    technologies: ["React.js", "Express.js"],
+    imageUrl: "https://placehold.co/500x500/png",
+    projectLink: "https://example.com/project"
+  },
+  {
+    title: "UNSW Streams",
+    subtitle: "Messaging service for university students.",
+    description: "Project.",
+    technologies: ["Framework"],
+    imageUrl: "https://placehold.co/500x500/png",
+    projectLink: "https://example.com/project"
+  },
+  {
+    title: "Dungeon Mania",
     subtitle: "Project.",
     description: "Project.",
     technologies: ["Framework"],
@@ -43,32 +77,8 @@ const projects = [
     projectLink: "https://example.com/project"
   },
   {
-    title: "Project",
-    subtitle: "Project.",
-    description: "Project.",
-    technologies: ["Framework"],
-    imageUrl: "https://placehold.co/500x500/png",
-    projectLink: "https://example.com/project"
-  },
-  {
-    title: "Project",
-    subtitle: "Project.",
-    description: "Project.",
-    technologies: ["Framework"],
-    imageUrl: "https://placehold.co/500x500/png",
-    projectLink: "https://example.com/project"
-  },
-  {
-    title: "Project",
-    subtitle: "Project.",
-    description: "Project.",
-    technologies: ["Framework"],
-    imageUrl: "https://placehold.co/500x500/png",
-    projectLink: "https://example.com/project"
-  },
-  {
-    title: "Project",
-    subtitle: "Project.",
+    title: "Weather API",
+    subtitle: "Data service for weather information.",
     description: "Project.",
     technologies: ["Framework"],
     imageUrl: "https://placehold.co/500x500/png",
