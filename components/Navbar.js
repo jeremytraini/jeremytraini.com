@@ -22,20 +22,15 @@ import {
 export const Navbar = () => {
 	return (
 		<NextUINavbar maxWidth="xl" position="sticky">
-			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-				<NavbarBrand as="li" className="gap-3 max-w-fit">
-					<NextLink className="flex justify-start items-center gap-1" href="/">
-						{/* <Logo /> */}
-						<p className="font-bold text-inherit">Jeremy Traini</p>
-					</NextLink>
-				</NavbarBrand>
+			<NavbarContent className="basis-1/5 sm:basis-full" justify="center">
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
-					{siteConfig.navItems.map((item) => (
+					{siteConfig.navItems.map((item, index) => (
 						<NavbarItem key={item.href}>
 							<NextLink
 								className={clsx(
 									linkStyles({ color: "foreground" }),
-									"data-[active=true]:text-primary data-[active=true]:font-medium"
+									"data-[active=true]:text-primary data-[active=true]:font-medium",
+									index === siteConfig.navItems.length - 1 ? "border hover:border-color rounded px-2" : ""
 								)}
 								color="foreground"
 								href={item.href}
@@ -46,27 +41,6 @@ export const Navbar = () => {
 					))}
 				</ul>
 			</NavbarContent>
-
-			<NavbarContent
-				className="hidden sm:flex basis-1/5 sm:basis-full"
-				justify="end"
-			>
-				<NavbarItem className="hidden sm:flex gap-2">
-					<Link isExternal href={siteConfig.links.github} aria-label="Github">
-						<GithubIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
-						<LinkedinIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
-						<DribbbleIcon className="text-default-500" />
-					</Link>
-					{/* Gap */}
-
-					<DarkModeSwitch />
-				</NavbarItem>
-			</NavbarContent>
-
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 				<Link isExternal href={siteConfig.links.github} aria-label="Github">
 					<GithubIcon className="text-default-500" />
