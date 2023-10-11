@@ -32,6 +32,14 @@ const addCollaborator = async (owner, repo, username) => {
 // Response: { message: string }
 // Status code: 201
 export const POST = async (request) => {
+    if (request == null) {
+        return new Response("You must supply a request body!", { status: 400 });
+    }
+
+    if (request.headers.get("Content-Type") !== "application/json") {
+        return new Response("You must supply a JSON request body!", { status: 400 });
+    }
+
     const { username, code } = await request.json();
 
     // Require username and secret code
@@ -47,7 +55,6 @@ export const POST = async (request) => {
         await addCollaborator("jeremytraini", "jeremytraini.com", username);
         return new Response("Successfully added you to the repo!", { status: 201 });
     } catch (error) {
-        console.log(error);
-        return new Response("Could not add you to the repo!", { status: 500 });
+        return new Response("Could not add you to the repo!", { status: 400 });
     }
 }
