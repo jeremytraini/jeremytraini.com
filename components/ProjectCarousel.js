@@ -18,10 +18,9 @@ const ProjectCarousel = ({ ...props }) => {
       slidesPerView={3}
       loop
     >
-      {projects.map(project => (
-        <SwiperSlide>
+      {projects.map((project, index) => (
+        <SwiperSlide key={index}>
           <ProjectCard
-            key={project.id}
             project={project}
           />
         </SwiperSlide>

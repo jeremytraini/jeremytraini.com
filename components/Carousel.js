@@ -7,24 +7,24 @@ const Carousel = ({ technologies }) => {
   const flickityRef = useRef(null);
   let requestId;
 
-  useEffect(() => {
-    // Delay our logic to ensure Flickity has initialized
-    setTimeout(() => {
-      const mainTicker = flickityRef.current && flickityRef.current.flkty;
-      if (mainTicker) {
-        play();
+  // useEffect(() => {
+  //   // Delay our logic to ensure Flickity has initialized
+  //   setTimeout(() => {
+  //     const mainTicker = flickityRef.current && flickityRef.current.flkty;
+  //     if (mainTicker) {
+  //       play();
 
-        mainTicker.on('dragStart', pause);
-        mainTicker.on('dragEnd', play);
-      }
-    }, 200);
+  //       mainTicker.on('dragStart', pause);
+  //       mainTicker.on('dragEnd', play);
+  //     }
+  //   }, 200);
 
-    return () => {
-      if (requestId) {
-        window.cancelAnimationFrame(requestId);
-      }
-    };
-  }, [pause, play, requestId]);
+  //   return () => {
+  //     if (requestId) {
+  //       window.cancelAnimationFrame(requestId);
+  //     }
+  //   };
+  // }, []);
 
   function play() {
     const mainTicker = flickityRef.current && flickityRef.current.flkty;
