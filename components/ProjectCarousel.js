@@ -1,28 +1,32 @@
 import React from 'react';
 import { Image } from "@nextui-org/react";
-import Flickity from 'react-flickity-component';
-import "flickity/css/flickity.css";
+// import Flickity from 'react-flickity-component';
+// import "flickity/css/flickity.css";
 import projects from '@/data/projects';
 import ProjectCard from './ProjectCard';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+
 const ProjectCarousel = ({ ...props }) => {
   return (
-    <Flickity
-      static
-      options={{
-        wrapAround: true,
-        prevNextButtons: false,
-      }}
-      className="pb-6"
-      {...props}
+    <Swiper
+      spaceBetween={10}
+      slidesPerView={3}
+      loop
     >
       {projects.map(project => (
-        <ProjectCard
-          key={project.id}
-          project={project}
-        />
+        <SwiperSlide>
+          <ProjectCard
+            key={project.id}
+            project={project}
+          />
+        </SwiperSlide>
       ))}
-    </Flickity>
+    </Swiper>
   )
 }
 

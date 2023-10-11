@@ -18,14 +18,12 @@ export const Navbar = () => {
 		<NextUINavbar
 			maxWidth="xl"
 			position="sticky"
-			className="mx-auto w-fit z-50 p-0 radius-full"
+			className="mx-auto w-fit z-50 radius-full"
 		>
-			<NavbarContent className="basis-full sm:basis-full" justify="center">
+			<NavbarContent className="basis-full sm:basis-full radius-full" justify="center">
 				<Tabs radius="full" size="lg">
 					{siteConfig.navItems.map((item, index) => (
-						<Tab key={index} title={item.label}>
-							
-						</Tab>
+						<Tab key={index} title={item.label} />
 					))}
 				</Tabs>
 				{/* <ul className="hidden lg:flex gap-4 justify-start ml-2">
