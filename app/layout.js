@@ -1,5 +1,4 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import { Providers } from './providers';
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -31,14 +30,14 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
 			<head />
       <body className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen bg-background antialiased",
 					fontSans.variable
 				)}
 			>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
+          <div className="relative flex flex-col h-screen overflow-visible">
 						<Navbar />
-						<main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+						<main className="w-full pt-6 flex-grow"> {/* mx-auto max-w-7xl px-6 */}
 							{children}
 						</main>
 						<Footer />
