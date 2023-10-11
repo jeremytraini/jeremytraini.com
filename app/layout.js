@@ -27,7 +27,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+			lang="en"
+			suppressHydrationWarning
+			className="scroll-smooth"
+		>
 			<head />
       <body className={clsx(
 					"min-h-screen bg-background antialiased",
@@ -37,7 +41,7 @@ export default function RootLayout({ children }) {
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen overflow-visible">
 						<Navbar />
-						<main className="w-full pt-6 flex-grow"> {/* mx-auto max-w-7xl px-6 */}
+						<main className="w-full pt-10 flex-grow"> {/* mx-auto max-w-7xl px-6 */}
 							{children}
 						</main>
 						<Footer />

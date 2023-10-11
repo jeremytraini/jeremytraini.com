@@ -24,10 +24,10 @@ export default function Home() {
           <h1 className={clsx(
             "text-4xl md:text-6xl font-bold",
             fontAzeretMono.className,
-            "text-default-900 pb-10"
+            "text-default-900 pb-6"
           )}>Jeremy Traini</h1>
-          <p className="text-xl mb-10">I'm a software engineering student in need of a job!</p>
-          <div className="flex justify-center items-center gap-6 pb-4">
+          <p className="text-xl mb-8">I'm a software engineering student in need of a job!</p>
+          <div className="flex justify-center items-center gap-6 pb-10">
             <Link isExternal href={siteConfig.links.github} aria-label="Github">
               <GithubIcon size={32} className="text-default-600" />
             </Link>
@@ -46,7 +46,7 @@ export default function Home() {
           </Button> */}
         </div>
       </div>
-      <div className="py-10">
+      <div className="pb-20">
         <ProjectCarousel />
       </div>
     </section>
