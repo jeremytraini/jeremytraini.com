@@ -24,7 +24,7 @@ const Carousel = ({ technologies }) => {
         window.cancelAnimationFrame(requestId);
       }
     };
-  }, []);
+  }, [pause, play, requestId]);
 
   function play() {
     const mainTicker = flickityRef.current && flickityRef.current.flkty;
