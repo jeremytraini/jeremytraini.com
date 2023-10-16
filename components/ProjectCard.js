@@ -8,7 +8,6 @@ export default function ProjectCard({ project, ...props }) {
         alt="Project Thumbnail"
         className="object-cover rounded-xl h-64 w-full"
         src={project.imageUrl}
-        fill
         isZoomed
       />
     </div>

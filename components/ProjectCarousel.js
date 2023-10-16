@@ -14,12 +14,15 @@ import 'swiper/css';
 const ProjectCarousel = ({ ...props }) => {
   return (
     <Swiper
-      spaceBetween={10}
-      slidesPerView={3}
+      // spaceBetween={10}
+      slidesPerView={4}
+      centeredSlides={true}
       loop
     >
       {projects.map((project, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide
+          key={index}
+        >
           <ProjectCard
             project={project}
           />
