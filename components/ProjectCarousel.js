@@ -18,6 +18,23 @@ const ProjectCarousel = ({ ...props }) => {
       slidesPerView={4}
       centeredSlides={true}
       loop
+      breakpoints={{
+        0: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        900: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      }}
     >
       {projects.map((project, index) => (
         <SwiperSlide
