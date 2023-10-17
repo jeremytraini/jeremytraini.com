@@ -6,6 +6,7 @@ import { fontAzeretMono } from "@/config/fonts";
 import clsx from "clsx";
 import { TypeAnimation } from 'react-type-animation';
 import { Navbar } from "@/components/Navbar";
+import { MdEmail } from "react-icons/md";
 
 import {
 	GithubIcon,
@@ -50,14 +51,15 @@ export default function Home() {
             <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
               <DribbbleIcon size={32} className="text-white" />
             </Link>
+            <Button
+              radius="full"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
+              onPress={() => window.open(`mailto:${siteConfig.email}?subject=Hello Jeremy!`)}
+              endContent={<MdEmail size={18} />}
+            >
+              Email me
+            </Button>
           </div>
-          <Button
-            radius="full"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
-            onPress={() => window.open(`mailto:${siteConfig.email}?subject=Hello Jeremy!`)}
-          >
-            Email me
-          </Button>
         </div>
       </div>
       <div className="pb-20">
@@ -76,7 +78,7 @@ export default function Home() {
           My Path
         </h1>
         <div
-          className="pb-6 h-full"
+          className="pb-6 h-full flex flex-row justify-center items-center"
         >
           <Timeline />
         </div>
