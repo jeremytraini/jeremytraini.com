@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/react";
 // import Flickity from 'react-flickity-component';
 // import "flickity/css/flickity.css";
 import projects from '@/data/projects';
-import ProjectCard from './ProjectCard';
+import ProjectCard from './ProjectDisplayCard';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
