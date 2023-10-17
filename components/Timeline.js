@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { HiRocketLaunch } from "react-icons/hi2";
 
 const experiences = [
   {
@@ -34,8 +35,8 @@ const experiences = [
     name: 'Your Company?',
     duration: '2023',
     // description: 'Description about my work experience',
-    imageUrl: 'infotrack_logo.png',
-    backgroundColor: '#ffffff',
+    icon: <HiRocketLaunch color="white" className="w-12 h-12" />,
+    backgroundColor: '#ffa500',
     scale: 0.8
   }
 ];
@@ -43,17 +44,20 @@ const experiences = [
 function TimelineItem({ data }) {
   return (
     <div className="timeline-item flex space-x-4 my-8">
-      <div className="-ml-2 mt-8 w-4 h-4 bg-default-600 rounded shadow-xl"></div>
+      <div className="-ml-2 mt-8 w-4 h-4 bg-default-600 rounded shadow-xl" />
       <div
-        className="flex-none w-20 h-20 rounded-xl relative shadow-xl"
+        className="w-20 h-20 rounded-xl relative shadow-xl flex justify-center items-center"
         style={{ backgroundColor: data.backgroundColor }}
       >
-        <Image
-          src={"/images/" + data.imageUrl}
-          alt={data.type}
-          style={{ objectFit: "contain", transform: `scale(${data.scale})` }}
-          fill={true}
-        />
+        {data.imageUrl && (
+          <Image
+            src={"/images/" + data.imageUrl}
+            alt={data.type}
+            style={{ objectFit: "contain", transform: `scale(${data.scale})` }}
+            fill={true}
+          />
+        )}
+        {data.icon}
       </div>
       <div className="flex-1">
         <div>
@@ -69,14 +73,15 @@ function TimelineItem({ data }) {
 
 function Timeline() {
   return (
-    <div className="pb-8 w-full h-full flex flex-row items-center">
-      <div className="border-l-3 border-b-3 border-default-400 rounded-b-lg h-full flex-1">
+    <div className="px-6 pb-8 w-full flex flex-col md:flex-row">
+      <div className="border-l-3 md:border-b-3 border-default-400 md:rounded-bl-lg flex-1">
         {experiences.slice(0,2).map((experience, index) => (
           <TimelineItem key={index} data={experience} />
         ))}
       </div>
-      <div className="border-l-3 border-t-3 border-default-400 rounded-b-lg h-full flex-1" />
-      <div className="h-full flex-1">
+      <div className="hidden md:block border-b-3 border-r-3 border-default-400 rounded-br-lg w-10" />
+      <div className="hidden md:block border-l-3 border-t-3 border-r-3 border-default-400 rounded-t-lg flex-1 min-w-5" />
+      <div className="flex-1 border-l-3 border-default-400 md:border-none">
         {experiences.slice(2).map((experience, index) => (
           <TimelineItem key={index} data={experience} />
         ))}
