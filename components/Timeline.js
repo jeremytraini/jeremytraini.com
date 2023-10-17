@@ -73,14 +73,17 @@ function TimelineItem({ data }) {
 
 function Timeline() {
   return (
-    <div className="px-6 pb-8 w-full flex flex-col md:flex-row">
+    <div className="px-6 pb-8 flex flex-col md:flex-row justify-center">
       <div className="border-l-3 md:border-b-3 border-default-400 md:rounded-bl-lg flex-1">
         {experiences.slice(0,2).map((experience, index) => (
           <TimelineItem key={index} data={experience} />
         ))}
       </div>
-      <div className="hidden md:block border-b-3 border-r-3 border-default-400 rounded-br-lg w-10" />
-      <div className="hidden md:block border-l-3 border-t-3 border-r-3 border-default-400 rounded-t-lg flex-1 min-w-5" />
+      <div className="hidden w-20 md:flex md:flex-row md:align-self mr-[-3px]">
+        <div className="hidden md:block border-b-3 border-r-3 border-default-400 rounded-br-lg h-1/2 w-1/2 self-end mr-[-3px]" />
+        <div className="hidden md:block border-l-3 border-t-3 border-default-400 rounded-tl-lg h-1/2 w-1/2" />
+      </div>
+      <div className="hidden md:block border-t-3 border-r-3 border-default-400 rounded-tr-lg w-10" />
       <div className="flex-1 border-l-3 border-default-400 md:border-none">
         {experiences.slice(2).map((experience, index) => (
           <TimelineItem key={index} data={experience} />
