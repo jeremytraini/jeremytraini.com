@@ -1,7 +1,12 @@
 import React from 'react';
 import Carousel from './Carousel';
 import { Button } from '@nextui-org/react';
-import { TbBrandGithub } from "react-icons/tb";
+import {
+  TbBrandGithub,
+  TbBrandFigma,
+  TbLockCode,
+  TbExternalLink
+} from "react-icons/tb";
 
 const ProjectCard = ({ project, index }) => {
   const isOdd = index % 2 == 0;
@@ -49,23 +54,51 @@ const ProjectDetails = ({ project }) => {
         <Carousel technologies={project.technologies} />
       </div>
       <div className="flex flex-row justify-end">
-        <Button
-          className="ml-2"
-          size="small"
-          variant="ghost"
-          onPress={() => window.open(project.githubLink)}
-          endContent={<TbBrandGithub size={24} />}
-        >
-          Github
-        </Button>
-        <Button
-          className="ml-2"
-          auto size="small"
-          variant="ghost"
-          color="primary"
-          onPress={() => window.open(project.demoLink)}>
-          View Demo
-        </Button>
+        {project.githubLink && 
+          (!project.isPrivate ? (
+            <Button
+              className="ml-2"
+              size="small"
+              variant="ghost"
+              onPress={() => window.open(project.githubLink)}
+              endContent={<TbBrandGithub size={22} />}
+            >
+              Github
+            </Button>
+          ) : (
+            <Button
+              className="ml-2"
+              size="small"
+              variant="ghost"
+              onPress={() => window.open(project.githubLink)}
+              endContent={<TbLockCode size={22} />}
+            >
+              Request Access
+            </Button>
+          ))
+        }
+        {project.figmaLink && 
+          <Button
+            className="ml-2"
+            size="small"
+            variant="ghost"
+            onPress={() => window.open(project.figmaLink)}
+            endContent={<TbBrandFigma size={22} />}
+          >
+            Figma
+          </Button>
+        }
+        {project.liveLink && 
+          <Button
+            className="ml-2"
+            size="small"
+            color="primary"
+            onPress={() => window.open(project.liveLink)}
+            endContent={<TbExternalLink size={22} />}
+          >
+            Live
+          </Button>
+        }
       </div>
     </div>
   );

@@ -6,7 +6,8 @@ const projects = [
     description: "A soccer coaching app that seamlessly integrates player engagement, skill-building, and performance tracking, enabling players to master soccer skills at home with real-time feedback from their coaches and peers.",
     technologies: ["Figma", "React Native", "Express.js", "Firebase"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project1"
+    githubLink: "https://example.com/project1",
+    isPrivate: true
   },
   {
     title: "ChurroFlow.com",
@@ -16,7 +17,9 @@ const projects = [
                   `,
     technologies: ["React.js", "Python", "FastAPI", "PostgreSQL", "AWS" , "Jira", "Confluence"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project1"
+    githubLink: "https://example.com/project1",
+    liveLink: "https://www.churroflow.com",
+    isPrivate: false
   },
   {
     title: "InvestEd",
@@ -24,7 +27,7 @@ const projects = [
     description: "Worked in a team to develop an innovative educational platform designed to empower university students with comprehensive financial knowledge.",
     technologies: ["Figma", "Jira", "Confluence"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project1"
+    figmaLink: "https://example.com/project1",
   },
   {
     title: "jeremytraini.com",
@@ -32,7 +35,8 @@ const projects = [
     description: "The website you're on right now.",
     technologies: ["Next.js"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project1"
+    githubLink: "https://example.com/project1",
+    isPrivate: true
   },
   {
     title: "CollegeConnector",
@@ -40,7 +44,8 @@ const projects = [
     description: "Project.",
     technologies: ["Java", "Greenfoot"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project"
+    githubLink: "https://example.com/project1",
+    isPrivate: true
   },
   {
     title: "BigBrain",
@@ -48,7 +53,8 @@ const projects = [
     description: "Developed an interactive frontend for a Kahoot-like student quiz manager.",
     technologies: ["React.js", "Express.js"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project"
+    githubLink: "https://example.com/project1",
+    isPrivate: true
   },
   {
     title: "UNSW Streams",
@@ -56,7 +62,8 @@ const projects = [
     description: "Project.",
     technologies: ["Framework"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project"
+    githubLink: "https://example.com/project1",
+    isPrivate: true
   },
   {
     title: "Dungeon Mania",
@@ -64,7 +71,8 @@ const projects = [
     description: "Project.",
     technologies: ["Framework"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project"
+    githubLink: "https://example.com/project1",
+    isPrivate: true
   },
   {
     title: "Weather API",
@@ -72,7 +80,8 @@ const projects = [
     description: "Project.",
     technologies: ["Framework"],
     imageUrl: "https://placehold.co/450x350/png",
-    projectLink: "https://example.com/project"
+    githubLink: "https://example.com/project1",
+    isPrivate: true
   },
 ];
 
