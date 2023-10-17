@@ -1,6 +1,5 @@
 import './globals.css';
 import { Providers } from './providers';
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
@@ -38,9 +37,8 @@ export default function RootLayout({ children }) {
 					fontSans.variable
 				)}
 			>
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col">
-						<Navbar />
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+          <div className="relative flex flex-col bg-black">
 						<main className="w-full pt-10 flex-grow">
 							{children}
 						</main>
