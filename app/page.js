@@ -36,8 +36,8 @@ export default function Home() {
               wrapper="div"
               cursor={false}
               className={clsx(
-                "text-white text-5xl md:text-6xl",
-                fontAzeretMono.className
+                "text-white text-5xl md:text-7xl",
+                // fontAzeretMono.className
               )}
               style={{ paddingBottom: '3rem' }}
             />
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </div>
       <div className="pb-20">
-        <ProjectCarousel />
+        <ProjectCarousel projects={projects} />
       </div>
       <Navbar />
     </section>
@@ -77,7 +77,7 @@ export default function Home() {
             "text-default-900 pb-10"
           )}
         >
-          My Path
+          My Learning Path
         </h1>
         <div
           className="pb-6 h-full flex flex-row justify-center items-center"

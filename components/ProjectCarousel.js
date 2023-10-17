@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
-const ProjectCarousel = ({ ...props }) => {
+const ProjectCarousel = ({ projects, ...props }) => {
   return (
     <Swiper
       // spaceBetween={10}
