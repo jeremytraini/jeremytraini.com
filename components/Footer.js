@@ -3,7 +3,7 @@ import { Link } from "@nextui-org/react";
 
 export const Footer = () => {
 	return (
-    <div className="w-full pt-16 px-6 bg-black rounded-t-[4em] mt-[-4em]">
+    <div className="w-full p-16 bg-black rounded-t-[4em] mt-[-4em]">
 			<div className="mx-auto max-w-7xl">
 				<div className="flex justify-between items-start py-6">
 					<div>
@@ -17,7 +17,7 @@ export const Footer = () => {
 						<Link isExternal href="#" showAnchorIcon>Dribbble</Link>
 					</div>
 				</div>
-				<footer className="w-full flex items-center justify-left py-3 mb-5">
+				<footer className="w-full flex items-center justify-left py-3">
 					<p className="text-default-500">© 2023 Jeremy Traini</p>
 				</footer>
 			</div>
