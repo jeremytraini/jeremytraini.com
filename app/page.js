@@ -17,7 +17,6 @@ import { Button } from "@nextui-org/react";
 
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Timeline from "@/components/Timeline";
-import Carousel from "@/components/Carousel";
 
 export default function Home() {
   return (
@@ -52,12 +51,13 @@ export default function Home() {
               <DribbbleIcon size={32} className="text-white" />
             </Link>
           </div>
-          {/* <Button
+          <Button
             radius="full"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
+            onPress={() => window.open(`mailto:${siteConfig.email}?subject=Hello Jeremy!`)}
           >
-            Contact me
-          </Button> */}
+            Email me
+          </Button>
         </div>
       </div>
       <div className="pb-20">
@@ -70,38 +70,27 @@ export default function Home() {
 				<h1
           className={clsx(
             "text-4xl md:text-5xl",
-            "text-default-900 pb-6"
+            "text-default-900 pb-10"
           )}
         >
           My Path
         </h1>
         <div
-          className="flex w-full justify-center items-center"
+          className="pb-6 h-full"
         >
           <Timeline />
         </div>
-        <div
-          className="text-md md:text-lg font-bold"
-        >
-          Cool tech I&apos;ve used
-        </div>
-        <Carousel
-          technologies={[
-            "React",
-            "Next.js",
-          ]}
-        />
 			</div>
 		</section>
     <section className="w-full p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
 			<div className="mx-auto max-w-7xl">
-				<h1
+        <h1
           className={clsx(
-            "text-4xl md:text-6xl font-bold",
-            "text-default-900 pb-6"
+            "text-4xl md:text-5xl",
+            "text-default-900 pb-10"
           )}
         >
-          Things I&apos;m woring on
+          Things I&apos;m working on
         </h1>
         <div className="flex flex-col md:flex-row pb-6">
           <div>
