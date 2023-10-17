@@ -1,6 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
+import projects from "@/data/projects";
 import { Link } from "@nextui-org/link";
 import { fontAzeretMono } from "@/config/fonts";
 import clsx from "clsx";
@@ -18,6 +19,7 @@ import { Button } from "@nextui-org/react";
 
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Timeline from "@/components/Timeline";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -94,14 +96,7 @@ export default function Home() {
         >
           Things I&apos;m working on
         </h1>
-        <div className="flex flex-col md:flex-row pb-6">
-          <div>
-            Left
-          </div>
-          <div>
-            Right
-          </div>
-        </div>
+        <Projects projects={projects} />
 			</div>
 		</section>
   </>
