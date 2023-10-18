@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import Carousel from './Carousel';
 import {
   TbBrandGithub,
@@ -7,18 +7,18 @@ import {
   TbExternalLink
 } from "react-icons/tb";
 import AccessModal from './AccessModal';
-import { Button, useDisclosure } from "@nextui-org/react";
+import { Tooltip, Button, useDisclosure } from "@nextui-org/react";
 
 const ProjectCard = ({ project, index, openModal }) => {
   const isOdd = index % 2 == 0;
 
   return (
     <>
-      <div className="flex flex-col md:hidden mb-4 items-center shadow-md rounded-xl">
+      <div className="flex flex-col md:hidden mb-6 items-center shadow-md rounded-xl">
         <ProjectImage src={project.imageUrl} />
         <ProjectDetails project={project} openModal={openModal} />
       </div>
-      <div className="hidden md:flex md:flex-row mb-4 items-center shadow-md rounded-xl">
+      <div className="hidden md:flex md:flex-row mb-6 items-center shadow-md rounded-xl">
         {isOdd ? (
           <>
             <ProjectImage src={project.imageUrl} />
@@ -55,27 +55,31 @@ const ProjectDetails = ({ project, openModal }) => {
         <Carousel technologies={project.technologies} />
       </div>
       <div className="flex flex-row justify-end">
-        {project.githubLink && 
+        {project.githubRepo && 
           (!project.isPrivate ? (
-            <Button
-              className="ml-2"
-              size="small"
-              variant="ghost"
-              onPress={() => window.open(project.githubLink)}
-              endContent={<TbBrandGithub size={22} />}
-            >
-              Github
-            </Button>
+            <Tooltip showArrow={true} content="View this project on Github.com">
+              <Button
+                className="ml-2"
+                size="small"
+                variant="ghost"
+                onPress={() => window.open("https://github.com/jeremytraini/" + project.githubLink)}
+                endContent={<TbBrandGithub size={22} />}
+              >
+                Github
+              </Button>
+            </Tooltip>
           ) : (
-            <Button
-              className="ml-2"
-              size="small"
-              variant="ghost"
-              onPress={openModal}
-              endContent={<TbLockCode size={22} />}
-            >
-              Request Access
-            </Button>
+            <Tooltip showArrow={true} content="Request access to the source code of this project">
+              <Button
+                className="ml-2"
+                size="small"
+                variant="ghost"
+                onPress={() => openModal(project)}
+                endContent={<TbLockCode size={22} />}
+              >
+                Request Access
+              </Button>
+            </Tooltip>
           ))
         }
         {project.figmaLink && 
@@ -107,13 +111,19 @@ const ProjectDetails = ({ project, openModal }) => {
 
 const Projects = ({ projects }) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const [currentProject, setCurrentProject] = useState(null);
+
+  const openModal = (project) => {
+    setCurrentProject(project);
+    onOpen();
+  }
 
   return (
-    <div className="p-4">
+    <div className="py-4">
       {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} index={index} openModal={onOpen} />
+        <ProjectCard key={index} project={project} index={index} openModal={openModal} />
       ))}
-      <AccessModal isOpen={isOpen} onOpenChange={onOpenChange} />
+      <AccessModal project={currentProject} isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
   );
 }
