@@ -14,11 +14,11 @@ const ProjectCard = ({ project, index, openModal }) => {
 
   return (
     <>
-      <div className="flex flex-col md:hidden mb-6 items-center shadow-md rounded-xl">
+      <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
         <ProjectImage src={project.imageUrl} />
         <ProjectDetails project={project} openModal={openModal} />
       </div>
-      <div className="hidden md:flex md:flex-row mb-6 items-center shadow-md rounded-xl">
+      <div className="hidden md:flex md:flex-row mb-10 items-center shadow-md rounded-xl">
         {isOdd ? (
           <>
             <ProjectImage src={project.imageUrl} />

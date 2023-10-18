@@ -24,7 +24,7 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
   <>
-    <section className="flex flex-col justify-start gap-6 py-4 md:py-6 min-h-screen">
+    <section className="flex flex-col justify-start gap-6 pt-4 md:pt-6 pb-24 min-h-screen">
       <div className="flex flex-col justify-center items-center">
         <div className="text-center pt-10">
           <div>
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <Navbar />
     </section>
-    <section id="path" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-[4em]">
+    <section id="path" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
 				<h1
           className={clsx(
@@ -99,7 +99,7 @@ export default function Home() {
         <Projects projects={projects} />
 			</div>
 		</section>
-    <section id="contact" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-[4em]">
+    <section id="contact" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
         <h1
           className={clsx(
