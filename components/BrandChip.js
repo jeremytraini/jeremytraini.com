@@ -32,6 +32,9 @@ import {
   SiConfluence,
   SiExpress,
 } from "react-icons/si";
+import {
+	GreenfootLogo
+} from "@/components/Icons";
 
 const BrandChip = ({ brand, ...props }) => {
   const brands = {
@@ -142,6 +145,10 @@ const BrandChip = ({ brand, ...props }) => {
     'Express.js': {
       color: "hover:bg-[#003366]",
       icon: <SiExpress size={18} />,
+    },
+    'Greenfoot': {
+      color: "hover:bg-[#6ebd4b]",
+      icon: <GreenfootLogo size={18} />,
     },
   };
 

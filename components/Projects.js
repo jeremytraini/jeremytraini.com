@@ -62,7 +62,7 @@ const ProjectDetails = ({ project, openModal }) => {
                 className="ml-2"
                 size="small"
                 variant="ghost"
-                onPress={() => window.open("https://github.com/jeremytraini/" + project.githubLink)}
+                onPress={() => window.open("https://github.com/jeremytraini/" + project.githubRepo)}
                 endContent={<TbBrandGithub size={22} />}
               >
                 Github

@@ -49,8 +49,8 @@ const projects = [
     description: "Project.",
     technologies: ["Java", "Greenfoot"],
     imageUrl: "/images/thumbnails/collegeconnector.png",
-    githubRepo: "https://example.com/project1",
-    isPrivate: true
+    githubRepo: "college-connector",
+    isPrivate: false
   },
   {
     title: "BigBrain",
