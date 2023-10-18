@@ -1,14 +1,15 @@
 import React from 'react';
 import Carousel from './Carousel';
-import { Button } from '@nextui-org/react';
 import {
   TbBrandGithub,
   TbBrandFigma,
   TbLockCode,
   TbExternalLink
 } from "react-icons/tb";
+import AccessModal from './AccessModal';
+import { Button, useDisclosure } from "@nextui-org/react";
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project, index, openModal }) => {
   const isOdd = index % 2 == 0;
 
   return (
@@ -21,11 +22,11 @@ const ProjectCard = ({ project, index }) => {
         {isOdd ? (
           <>
             <ProjectImage src={project.imageUrl} />
-            <ProjectDetails project={project} />
+            <ProjectDetails project={project} openModal={openModal} />
           </>
         ) : (
           <>
-            <ProjectDetails project={project} />
+            <ProjectDetails project={project} openModal={openModal} />
             <ProjectImage src={project.imageUrl} />
           </>
         )}
@@ -43,7 +44,7 @@ const ProjectImage = ({ src }) => {
   );
 }
 
-const ProjectDetails = ({ project }) => {
+const ProjectDetails = ({ project, openModal }) => {
   return (
     <div className="p-6 w-full">
       <h2 className="text-xl font-bold">{project.title}</h2>
@@ -70,7 +71,7 @@ const ProjectDetails = ({ project }) => {
               className="ml-2"
               size="small"
               variant="ghost"
-              onPress={() => window.open(project.githubLink)}
+              onPress={openModal}
               endContent={<TbLockCode size={22} />}
             >
               Request Access
@@ -105,11 +106,14 @@ const ProjectDetails = ({ project }) => {
 }
 
 const Projects = ({ projects }) => {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+
   return (
     <div className="p-4">
       {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} index={index} />
+        <ProjectCard key={index} project={project} index={index} openModal={onOpen} />
       ))}
+      <AccessModal isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
   );
 }
