@@ -18,7 +18,7 @@ const ProjectCard = ({ project, index, openModal }) => {
         <ProjectImage src={project.imageUrl} />
         <ProjectDetails project={project} openModal={openModal} />
       </div>
-      <div className="hidden md:flex md:flex-row mb-10 items-center shadow-md rounded-xl">
+      <div className="hidden md:flex md:flex-row mb-10 shadow-md rounded-xl">
         {isOdd ? (
           <>
             <ProjectImage src={project.imageUrl} />
@@ -46,26 +46,27 @@ const ProjectImage = ({ src }) => {
 
 const ProjectDetails = ({ project, openModal }) => {
   return (
-    <div className="p-6 w-full">
-      <h2 className="text-xl font-bold">{project.title}</h2>
-      <h3 className="text-md text-gray-600 mb-2">{project.subtitle}</h3>
-      <p className="text-sm text-gray-800 mb-2">{project.description}</p>
-      <p className="text-sm text-gray-600 mb-2">Technologies I used:</p>
-      <div className="max-h-[28px] overflow-hidden mb-4">
-        <Carousel technologies={project.technologies} />
+    <div className="p-6 flex flex-col w-full">
+      <div className="flex-grow flex flex-col justify-center">
+        <h2 className="text-xl font-bold">{project.title}</h2>
+        <h3 className="text-md text-gray-600 mb-2">{project.subtitle}</h3>
+        <p className="text-sm text-gray-800 mb-2">{project.description}</p>
+        <p className="text-sm text-gray-600 mb-2">Technologies I used:</p>
+        <div className="max-h-[28px] overflow-hidden mb-4">
+          <Carousel technologies={project.technologies} />
+        </div>
       </div>
       <div className="flex flex-row justify-end">
         {project.githubRepo && 
           (!project.isPrivate ? (
             <Tooltip showArrow={true} content="View this project on Github.com">
               <Button
-                className="ml-2"
+                className="ml-2 bg-black border-black hover:bg-gray-800 text-white"
                 size="small"
-                variant="ghost"
                 onPress={() => window.open("https://github.com/jeremytraini/" + project.githubRepo)}
                 endContent={<TbBrandGithub size={22} />}
               >
-                Github
+                View on Github
               </Button>
             </Tooltip>
           ) : (
@@ -75,7 +76,7 @@ const ProjectDetails = ({ project, openModal }) => {
                 size="small"
                 variant="ghost"
                 onPress={() => openModal(project)}
-                endContent={<TbLockCode size={22} />}
+                endContent={<TbLockCode color="gray" size={22} />}
               >
                 Request Access
               </Button>
@@ -84,13 +85,12 @@ const ProjectDetails = ({ project, openModal }) => {
         }
         {project.figmaLink && 
           <Button
-            className="ml-2"
+            className="ml-2 border-[#9747ff] bg-[#9747ff] text-white"
             size="small"
-            variant="ghost"
             onPress={() => window.open(project.figmaLink)}
             endContent={<TbBrandFigma size={22} />}
           >
-            Figma
+            View on Figma
           </Button>
         }
         {project.liveLink && 

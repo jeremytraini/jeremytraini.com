@@ -77,7 +77,7 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">Request access to the "{project?.title}" repository</ModalHeader>
+            <ModalHeader className="flex flex-col gap-1">Request access to the &quot;{project?.title}&quot; repository</ModalHeader>
             <ModalBody>
               <p>This feature is only available if you have a secret access code from my resume.</p>
               <p>You should also have a Github account.</p>

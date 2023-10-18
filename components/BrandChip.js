@@ -160,9 +160,10 @@ const BrandChip = ({ brand, ...props }) => {
   return (
     <Chip
       classNames={{
-        base: color+" transition hover:text-white",
+        base: color+" bg-gray-200 transition hover:text-white",
         content: ""
       }}
+      color=""
       startContent={icon}
       {...props}
     >
