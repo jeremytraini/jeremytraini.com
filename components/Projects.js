@@ -13,7 +13,7 @@ const ProjectCard = ({ project, index, openModal }) => {
   const isOdd = index % 2 == 0;
 
   return (
-    <>
+    <div id={project.id}>
       <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
         <ProjectImage src={project.imageUrl} />
         <ProjectDetails project={project} openModal={openModal} />
@@ -31,7 +31,7 @@ const ProjectCard = ({ project, index, openModal }) => {
           </>
         )}
       </div>
-    </>
+    </div>
     
   );
 }
