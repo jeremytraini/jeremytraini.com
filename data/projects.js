@@ -35,8 +35,8 @@ const projects = [
     description: "The website you're on right now.",
     technologies: ["Next.js"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
-    isPrivate: true
+    githubLink: "https://github.com/jeremytraini/jeremytraini.com",
+    isPrivate: false
   },
   {
     title: "CollegeConnector",
