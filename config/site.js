@@ -10,21 +10,20 @@ export const siteConfig = {
 	},
 	navItems: [
 		{
-			label: "Home",
-			href: "/",
+			label: "Me",
+			href: "#",
 		},
 		{
-			label: "Projects",
-			href: "/projects",
+			label: "Path",
+			href: "#path",
 		},
 		{
-			label: "About",
-			href: "/about",
+			label: "Work",
+			href: "#work",
 		},
 		{
 			label: "Contact",
-			href: "/contact",
+			href: "#contact",
 		},
-	],
-	navMenuItems: []
+	]
 };

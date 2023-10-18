@@ -6,7 +6,7 @@ const experiences = [
   {
     type: 'High School',
     name: 'Barker College',
-    duration: '2016 - 2020',
+    duration: '2013 - 2020',
     // description: 'Description about my time at school',
     imageUrl: 'barker_logo.png',
     backgroundColor: '#e02725',

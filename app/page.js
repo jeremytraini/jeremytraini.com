@@ -64,12 +64,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pb-20">
+      <div className="pb-10">
         <ProjectCarousel projects={projects} />
       </div>
       <Navbar />
     </section>
-    <section className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-[4em]">
+    <section id="path" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-[4em]">
 			<div className="mx-auto max-w-7xl">
 				<h1
           className={clsx(
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
 			</div>
 		</section>
-    <section className="w-full p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
+    <section id="work" className="w-full p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
 			<div className="mx-auto max-w-7xl">
         <h1
           className={clsx(
@@ -97,6 +97,19 @@ export default function Home() {
           Things I&apos;m working on
         </h1>
         <Projects projects={projects} />
+			</div>
+		</section>
+    <section id="contact" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-[4em]">
+			<div className="mx-auto max-w-7xl">
+        <h1
+          className={clsx(
+            "text-4xl md:text-5xl",
+            "text-default-900 pb-10"
+          )}
+        >
+          Contact me
+        </h1>
+        <p className="pb-20">Just reach out to me on Linkedin!</p>
 			</div>
 		</section>
   </>
