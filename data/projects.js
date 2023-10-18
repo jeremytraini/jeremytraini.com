@@ -7,7 +7,7 @@ const projects = [
     description: "A soccer coaching app that seamlessly integrates player engagement, skill-building, and performance tracking, enabling players to master soccer skills at home with real-time feedback from their coaches and peers.",
     technologies: ["Figma", "React Native", "Express.js", "Firebase"],
     imageUrl: "/images/thumbnails/tekkerz.png",
-    figmaLink: "https://www.figma.com/proto/4NkA0TWj4Qlvk184gJcS4i/InvestEd-Prototypes?type=design&node-id=572-1315&t=ciiht5fueOy2FRWF-0&scaling=scale-down&page-id=572%3A1289&starting-point-node-id=572%3A1315",
+    figmaLink: "https://www.figma.com/proto/gwVxjUEyHvdu57xiCYAhvl/TekkerzPDP?type=design&node-id=10-430&t=MG6oQ904BhGnZONF-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A430",
     githubRepo: "project1",
     isPrivate: true
   },
