@@ -6,7 +6,7 @@ const projects = [
     description: "A soccer coaching app that seamlessly integrates player engagement, skill-building, and performance tracking, enabling players to master soccer skills at home with real-time feedback from their coaches and peers.",
     technologies: ["Figma", "React Native", "Express.js", "Firebase"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
+    githubRepo: "project1",
     isPrivate: true
   },
   {
@@ -17,7 +17,7 @@ const projects = [
                   `,
     technologies: ["React.js", "Python", "FastAPI", "PostgreSQL", "AWS" , "Jira", "Confluence"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
+    githubRepo: "project1",
     liveLink: "https://www.churroflow.com",
     isPrivate: false
   },
@@ -35,7 +35,7 @@ const projects = [
     description: "The website you're on right now.",
     technologies: ["Next.js"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://github.com/jeremytraini/jeremytraini.com",
+    githubRepo: "jeremytraini.com",
     isPrivate: false
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     description: "Project.",
     technologies: ["Java", "Greenfoot"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
+    githubRepo: "https://example.com/project1",
     isPrivate: true
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     description: "Developed an interactive frontend for a Kahoot-like student quiz manager.",
     technologies: ["React.js", "Express.js"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
+    githubRepo: "https://example.com/project1",
     isPrivate: true
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     description: "Project.",
     technologies: ["Framework"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
+    githubRepo: "https://example.com/project1",
     isPrivate: true
   },
   {
@@ -71,7 +71,7 @@ const projects = [
     description: "Project.",
     technologies: ["Framework"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
+    githubRepo: "https://example.com/project1",
     isPrivate: true
   },
   {
@@ -80,7 +80,7 @@ const projects = [
     description: "Project.",
     technologies: ["Framework"],
     imageUrl: "https://placehold.co/450x350/png",
-    githubLink: "https://example.com/project1",
+    githubRepo: "https://example.com/project1",
     isPrivate: true
   },
 ];
