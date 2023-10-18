@@ -11,7 +11,7 @@ export default function ProjectCard({ project, ...props }) {
         <Image
           alt="Project Thumbnail"
           className="object-cover rounded-xl h-64 w-full"
-          src={project.imageUrl}
+          src={project.imageUrl || "https://via.placeholder.com/450x350"}
           isZoomed
         />
       </a>

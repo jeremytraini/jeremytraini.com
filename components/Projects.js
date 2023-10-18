@@ -7,7 +7,7 @@ import {
   TbExternalLink
 } from "react-icons/tb";
 import AccessModal from './AccessModal';
-import { Tooltip, Button, useDisclosure } from "@nextui-org/react";
+import { Tooltip, Button, useDisclosure, Image } from "@nextui-org/react";
 
 const ProjectCard = ({ project, index, openModal }) => {
   const isOdd = index % 2 == 0;
@@ -39,7 +39,11 @@ const ProjectCard = ({ project, index, openModal }) => {
 const ProjectImage = ({ src }) => {
   return (
     <div className="flex-shrink">
-      <img src={src} alt="Project Image" className="rounded-lg md:shadow-lg w-full object-cover" />
+      <Image
+        src={src || "https://via.placeholder.com/450x350"}
+        alt="Project Image"
+        className="rounded-lg md:shadow-lg w-full object-cover"
+      />
     </div>
   );
 }

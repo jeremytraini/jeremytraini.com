@@ -32,6 +32,7 @@ import {
   SiConfluence,
   SiExpress,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 import {
 	GreenfootLogo
 } from "@/components/Icons";
@@ -149,6 +150,10 @@ const BrandChip = ({ brand, ...props }) => {
     'Greenfoot': {
       color: "hover:bg-[#6ebd4b]",
       icon: <GreenfootLogo size={18} />,
+    },
+    'Java': {
+      color: "hover:bg-[#5382a1]",
+      icon: <FaJava size={18} />,
     },
   };
 
