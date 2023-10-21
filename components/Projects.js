@@ -70,7 +70,8 @@ const ProjectDetails = ({ project, openModal }) => {
                 onPress={() => window.open("https://github.com/jeremytraini/" + project.githubRepo)}
                 endContent={<TbBrandGithub size={22} />}
               >
-                View on Github
+                <div className="hidden md:inline-block">View on Github</div>
+                <div className="inline-block md:hidden">Github</div>
               </Button>
             </Tooltip>
           ) : (
@@ -82,7 +83,8 @@ const ProjectDetails = ({ project, openModal }) => {
                 onPress={() => openModal(project)}
                 endContent={<TbLockCode color="gray" size={22} />}
               >
-                Request Access
+                <div className="hidden md:inline-block">Request Access</div>
+                <div className="inline-block md:hidden">Github</div>
               </Button>
             </Tooltip>
           ))
@@ -94,7 +96,8 @@ const ProjectDetails = ({ project, openModal }) => {
             onPress={() => window.open(project.figmaLink)}
             endContent={<TbBrandFigma size={22} />}
           >
-            View on Figma
+            <div className="hidden md:inline-block">View on Figma</div>
+            <div className="inline-block md:hidden">Figma</div>
           </Button>
         }
         {project.liveLink && 
@@ -105,7 +108,8 @@ const ProjectDetails = ({ project, openModal }) => {
             onPress={() => window.open(project.liveLink)}
             endContent={<TbExternalLink size={22} />}
           >
-            Live
+            <div className="hidden md:inline-block">See live</div>
+            <div className="inline-block md:hidden">Live</div>
           </Button>
         }
       </div>
