@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, Image } from "@nextui-org/react";
-import NextImage from "next/image";
+import { Image } from "@nextui-org/react";
 
 export default function ProjectCard({ project, ...props }) {
   return (

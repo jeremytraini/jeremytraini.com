@@ -1,8 +1,4 @@
 import React from 'react';
-import { Image } from "@nextui-org/react";
-// import Flickity from 'react-flickity-component';
-// import "flickity/css/flickity.css";
-import projects from '@/data/projects';
 import ProjectCard from './ProjectDisplayCard';
 
 // Import Swiper React components
