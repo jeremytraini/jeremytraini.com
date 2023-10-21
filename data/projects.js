@@ -8,8 +8,9 @@ const projects = [
     technologies: ["Figma", "React Native", "Express.js", "Firebase"],
     imageUrl: "/images/thumbnails/tekkerz.png",
     figmaLink: "https://www.figma.com/proto/gwVxjUEyHvdu57xiCYAhvl/TekkerzPDP?type=design&node-id=10-430&t=MG6oQ904BhGnZONF-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A430",
-    githubRepo: "project1",
-    isPrivate: true
+    githubRepo: "tekkerz",
+    isPrivate: true,
+    hidden: false
   },
   {
     title: "ChurroFlow.com",
@@ -20,9 +21,10 @@ const projects = [
                   `,
     technologies: ["React.js", "Python", "FastAPI", "PostgreSQL", "AWS" , "Jira", "Confluence"],
     imageUrl: "/images/thumbnails/churroflow.png",
-    githubRepo: "project1",
+    githubRepo: "churroflow",
     liveLink: "https://www.churroflow.com",
-    isPrivate: false
+    isPrivate: false,
+    hidden: false
   },
   {
     title: "InvestEd",
@@ -32,6 +34,7 @@ const projects = [
     technologies: ["Figma", "Jira", "Confluence"],
     imageUrl: "/images/thumbnails/invested.png",
     figmaLink: "https://www.figma.com/proto/4NkA0TWj4Qlvk184gJcS4i/InvestEd-Prototypes?type=design&node-id=572-1315&t=pHSTL3OJaxbeOQHw-0&scaling=scale-down&page-id=572%3A1289&starting-point-node-id=572%3A1315",
+    hidden: false
   },
   {
     title: "jeremytraini.com",
@@ -39,9 +42,11 @@ const projects = [
     subtitle: "My website.",
     description: "The website you're on right now.",
     technologies: ["Next.js"],
+    imageUrl: "https://placehold.co/600x400/EEE/31343C?font=montserrat&text=jeremytraini.com",
     liveLink: "#",
     githubRepo: "jeremytraini.com",
-    isPrivate: false
+    isPrivate: false,
+    hidden: false
   },
   {
     title: "CollegeConnector",
@@ -51,35 +56,40 @@ const projects = [
     technologies: ["Java", "Greenfoot"],
     imageUrl: "/images/thumbnails/collegeconnector.png",
     githubRepo: "college-connector",
-    isPrivate: false
+    isPrivate: false,
+    hidden: false
   },
   {
     title: "BigBrain",
     id: "bigbrain",
     subtitle: "Learning Platform",
     description: "Developed an interactive frontend for a Kahoot-like student quiz manager.",
-    technologies: ["React.js", "Express.js"]
+    technologies: ["React.js", "Express.js"],
+    hidden: true
   },
   {
     title: "UNSW Streams",
     id: "unswstreams",
     subtitle: "Messaging service for university students.",
     description: "Project.",
-    technologies: ["Framework"]
+    technologies: ["Framework"],
+    hidden: true
   },
   {
     title: "Dungeon Mania",
     id: "dungeonmania",
     subtitle: "Project.",
     description: "Project.",
-    technologies: ["Framework"]
+    technologies: ["Framework"],
+    hidden: true
   },
   {
     title: "Weather API",
     id: "weatherapi",
     subtitle: "Data service for weather information.",
     description: "Project.",
-    technologies: ["Framework"]
+    technologies: ["Framework"],
+    hidden: true
   },
 ];
 

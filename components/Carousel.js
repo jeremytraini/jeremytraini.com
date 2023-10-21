@@ -69,7 +69,7 @@ const Carousel = ({ technologies }) => {
     }
     
     return result;
-}
+  }
 
   const content = wrapAroundList(technologies);
 
@@ -87,11 +87,12 @@ const Carousel = ({ technologies }) => {
         setGallerySize: true,
       }}
     >
-      {content.map((tech, index) => (
-        <div key={index} className="mr-2">
-          <BrandChip brand={tech} />
-        </div>
-      ))}
+      {content
+        .map((tech, index) => (
+          <div key={index} className="mr-2">
+            <BrandChip brand={tech} />
+          </div>
+        ))}
     </Flickity>
   );
 }
