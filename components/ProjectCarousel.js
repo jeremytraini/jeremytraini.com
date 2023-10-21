@@ -12,9 +12,27 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 const ProjectCarousel = ({ projects, ...props }) => {
+  function wrapAroundList(list) {
+    const wrapLength = 20;
+
+    // If the list has more than 20 items, leave it
+    if (list.length > wrapLength) {
+      return list;
+    }
+
+    // If the list has fewer than 20 items, repeat it until it reaches 20 items
+    let result = [];
+    while (result.length < wrapLength) {
+      result = result.concat(list);
+    }
+    
+    return result;
+  }
+
+  const content = wrapAroundList(projects);
+
   return (
     <Swiper
-      // spaceBetween={10}
       slidesPerView={4}
       centeredSlides={true}
       loop
@@ -36,15 +54,17 @@ const ProjectCarousel = ({ projects, ...props }) => {
         },
       }}
     >
-      {projects.map((project, index) => (
-        <SwiperSlide
-          key={index}
-        >
-          <ProjectCard
-            project={project}
-          />
-        </SwiperSlide>
-      ))}
+      {content
+        .filter(project => !project.hidden)
+        .map((project, index) => (
+          <SwiperSlide
+            key={index}
+          >
+            <ProjectCard
+              project={project}
+            />
+          </SwiperSlide>
+        ))}
     </Swiper>
   )
 }

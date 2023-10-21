@@ -124,9 +124,11 @@ const Projects = ({ projects }) => {
 
   return (
     <div className="py-4">
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} index={index} openModal={openModal} />
-      ))}
+      {projects
+        .filter((project) => !project.hidden)
+        .map((project, index) => (
+          <ProjectCard key={index} project={project} index={index} openModal={openModal} />
+        ))}
       <AccessModal project={currentProject} isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
   );
