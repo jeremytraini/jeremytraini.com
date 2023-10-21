@@ -7,8 +7,8 @@ export const Footer = () => {
 			<div className="mx-auto max-w-7xl">
 				<div className="flex justify-between items-start py-6">
 					<div>
-						<p className="text-3xl text-white">Discover my potential.</p>
-						<p className="text-3xl text-white">Hire me.</p>
+						<p className="text-3xl text-white">Feel free to reach out.</p>
+						<p className="text-3xl text-white">I&apos;m open to work.</p>
 					</div>
 					<div className="flex flex-col gap-2 items-end">
 						<p className="text-xl text-white pb-2">Find me on</p>

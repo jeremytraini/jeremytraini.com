@@ -43,7 +43,7 @@ const Carousel = ({ technologies }) => {
   function play() {
     const mainTicker = flickityRef.current && flickityRef.current.flkty;
     if (mainTicker) {
-      mainTicker.x -= 0.05;
+      mainTicker.x -= 0.1;
       mainTicker.settle(mainTicker.x);
       requestId = window.requestAnimationFrame(play);
     }
