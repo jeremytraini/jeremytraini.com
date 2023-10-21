@@ -1,4 +1,8 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google"
+import {
+  Fira_Code as FontMono,
+  Inter as FontSans,
+  Azeret_Mono as AzeretMono,
+} from "next/font/google"
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -8,4 +12,9 @@ export const fontSans = FontSans({
 export const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
+})
+
+export const fontAzeretMono = AzeretMono({
+  subsets: ["latin"],
+  variable: "--font-azeret-mono",
 })

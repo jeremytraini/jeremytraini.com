@@ -32,6 +32,10 @@ import {
   SiConfluence,
   SiExpress,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import {
+	GreenfootLogo
+} from "@/components/Icons";
 
 const BrandChip = ({ brand, ...props }) => {
   const brands = {
@@ -143,6 +147,14 @@ const BrandChip = ({ brand, ...props }) => {
       color: "hover:bg-[#003366]",
       icon: <SiExpress size={18} />,
     },
+    'Greenfoot': {
+      color: "hover:bg-[#6ebd4b]",
+      icon: <GreenfootLogo size={18} />,
+    },
+    'Java': {
+      color: "hover:bg-[#5382a1]",
+      icon: <FaJava size={18} />,
+    },
   };
 
   let { color, icon } = brands[brand] || {
@@ -153,9 +165,10 @@ const BrandChip = ({ brand, ...props }) => {
   return (
     <Chip
       classNames={{
-        base: color+" transition hover:text-white",
+        base: color+" bg-gray-200 transition hover:text-white",
         content: ""
       }}
+      color=""
       startContent={icon}
       {...props}
     >

@@ -24,12 +24,26 @@ const Carousel = ({ technologies }) => {
         window.cancelAnimationFrame(requestId);
       }
     };
-  }, []);
+  }, [flickityRef]);
+
+  useEffect(() => {
+    const mainTicker = flickityRef.current && flickityRef.current.flkty;
+    if (mainTicker) {
+      console.log(flickityRef.current.flkty);
+      // display the flickity container
+      // flickityRef.current.style.display = 'block';
+    } else {
+      // hide the flickity container
+      // flickityRef.current.style.display = 'none';
+    }
+  }, [flickityRef]);
+
+
 
   function play() {
     const mainTicker = flickityRef.current && flickityRef.current.flkty;
     if (mainTicker) {
-      mainTicker.x -= 0.02;
+      mainTicker.x -= 0.1;
       mainTicker.settle(mainTicker.x);
       requestId = window.requestAnimationFrame(play);
     }
@@ -41,7 +55,7 @@ const Carousel = ({ technologies }) => {
   }
 
   function wrapAroundList(list) {
-    const wrapLength = 10;
+    const wrapLength = 20;
 
     // If the list has more than 20 items, leave it
     if (list.length > wrapLength) {
@@ -55,7 +69,7 @@ const Carousel = ({ technologies }) => {
     }
     
     return result;
-}
+  }
 
   const content = wrapAroundList(technologies);
 
@@ -73,11 +87,12 @@ const Carousel = ({ technologies }) => {
         setGallerySize: true,
       }}
     >
-      {content.map((tech, index) => (
-        <div key={index} className="mr-2">
-          <BrandChip brand={tech} />
-        </div>
-      ))}
+      {content
+        .map((tech, index) => (
+          <div key={index} className="mr-2">
+            <BrandChip brand={tech} />
+          </div>
+        ))}
     </Flickity>
   );
 }
