@@ -6,7 +6,7 @@ export default function ProjectCard({ project, ...props }) {
   return (
     <a
       href={"#"+project.id}
-      className="pointer-default w-full px-4 rounded-xl h-64 flex justify-center items-center"
+      className="cursor-default w-full px-4 rounded-xl h-64 flex justify-center items-center"
       {...props}
     >
       <Image

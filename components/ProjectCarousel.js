@@ -38,12 +38,6 @@ const ProjectCarousel = ({ projects, ...props }) => {
       loop
       breakpoints={{
         0: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 1,
-        },
-        768: {
           slidesPerView: 2,
         },
         900: {
