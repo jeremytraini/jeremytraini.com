@@ -1,5 +1,4 @@
 "use client";
-import { Tabs, Tab } from "@nextui-org/react"; 
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
