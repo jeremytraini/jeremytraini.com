@@ -9,7 +9,30 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        scrollText: {
+          from: {
+            transform: 'translateX(0%)',
+          },
+          to: {
+            transform: 'translateX(-50%)',
+          }
+        },
+        marquee: {
+          from: {
+            transform: 'translate3d(0, 0, 0)',
+          },
+          to: {
+            transform: 'translate3d(-50%, 0, 0)',
+          }
+        },
+      },
+      animation: {
+        scrollText: 'scrollText 10s infinite linear',
+        marquee: 'marquee 25s linear infinite',
+      }
+    },
   },
   darkMode: "class",
   plugins: [nextui()],
