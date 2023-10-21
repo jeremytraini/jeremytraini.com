@@ -53,12 +53,14 @@ const ProjectCarousel = ({ projects, ...props }) => {
           slidesPerView: 4,
         },
       }}
+      className="h-full"
     >
       {content
         .filter(project => !project.hidden)
         .map((project, index) => (
           <SwiperSlide
             key={index}
+            // className="h-full"
           >
             <ProjectCard
               project={project}
