@@ -24,44 +24,42 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
   <>
-    <section className="flex flex-col justify-start gap-6 pt-4 md:pt-6 pb-24 min-h-screen">
-      <div className="flex flex-col justify-center items-center">
-        <div className="text-center pt-10">
-          <div>
-            <TypeAnimation
-              sequence={[
-                'Jeremy Traini',
-              ]}
-              speed={30}
-              wrapper="div"
-              cursor={false}
-              className={clsx(
-                "text-white text-5xl md:text-7xl",
-                // fontAzeretMono.className
-              )}
-              style={{ paddingBottom: '3rem' }}
-            />
-          </div>
-          <p className="text-xl mb-8 text-white">I&apos;m a software engineering student in need of a job!</p>
-          <div className="flex justify-center items-center gap-6 pb-10">
-            <Link isExternal href={siteConfig.links.github} aria-label="Github">
-              <GithubIcon size={32} className="text-white" />
-            </Link>
-            <Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
-              <LinkedinIcon size={32} className="text-white" />
-            </Link>
-            <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
-              <DribbbleIcon size={32} className="text-white" />
-            </Link>
-            <Button
-              radius="full"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
-              onPress={() => window.open(`mailto:${siteConfig.email}?subject=Hello Jeremy!`)}
-              endContent={<MdEmail size={18} />}
-            >
-              Email me
-            </Button>
-          </div>
+    <section className="flex flex-col justify-evenly pb-32 h-screen">
+      <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center">
+        <div>
+          <TypeAnimation
+            sequence={[
+              'Jeremy Traini',
+            ]}
+            speed={30}
+            wrapper="div"
+            cursor={false}
+            className={clsx(
+              "text-white text-5xl md:text-7xl",
+              // fontAzeretMono.className
+            )}
+            style={{ paddingBottom: '3rem' }}
+          />
+        </div>
+        <p className="text-xl pb-8 text-white">I&apos;m a software engineering student in need of a job!</p>
+        <div className="flex justify-center items-center gap-6 pb-10">
+          <Link isExternal href={siteConfig.links.github} aria-label="Github">
+            <GithubIcon size={32} className="text-white" />
+          </Link>
+          <Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
+            <LinkedinIcon size={32} className="text-white" />
+          </Link>
+          <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
+            <DribbbleIcon size={32} className="text-white" />
+          </Link>
+          <Button
+            radius="full"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
+            onPress={() => window.open(`mailto:${siteConfig.email}?subject=Hello Jeremy!`)}
+            endContent={<MdEmail size={18} />}
+          >
+            Email me
+          </Button>
         </div>
       </div>
       <div className="pb-10">
@@ -69,7 +67,7 @@ export default function Home() {
       </div>
       <Navbar />
     </section>
-    <section id="path" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-24">
+    <section id="path" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
 				<h1
           className={clsx(
@@ -99,7 +97,7 @@ export default function Home() {
         <Projects projects={projects} />
 			</div>
 		</section>
-    <section id="contact" className="w-full p-16 bg-gray-200 rounded-t-[4em] mt-[-4em] pb-24">
+    <section id="contact" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
         <h1
           className={clsx(
