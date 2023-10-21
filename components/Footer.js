@@ -12,9 +12,9 @@ export const Footer = () => {
 					</div>
 					<div className="flex flex-col gap-2 items-end">
 						<p className="text-xl text-white pb-2">Find me on</p>
-						<Link isExternal href="#" showAnchorIcon>GitHub</Link>
-						<Link isExternal href="#" showAnchorIcon>LinkedIn</Link>
-						<Link isExternal href="#" showAnchorIcon>Dribbble</Link>
+						<Link isExternal href={siteConfig.links.github} showAnchorIcon>GitHub</Link>
+						<Link isExternal href={siteConfig.links.linkedin} showAnchorIcon>LinkedIn</Link>
+						<Link isExternal href={siteConfig.links.dribbble} showAnchorIcon>Dribbble</Link>
 					</div>
 				</div>
 				<footer className="w-full flex items-center justify-left py-3">
