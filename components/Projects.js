@@ -102,16 +102,17 @@ const ProjectDetails = ({ project, openModal }) => {
           </Button>
         }
         {project.liveLink && 
-          <Button
-            className="ml-2"
-            size="small"
-            color="primary"
-            onPress={() => window.open(project.liveLink)}
-            endContent={<TbExternalLink size={22} />}
-          >
-            <div className="hidden md:inline-block">See live</div>
-            <div className="inline-block md:hidden">Live</div>
-          </Button>
+          <Tooltip showArrow={true} content={`Go to ${project.liveLink}`}>
+            <Button
+              className="ml-2"
+              size="small"
+              color="primary"
+              onPress={() => window.open(project.liveLink)}
+              endContent={<TbExternalLink size={22} />}
+            >
+              Live
+            </Button>
+          </Tooltip>
         }
       </div>
     </div>
