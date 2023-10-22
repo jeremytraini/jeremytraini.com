@@ -42,7 +42,7 @@ const projects = [
     subtitle: "My website.",
     description: "The website you're on right now.",
     technologies: ["Next.js"],
-    imageUrl: "https://placehold.co/600x400/EEE/31343C?font=montserrat&text=jeremytraini.com",
+    imageUrl: "/images/thumbnails/jeremytraini.png",
     liveLink: "#",
     githubRepo: "jeremytraini.com",
     isPrivate: false,

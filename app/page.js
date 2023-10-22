@@ -24,7 +24,7 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
   <>
-    <section className="flex flex-col justify-evenly pb-32 h-screen">
+    <section className="flex flex-col justify-evenly pb-32 h-screen min-h-min">
       <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center">
         <div>
           <TypeAnimation
