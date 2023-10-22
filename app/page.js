@@ -41,7 +41,7 @@ export default function Home() {
             style={{ paddingBottom: '3rem' }}
           />
         </div>
-        <p className="text-xl pb-8 text-white">Hi. I&apos;m a software engineering student at UNSW.</p>
+        <p className="text-xl p-4 pb-8 text-white">Hi. I&apos;m a software engineering student at UNSW.</p>
         <div className="flex justify-center items-center gap-6 pb-10">
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon size={32} className="text-white" />
