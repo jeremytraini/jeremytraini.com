@@ -38,11 +38,12 @@ const ProjectCard = ({ project, index, openModal }) => {
 
 const ProjectImage = ({ src }) => {
   return (
-    <div className="flex-shrink">
+    <div className="flex-shrink flex flex-col justify-center">
       <Image
-        src={src || "https://via.placeholder.com/450x350"}
+        src={src || "/images/thumbnails/placeholder.png"}
         alt="Project Image"
-        className="rounded-lg md:shadow-lg w-full object-cover"
+        className="md:shadow-lg justify-center"
+        removeWrapper
       />
     </div>
   );
@@ -101,16 +102,17 @@ const ProjectDetails = ({ project, openModal }) => {
           </Button>
         }
         {project.liveLink && 
-          <Button
-            className="ml-2"
-            size="small"
-            color="primary"
-            onPress={() => window.open(project.liveLink)}
-            endContent={<TbExternalLink size={22} />}
-          >
-            <div className="hidden md:inline-block">See live</div>
-            <div className="inline-block md:hidden">Live</div>
-          </Button>
+          <Tooltip showArrow={true} content={`Go to ${project.liveLink}`}>
+            <Button
+              className="ml-2"
+              size="small"
+              color="primary"
+              onPress={() => window.open(project.liveLink)}
+              endContent={<TbExternalLink size={22} />}
+            >
+              Live
+            </Button>
+          </Tooltip>
         }
       </div>
     </div>

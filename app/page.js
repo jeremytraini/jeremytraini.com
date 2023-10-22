@@ -24,8 +24,8 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
   <>
-    <section className="flex flex-col justify-evenly pb-32 h-screen">
-      <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center">
+    <section className="flex flex-col justify-evenly pb-32 h-screen max-h-[900px] min-h-[670px]">
+      <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center min-h-min">
         <div>
           <TypeAnimation
             sequence={[
@@ -41,7 +41,7 @@ export default function Home() {
             style={{ paddingBottom: '3rem' }}
           />
         </div>
-        <p className="text-xl pb-8 text-white">Hi. I&apos;m a software engineering student at UNSW.</p>
+        <p className="text-xl p-4 pb-8 text-white">Hi. I&apos;m a software engineering student at UNSW.</p>
         <div className="flex justify-center items-center gap-6 pb-10">
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon size={32} className="text-white" />
