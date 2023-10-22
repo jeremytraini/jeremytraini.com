@@ -40,7 +40,7 @@ const ProjectImage = ({ src }) => {
   return (
     <div className="flex-shrink">
       <Image
-        src={src || "https://via.placeholder.com/450x350"}
+        src={src || "/images/thumbnails/placeholder.png"}
         alt="Project Image"
         className="rounded-lg md:shadow-lg w-full object-cover"
       />
