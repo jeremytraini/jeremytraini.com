@@ -38,11 +38,12 @@ const ProjectCard = ({ project, index, openModal }) => {
 
 const ProjectImage = ({ src }) => {
   return (
-    <div className="flex-shrink">
+    <div className="flex-shrink flex flex-col justify-center">
       <Image
         src={src || "/images/thumbnails/placeholder.png"}
         alt="Project Image"
-        className="rounded-lg md:shadow-lg w-full object-cover"
+        className="md:shadow-lg justify-center"
+        removeWrapper
       />
     </div>
   );
