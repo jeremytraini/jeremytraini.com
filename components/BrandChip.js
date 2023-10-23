@@ -34,6 +34,7 @@ import {
   SiAxios,
   SiMui,
   SiFlask,
+  SiSqlite,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import {
@@ -164,11 +165,15 @@ const BrandChip = ({ brand, ...props }) => {
     },
     'Material UI': {
       color: "hover:bg-[#007FFF]",
-      icon: <SiMui size={18} />,
+      icon: <SiMui size={16} />,
     },
     'Flask': {
       color: "hover:bg-[#000000]",
       icon: <SiFlask size={18} />,
+    },
+    'SQLite': {
+      color: "hover:bg-[#003B57]",
+      icon: <SiSqlite size={18} />,
     },
   };
 
