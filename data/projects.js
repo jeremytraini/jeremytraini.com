@@ -51,8 +51,8 @@ const projects = [
   {
     title: "CollegeConnector",
     id: "collegeconnector",
-    subtitle: "A digital wayfinding solution for schools.",
-    description: "Project.",
+    subtitle: "Digital Wayfinding Solution",
+    description: "I created College Connector as a modern solution to an age-old problem: navigating expansive school campuses. Recognising the need for a user-friendly and precise tool, I integrated an intuitive touch interface and incorporated the A* search algorithm for advanced pathfinding. This tool not only streamlines the campus experience for students and parents but also embodies my dedication to creating technology that's both impactful and user-centric.",
     technologies: ["Java", "Greenfoot"],
     imageUrl: "/images/thumbnails/collegeconnector.png",
     githubRepo: "college-connector",
@@ -79,6 +79,17 @@ const projects = [
     imageUrl: "/images/thumbnails/auscal.png",
     githubRepo: "auscal",
     isPrivate: false,
+    hidden: false
+  },
+  {
+    title: "UNSW Streams",
+    id: "unswstreams",
+    subtitle: "Digital Communication Tool",
+    description: "Drawing inspiration from Microsoft Teams, I worked in a team of 4 to create a backend system that offers a seamless collaboration space. This project not only allowed me to apply advanced software development practices but also honed my ability to function effectively within a team setting.",
+    technologies: ["Python"],
+    imageUrl: "/images/thumbnails/unswstreams.png",
+    githubRepo: "unsw-streams",
+    isPrivate: true,
     hidden: false
   },
   {
