@@ -41,7 +41,7 @@ const projects = [
     id: "jeremytraini",
     subtitle: "My website.",
     description: "The website you're on right now.",
-    technologies: ["Next.js"],
+    technologies: ["Next.js", "Axios", "TailwindCSS"],
     imageUrl: "/images/thumbnails/jeremytraini.png",
     liveLink: "#",
     githubRepo: "jeremytraini.com",
@@ -60,12 +60,24 @@ const projects = [
     hidden: false
   },
   {
-    title: "BigBrain",
-    id: "bigbrain",
+    title: "QuizzBuzz",
+    id: "quizzbuzz",
     subtitle: "Learning Platform",
     description: "Developed an interactive frontend for a Kahoot-like student quiz manager.",
-    technologies: ["React.js", "Express.js"],
-    hidden: true
+    technologies: ["React.js", "Material UI", "Express.js"],
+    githubRepo: "quizzbuzz",
+    isPrivate: true,
+    hidden: false
+  },
+  {
+    title: "AusCal",
+    id: "auscal",
+    subtitle: "Data service for weather information.",
+    description: "Project.",
+    technologies: ["Flask", "Python"],
+    githubRepo: "auscal",
+    isPrivate: true,
+    hidden: false
   },
   {
     title: "UNSW Streams",
@@ -82,15 +94,7 @@ const projects = [
     description: "Project.",
     technologies: ["Framework"],
     hidden: true
-  },
-  {
-    title: "Weather API",
-    id: "weatherapi",
-    subtitle: "Data service for weather information.",
-    description: "Project.",
-    technologies: ["Framework"],
-    hidden: true
-  },
+  }
 ];
 
 export default projects;
