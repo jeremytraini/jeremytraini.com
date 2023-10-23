@@ -65,6 +65,7 @@ const projects = [
     subtitle: "Learning Platform",
     description: "Over the course of several months, I build the frontend of QuizzBuzz, an engaging and dynamic quiz platform. Adhering to modern design principles with user-centric functionality, QuizzBuzz delivers a captivating experience for students, making knowledge testing more interactive and enjoyable.",
     technologies: ["React.js", "Material UI", "Express.js"],
+    imageUrl: "/images/thumbnails/quizzbuzz.png",
     githubRepo: "quizzbuzz",
     isPrivate: true,
     hidden: false
@@ -75,6 +76,7 @@ const projects = [
     subtitle: "Event Management API",
     description: "Over a 3-month period, I developed AusCal, a specialised event management platform for Australians. Merging real-time weather forecasts with public holidays and location data, AusCal provides seamless event scheduling and offers powerful API functionalities, ensuring an optimised event planning experience.",
     technologies: ["Flask", "Python", "SQLite"],
+    imageUrl: "/images/thumbnails/auscal.png",
     githubRepo: "auscal",
     isPrivate: false,
     hidden: false
