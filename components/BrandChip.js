@@ -23,6 +23,7 @@ import {
   TbBrandDocker,
   TbBrandStripe,
   TbBrandPython,
+  TbBrandCypress,
 } from "react-icons/tb";
 import {
   SiDigitalocean,
@@ -35,6 +36,8 @@ import {
   SiMui,
   SiFlask,
   SiSqlite,
+  SiJest,
+  SiPytest,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import {
@@ -174,6 +177,18 @@ const BrandChip = ({ brand, ...props }) => {
     'SQLite': {
       color: "hover:bg-[#003B57]",
       icon: <SiSqlite size={18} />,
+    },
+    'Jest': {
+      color: "hover:bg-[#99425b]",
+      icon: <SiJest size={18} />,
+    },
+    'Cypress': {
+      color: "hover:bg-[#04C38E]",
+      icon: <TbBrandCypress size={18} />,
+    },
+    'Pytest': {
+      color: "hover:bg-[#009FE3]",
+      icon: <SiPytest size={18} />,
     },
   };
 

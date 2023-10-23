@@ -5,7 +5,7 @@ const projects = [
     id: "tekkerz",
     subtitle: "Player Development Platform",
     description: "A soccer coaching app that seamlessly integrates player engagement, skill-building, and performance tracking, enabling players to master soccer skills at home with real-time feedback from their coaches and peers.",
-    technologies: ["Figma", "React Native", "Express.js", "Firebase"],
+    technologies: ["Figma", "React Native", "Express.js", "Firebase", "Axios"],
     imageUrl: "/images/thumbnails/tekkerz.png",
     figmaLink: "https://www.figma.com/proto/gwVxjUEyHvdu57xiCYAhvl/TekkerzPDP?type=design&node-id=10-430&t=MG6oQ904BhGnZONF-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A430",
     githubRepo: "tekkerz",
@@ -19,7 +19,7 @@ const projects = [
     description: `Lead a team to develop an innovative platform that transforms routine invoices into actionable business intelligence using data analytics, machine learning and AI.
                   ChurroFlow was presented to a board of Macquarie Group engineers, securing first place for the Software Engineering Macquarie Prize.
                   `,
-    technologies: ["React.js", "Python", "FastAPI", "PostgreSQL", "AWS" , "Jira", "Confluence"],
+    technologies: ["React.js", "Python", "FastAPI", "PostgreSQL", "Pytest", "Axios", "AWS" , "Jira", "Confluence"],
     imageUrl: "/images/thumbnails/churroflow.png",
     githubRepo: "churroflow",
     liveLink: "https://www.churroflow.com",
@@ -49,22 +49,11 @@ const projects = [
     hidden: false
   },
   {
-    title: "CollegeConnector",
-    id: "collegeconnector",
-    subtitle: "Digital Wayfinding Solution",
-    description: "I created College Connector as a modern solution to an age-old problem: navigating expansive school campuses. Recognising the need for a user-friendly and precise tool, I integrated an intuitive touch interface and incorporated the A* search algorithm for advanced pathfinding. This tool not only streamlines the campus experience for students and parents but also embodies my dedication to creating technology that's both impactful and user-centric.",
-    technologies: ["Java", "Greenfoot"],
-    imageUrl: "/images/thumbnails/collegeconnector.png",
-    githubRepo: "college-connector",
-    isPrivate: false,
-    hidden: false
-  },
-  {
     title: "QuizzBuzz",
     id: "quizzbuzz",
     subtitle: "Learning Platform",
     description: "Over the course of several months, I build the frontend of QuizzBuzz, an engaging and dynamic quiz platform. Adhering to modern design principles with user-centric functionality, QuizzBuzz delivers a captivating experience for students, making knowledge testing more interactive and enjoyable.",
-    technologies: ["React.js", "Material UI", "Express.js"],
+    technologies: ["React.js", "Material UI", "Jest", "Cypress", "Express.js"],
     imageUrl: "/images/thumbnails/quizzbuzz.png",
     githubRepo: "quizzbuzz",
     isPrivate: true,
@@ -86,7 +75,7 @@ const projects = [
     id: "unswstreams",
     subtitle: "Digital Communication Tool",
     description: "Drawing inspiration from Microsoft Teams, I worked in a team of 4 to create a backend system that offers a seamless collaboration space. This project not only allowed me to apply advanced software development practices but also honed my ability to function effectively within a team setting.",
-    technologies: ["Python"],
+    technologies: ["Python", "Flask", "Pytest"],
     imageUrl: "/images/thumbnails/unswstreams.png",
     githubRepo: "unsw-streams",
     isPrivate: true,
@@ -100,6 +89,17 @@ const projects = [
     technologies: ["Python"],
     imageUrl: "/images/thumbnails/edgenet.png",
     githubRepo: "edge-net",
+    isPrivate: false,
+    hidden: false
+  },
+  {
+    title: "CollegeConnector",
+    id: "collegeconnector",
+    subtitle: "Digital Wayfinding Solution",
+    description: "I created College Connector as a modern solution to an age-old problem: navigating expansive school campuses. Recognising the need for a user-friendly and precise tool, I integrated an intuitive touch interface and incorporated the A* search algorithm for advanced pathfinding. This tool not only streamlines the campus experience for students and parents but also embodies my dedication to creating technology that's both impactful and user-centric.",
+    technologies: ["Java", "Greenfoot"],
+    imageUrl: "/images/thumbnails/collegeconnector.png",
+    githubRepo: "college-connector",
     isPrivate: false,
     hidden: false
   }
