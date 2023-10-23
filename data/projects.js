@@ -82,20 +82,15 @@ const projects = [
     hidden: false
   },
   {
-    title: "UNSW Streams",
-    id: "unswstreams",
-    subtitle: "Messaging service for university students.",
-    description: "Project.",
-    technologies: ["Framework"],
-    hidden: true
-  },
-  {
-    title: "Dungeon Mania",
-    id: "dungeonmania",
-    subtitle: "Project.",
-    description: "Project.",
-    technologies: ["Framework"],
-    hidden: true
+    title: "EdgeNet",
+    id: "edgenet",
+    subtitle: "Decentralised Edge Network",
+    description: "Developed EdgeNet, an Python framework for edge devices, as part of an exploration into decentralised networking. My robust solution facilitates real-time data sharing and computation across devices, reflecting my dedication to integrating advanced technologies with user-centric applications.",
+    technologies: ["Python"],
+    imageUrl: "/images/thumbnails/edgenet.png",
+    githubRepo: "edge-net",
+    isPrivate: false,
+    hidden: false
   }
 ];
 
