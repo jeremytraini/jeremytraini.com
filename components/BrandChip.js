@@ -38,6 +38,7 @@ import {
   SiSqlite,
   SiJest,
   SiPytest,
+  SiGradle,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import {
@@ -189,6 +190,10 @@ const BrandChip = ({ brand, ...props }) => {
     'Pytest': {
       color: "hover:bg-[#009FE3]",
       icon: <SiPytest size={18} />,
+    },
+    'Gradle': {
+      color: "hover:bg-[#02303A]",
+      icon: <SiGradle size={18} />,
     },
   };
 

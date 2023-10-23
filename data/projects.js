@@ -82,6 +82,28 @@ const projects = [
     hidden: false
   },
   {
+    title: "Dungeon Mania",
+    id: "dungeonmania",
+    subtitle: "Retro Game",
+    description: "In an era where web games are reigning supreme, I took on the exhilarating challenge of developing the backend for \"Dungeon Mania\", an 80s-inspired maze and puzzle game.  Tasked with crafting the backend Java application, our team of 5 merged timeless gaming mechanics with contemporary software design principles.",
+    technologies: ["Java", "Gradle"],
+    imageUrl: "/images/thumbnails/dungeonmania.png",
+    githubRepo: "dungeon-mania",
+    isPrivate: true,
+    hidden: false
+  },
+  {
+    title: "Back in Blackout",
+    id: "backinblackout",
+    subtitle: "Satellite Communication Simulator",
+    description: "A comprehensive challenge to model and manage satellite-to-device communications, simulating a simplified yet futuristic version of the internet centred around file transfers.",
+    technologies: ["Java", "Gradle"],
+    imageUrl: "/images/thumbnails/backinblackout.png",
+    githubRepo: "back-in-blackout",
+    isPrivate: true,
+    hidden: false
+  },
+  {
     title: "EdgeNet",
     id: "edgenet",
     subtitle: "Decentralised Edge Network",
