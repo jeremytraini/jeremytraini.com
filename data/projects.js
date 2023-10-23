@@ -39,8 +39,8 @@ const projects = [
   {
     title: "jeremytraini.com",
     id: "jeremytraini",
-    subtitle: "My website.",
-    description: "The website you're on right now.",
+    subtitle: "Personal Website",
+    description: "The website you're on right now. Powered by modern web technologies, this website showcases my passion for engineering and design. Hope you're enjoying it!",
     technologies: ["Next.js", "Axios", "TailwindCSS"],
     imageUrl: "/images/thumbnails/jeremytraini.png",
     liveLink: "#",
@@ -63,7 +63,7 @@ const projects = [
     title: "QuizzBuzz",
     id: "quizzbuzz",
     subtitle: "Learning Platform",
-    description: "Developed an interactive frontend for a Kahoot-like student quiz manager.",
+    description: "Over the course of several months, I build the frontend of QuizzBuzz, an engaging and dynamic quiz platform. Adhering to modern design principles with user-centric functionality, QuizzBuzz delivers a captivating experience for students, making knowledge testing more interactive and enjoyable.",
     technologies: ["React.js", "Material UI", "Express.js"],
     githubRepo: "quizzbuzz",
     isPrivate: true,
@@ -72,11 +72,11 @@ const projects = [
   {
     title: "AusCal",
     id: "auscal",
-    subtitle: "Data service for weather information.",
-    description: "Project.",
-    technologies: ["Flask", "Python"],
+    subtitle: "Event Management API",
+    description: "Over a 3-month period, I developed AusCal, a specialised event management platform for Australians. Merging real-time weather forecasts with public holidays and location data, AusCal provides seamless event scheduling and offers powerful API functionalities, ensuring an optimised event planning experience.",
+    technologies: ["Flask", "Python", "SQLite"],
     githubRepo: "auscal",
-    isPrivate: true,
+    isPrivate: false,
     hidden: false
   },
   {
