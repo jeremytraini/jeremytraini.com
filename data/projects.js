@@ -15,7 +15,7 @@ const projects = [
   {
     title: "ChurroFlow.com",
     id: "churroflow",
-    subtitle: "Warehouse Analytics Dashboard",
+    subtitle: "Warehousing Analytics",
     description: `Lead a team to develop an innovative platform that transforms routine invoices into actionable business intelligence using data analytics, machine learning and AI.
                   ChurroFlow was presented to a board of Macquarie Group engineers, securing first place for the Software Engineering Macquarie Prize.
                   `,
@@ -30,7 +30,7 @@ const projects = [
     title: "InvestEd",
     id: "invested",
     subtitle: "Gamified Financial Education App Prototype",
-    description: "Worked in a team to develop an innovative educational platform designed to empower university students with comprehensive financial knowledge.",
+    description: "Worked in a team to develop an innovative prototype for an educational platform designed to empower university students with comprehensive financial knowledge.",
     technologies: ["Figma", "Jira", "Confluence"],
     imageUrl: "/images/thumbnails/invested.png",
     figmaLink: "https://www.figma.com/proto/4NkA0TWj4Qlvk184gJcS4i/InvestEd-Prototypes?type=design&node-id=572-1315&t=pHSTL3OJaxbeOQHw-0&scaling=scale-down&page-id=572%3A1289&starting-point-node-id=572%3A1315",
