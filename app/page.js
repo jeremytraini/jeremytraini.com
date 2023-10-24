@@ -49,9 +49,9 @@ export default function Home() {
           <Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
             <LinkedinIcon size={32} className="text-white" />
           </Link>
-          <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
+          {/* <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
             <DribbbleIcon size={32} className="text-white" />
-          </Link>
+          </Link> */}
           <Button
             radius="full"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
