@@ -1,7 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import projects from "@/data/projects";
+import projects from "../data/projects.yaml";
 import { Link } from "@nextui-org/link";
 import { fontAzeretMono } from "@/config/fonts";
 import clsx from "clsx";
