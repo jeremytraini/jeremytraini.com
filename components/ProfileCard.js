@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Button } from "@nextui-org/react";
-import { LinkedinConnect } from "./Icons";
+import { LinkedinConnect, LinkedinVerified } from "./Icons";
 import { siteConfig } from "@/config/site";
 import Image from 'next/image';
 
@@ -19,9 +19,9 @@ export default function ProfileCard() {
       <div className="flex items-center justify-between mt-4">
         <div className="flex items-center">
           <div>
-            <div className="flex items-center gap-4">
-              <h1 className="text-xl font-semibold">Jeremy Traini</h1>
-              <p className="text-sm text-gray-600">(He/Him)</p>
+            <div className="flex items-center gap-2">
+              <h1 className="text-2xl font-semibold">Jeremy Traini</h1>
+              <div className="text-[#00000099]"><LinkedinVerified /></div>
             </div>
             <p className="mt-1 text-md">Software Engineering Student at UNSW</p>
             <p className="mt-2 text-sm text-gray-500">Sydney, New South Wales, Australia</p>
