@@ -94,7 +94,7 @@
   imageUrl: /images/thumbnails/quizzbuzz.png
   githubRepo: quizzbuzz
   isPrivate: true
-  hidden: false
+  hidden: true
 
 - title: AusCal
   id: auscal
@@ -112,7 +112,7 @@
   imageUrl: /images/thumbnails/auscal.png
   githubRepo: auscal
   isPrivate: false
-  hidden: false
+  hidden: true
 
 - title: UNSW Streams
   id: unswstreams
@@ -129,7 +129,7 @@
   imageUrl: /images/thumbnails/unswstreams.png
   githubRepo: unsw-streams
   isPrivate: true
-  hidden: false
+  hidden: true
 
 - title: Dungeon Mania
   id: dungeonmania
@@ -146,7 +146,7 @@
   imageUrl: /images/thumbnails/dungeonmania.png
   githubRepo: dungeon-mania
   isPrivate: true
-  hidden: false
+  hidden: true
 
 - title: Back in Blackout
   id: backinblackout
@@ -161,7 +161,7 @@
   imageUrl: /images/thumbnails/backinblackout.png
   githubRepo: back-in-blackout
   isPrivate: true
-  hidden: false
+  hidden: true
 
 - title: EdgeNet
   id: edgenet
@@ -177,7 +177,7 @@
   imageUrl: /images/thumbnails/edgenet.png
   githubRepo: edge-net
   isPrivate: false
-  hidden: false
+  hidden: true
 
 - title: CollegeConnector
   id: collegeconnector
