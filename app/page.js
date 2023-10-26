@@ -87,7 +87,7 @@ export default function Home() {
 			</div>
 		</section>
     <section id="work" className="w-full p-12 sm:p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
-			<div className="mx-auto max-w-7xl">
+			<div className="mx-auto max-w-7xl pb-8 sm:pb-12">
         <h1
           className={clsx(
             "text-4xl md:text-5xl",
