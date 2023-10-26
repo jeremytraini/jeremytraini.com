@@ -20,6 +20,7 @@ import { Button } from "@nextui-org/react";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Timeline from "@/components/Timeline";
 import Projects from "@/components/Projects";
+import ProfileCard from "@/components/ProfileCard";
 
 export default function Home() {
   return (
@@ -99,15 +100,17 @@ export default function Home() {
 		</section>
     <section id="contact" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
-        <h1
-          className={clsx(
-            "text-4xl md:text-5xl",
-            "text-default-900 pb-10"
-          )}
-        >
-          Contact me
-        </h1>
-        <p className="pb-20">Just reach out to me on Linkedin!</p>
+        <div className="flex justify-end w-full">
+          <h1
+            className={clsx(
+              "text-2xl md:text-5xl",
+              "text-default-900 pb-10"
+            )}
+          >
+            ...Message me on LinkedIn
+          </h1>
+        </div>
+        <ProfileCard />
 			</div>
 		</section>
   </>
