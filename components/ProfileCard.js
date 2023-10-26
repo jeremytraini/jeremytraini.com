@@ -39,7 +39,11 @@ export default function ProfileCard() {
               fill={true}
             />
           </div>
-          <p className="text-sm font-semibold">UNSW</p>
+          <Link
+            className="text-sm font-semibold text-black hover:text-blue-700 hover:underline"
+            href="https://www.linkedin.com/school/unsw/"
+            isExternal
+          >UNSW</Link>
         </div>
       </div>
       <div className="mt-4 flex gap-2">
