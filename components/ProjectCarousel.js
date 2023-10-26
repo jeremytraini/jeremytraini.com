@@ -30,7 +30,7 @@ const ProjectCarousel = ({ projects, ...props }) => {
   return (
     <Swiper
       slidesPerView={4}
-      spaceBetween={30}
+      // spaceBetween={30}
       centeredSlides={true}
       loop
       breakpoints={{
@@ -52,6 +52,7 @@ const ProjectCarousel = ({ projects, ...props }) => {
           <SwiperSlide
             key={index}
             // className="h-full"
+            className="cursor-grab"
           >
             <ProjectCard
               project={project}
