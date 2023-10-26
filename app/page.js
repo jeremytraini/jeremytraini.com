@@ -67,7 +67,7 @@ export default function Home() {
       </div>
       <Navbar />
     </section>
-    <section id="path" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
+    <section id="timeline" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
 				<h1
           className={clsx(
@@ -75,7 +75,7 @@ export default function Home() {
             "text-default-900 pb-10"
           )}
         >
-          My Learning Path
+          Timeline
         </h1>
         <div
           className="pb-6 h-full flex flex-row justify-center items-center"
@@ -92,7 +92,7 @@ export default function Home() {
             "text-default-900 pb-10"
           )}
         >
-          Things I&apos;m working on
+          What I&apos;m working on
         </h1>
         <Projects projects={projects} />
 			</div>
