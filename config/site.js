@@ -14,8 +14,8 @@ export const siteConfig = {
 			href: "#",
 		},
 		{
-			label: "Path",
-			href: "#path",
+			label: "Timeline",
+			href: "#timeline",
 		},
 		{
 			label: "Work",
