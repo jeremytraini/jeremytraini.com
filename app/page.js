@@ -99,8 +99,8 @@ export default function Home() {
         <Projects projects={projects} />
 			</div>
 		</section>
-    <section id="contact" className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-32 relative">
-			<div className="mx-auto max-w-7xl">
+    <section id="contact" className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em]">
+			<div className="mx-auto max-w-7xl pb-20 sm:pb-24">
         <div className="flex flex-row justify-end items-end w-full pb-10">
           <h1
             className={clsx(
