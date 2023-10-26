@@ -23,6 +23,7 @@ import {
   TbBrandDocker,
   TbBrandStripe,
   TbBrandPython,
+  TbBrandCypress,
 } from "react-icons/tb";
 import {
   SiDigitalocean,
@@ -31,6 +32,13 @@ import {
   SiJira,
   SiConfluence,
   SiExpress,
+  SiAxios,
+  SiMui,
+  SiFlask,
+  SiSqlite,
+  SiJest,
+  SiPytest,
+  SiGradle,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import {
@@ -71,7 +79,7 @@ const BrandChip = ({ brand, ...props }) => {
       color: "hover:bg-[#000000]",
       icon: <TbBrandCss3 size={18} />,
     },
-    'Tailwind CSS': {
+    'TailwindCSS': {
       color: "hover:bg-[#38bdf8]",
       icon: <TbBrandTailwind size={18} />,
     },
@@ -154,6 +162,38 @@ const BrandChip = ({ brand, ...props }) => {
     'Java': {
       color: "hover:bg-[#5382a1]",
       icon: <FaJava size={18} />,
+    },
+    'Axios': {
+      color: "hover:bg-[#671ddf]",
+      icon: <SiAxios size={18} />,
+    },
+    'Material UI': {
+      color: "hover:bg-[#007FFF]",
+      icon: <SiMui size={16} />,
+    },
+    'Flask': {
+      color: "hover:bg-[#000000]",
+      icon: <SiFlask size={18} />,
+    },
+    'SQLite': {
+      color: "hover:bg-[#003B57]",
+      icon: <SiSqlite size={18} />,
+    },
+    'Jest': {
+      color: "hover:bg-[#99425b]",
+      icon: <SiJest size={18} />,
+    },
+    'Cypress': {
+      color: "hover:bg-[#04C38E]",
+      icon: <TbBrandCypress size={18} />,
+    },
+    'Pytest': {
+      color: "hover:bg-[#009FE3]",
+      icon: <SiPytest size={18} />,
+    },
+    'Gradle': {
+      color: "hover:bg-[#02303A]",
+      icon: <SiGradle size={18} />,
     },
   };
 

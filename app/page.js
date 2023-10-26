@@ -1,13 +1,14 @@
 "use client";
 
 import { siteConfig } from "@/config/site";
-import projects from "@/data/projects";
+import projects from "../data/projects.yaml";
 import { Link } from "@nextui-org/link";
 import { fontAzeretMono } from "@/config/fonts";
 import clsx from "clsx";
 import { TypeAnimation } from 'react-type-animation';
 import { Navbar } from "@/components/Navbar";
 import { MdEmail } from "react-icons/md";
+import Image from 'next/image';
 
 import {
 	GithubIcon,
@@ -20,6 +21,7 @@ import { Button } from "@nextui-org/react";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Timeline from "@/components/Timeline";
 import Projects from "@/components/Projects";
+import ProfileCard from "@/components/ProfileCard";
 
 export default function Home() {
   return (
@@ -49,9 +51,9 @@ export default function Home() {
           <Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
             <LinkedinIcon size={32} className="text-white" />
           </Link>
-          <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
+          {/* <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
             <DribbbleIcon size={32} className="text-white" />
-          </Link>
+          </Link> */}
           <Button
             radius="full"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
@@ -67,7 +69,7 @@ export default function Home() {
       </div>
       <Navbar />
     </section>
-    <section id="path" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
+    <section id="timeline" className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
 				<h1
           className={clsx(
@@ -75,7 +77,7 @@ export default function Home() {
             "text-default-900 pb-10"
           )}
         >
-          My Learning Path
+          Timeline
         </h1>
         <div
           className="pb-6 h-full flex flex-row justify-center items-center"
@@ -84,30 +86,37 @@ export default function Home() {
         </div>
 			</div>
 		</section>
-    <section id="work" className="w-full p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
-			<div className="mx-auto max-w-7xl">
+    <section id="work" className="w-full p-12 sm:p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
+			<div className="mx-auto max-w-7xl pb-8 sm:pb-12">
         <h1
           className={clsx(
             "text-4xl md:text-5xl",
             "text-default-900 pb-10"
           )}
         >
-          Things I&apos;m working on
+          What I&apos;m working on
         </h1>
         <Projects projects={projects} />
 			</div>
 		</section>
-    <section id="contact" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
-			<div className="mx-auto max-w-7xl">
-        <h1
-          className={clsx(
-            "text-4xl md:text-5xl",
-            "text-default-900 pb-10"
-          )}
-        >
-          Contact me
-        </h1>
-        <p className="pb-20">Just reach out to me on Linkedin!</p>
+    <section id="contact" className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em]">
+			<div className="mx-auto max-w-7xl pb-20 sm:pb-24">
+        <div className="flex flex-row justify-end items-end w-full pb-10">
+          <h1
+            className={clsx(
+              "invisible sm:visible text-xl md:text-2xl pb-[1.1px] md:pb-[1px]",
+              "text-default-900"
+            )}
+          >
+            Contact me on
+          </h1>
+          <div
+            className="invisible sm:visible relative w-[160px] h-[43.43px] ml-3"
+          >
+            <Image src="/images/linkedin_full.png" fill />
+          </div>
+        </div>
+        <ProfileCard />
 			</div>
 		</section>
   </>

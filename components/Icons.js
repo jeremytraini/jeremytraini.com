@@ -239,3 +239,35 @@ export const GreenfootLogo = (props) => {
 		</svg>
 	);
 };
+
+export const LinkedinConnect = (props) => {
+	const { width, height = 16 } = props;
+
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 16 16"
+			fill="currentColor"
+			width={width}
+			height={height}
+		>
+			<path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path>
+		</svg>
+	);
+}
+
+export const LinkedinVerified = (props) => {
+	const { width, height = 24 } = props;
+
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			width={width}
+			height={height}
+		>
+			<path d="M11.99 22l-1.23-.44C6.11 19.81 2.99 16 2.99 11V5L12 2l9 3v6c0 5-3.11 8.81-7.74 10.56l-1.27.44zM5 6.44V11c0 4.11 2.6 7.35 6.46 8.8l.54.2.58-.2C16.41 18.35 19 15.1 19 11V6.44l-7-2.32-7 2.32zM17 8h-2.57l-4.02 5.01-2.18-2.18-1.41 1.41 3.75 3.75 6.43-8z"></path>
+		</svg>
+	)
+}
