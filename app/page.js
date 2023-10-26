@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { TypeAnimation } from 'react-type-animation';
 import { Navbar } from "@/components/Navbar";
 import { MdEmail } from "react-icons/md";
+import Image from 'next/image';
 
 import {
 	GithubIcon,
@@ -98,17 +99,22 @@ export default function Home() {
         <Projects projects={projects} />
 			</div>
 		</section>
-    <section id="contact" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
+    <section id="contact" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-32 relative">
 			<div className="mx-auto max-w-7xl">
-        <div className="flex justify-end w-full">
+        <div className="flex flex-row justify-end items-end w-full pb-10">
           <h1
             className={clsx(
-              "text-2xl md:text-5xl",
-              "text-default-900 pb-10"
+              "invisible sm:visible text-xl md:text-2xl pb-[1.1px] md:pb-[1px]",
+              "text-default-900"
             )}
           >
-            ...Message me on LinkedIn
+            Contact me on
           </h1>
+          <div
+            className="invisible sm:visible relative w-[160px] h-[43.43px] ml-3"
+          >
+            <Image src="/images/linkedin_full.png" fill />
+          </div>
         </div>
         <ProfileCard />
 			</div>

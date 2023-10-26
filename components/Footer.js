@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 export const Footer = () => {
 	return (
-    <div className="w-full p-16 bg-black rounded-t-[4em] mt-[-4em]">
+    <section className="w-full p-16 bg-black rounded-t-[4em] mt-[-4em] z-50">
 			<div className="mx-auto max-w-7xl">
 				<div className="flex justify-between items-start py-6">
 					<div>
@@ -22,7 +22,7 @@ export const Footer = () => {
 					<p className="text-default-500">© 2023 Jeremy Traini</p>
 				</footer>
 			</div>
-		</div>
+		</section>
 	);
 };
 
