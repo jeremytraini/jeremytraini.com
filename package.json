@@ -13,6 +13,7 @@
     "axios": "^1.5.1",
     "flickity": "2.3.0",
     "framer-motion": "^10.16.4",
+    "js-yaml": "^4.1.0",
     "next": "latest",
     "next-themes": "^0.2.1",
     "octokit": "^3.1.1",
@@ -21,7 +22,8 @@
     "react-flickity-component": "^4.0.6",
     "react-icons": "^4.11.0",
     "react-type-animation": "^3.2.0",
-    "swiper": "^10.3.1"
+    "swiper": "^10.3.1",
+    "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
     "autoprefixer": "latest",

@@ -1,19 +1,29 @@
 import React from 'react';
 import { Image } from "@nextui-org/react";
+import NextImage from "next/image";
 
 export default function ProjectCard({ project, ...props }) {
   return (
-    <a
-      href={"#"+project.id}
-      className="cursor-default w-full px-4 rounded-xl h-64 flex justify-center items-center"
+    <div
+      className="mx-4 px-4 h-64 w-[100%-4px] flex justify-center items-center relative overflow-hidden rounded-2xl"
       {...props}
     >
       <Image
+        as={NextImage}
+        fill
         alt="Project Thumbnail"
-        className="object-cover h-64"
+        className="object-cover"
         src={project.imageUrl || "/images/thumbnails/placeholder.png"}
         isZoomed
+        removeWrapper
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById(project.id).scrollIntoView({
+            block: "center",
+            inline: "center"
+          });
+        }}
       />
-    </a>
+    </div>
   );
 }
