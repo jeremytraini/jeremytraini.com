@@ -13,7 +13,7 @@ export default function ProjectCard({ project, ...props }) {
         as={NextImage}
         fill
         alt="Project Thumbnail"
-        objectFit="cover"
+        className="object-cover"
         src={project.imageUrl || "/images/thumbnails/placeholder.png"}
         isZoomed
         removeWrapper
