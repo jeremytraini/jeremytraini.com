@@ -51,7 +51,7 @@ function TimelineItem({ data }) {
       >
         {data.imageUrl && (
           <Image
-            src={"/images/" + data.imageUrl}
+            src={"/images/timeline/" + data.imageUrl}
             alt={data.type}
             style={{ objectFit: "contain", transform: `scale(${data.scale})` }}
             fill={true}
