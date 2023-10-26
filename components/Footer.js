@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 export const Footer = () => {
 	return (
-    <section className="w-full p-16 bg-black rounded-t-[4em] mt-[-4em] z-50">
+    <section className="w-full p-12 sm:p-16 bg-black rounded-t-[4em] mt-[-4em] z-50">
 			<div className="mx-auto max-w-7xl">
 				<div className="flex justify-between items-start py-6">
 					<div>

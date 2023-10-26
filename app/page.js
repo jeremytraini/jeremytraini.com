@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <Navbar />
     </section>
-    <section id="timeline" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
+    <section id="timeline" className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24">
 			<div className="mx-auto max-w-7xl">
 				<h1
           className={clsx(
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
 			</div>
 		</section>
-    <section id="work" className="w-full p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
+    <section id="work" className="w-full p-12 sm:p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen">
 			<div className="mx-auto max-w-7xl">
         <h1
           className={clsx(
@@ -99,7 +99,7 @@ export default function Home() {
         <Projects projects={projects} />
 			</div>
 		</section>
-    <section id="contact" className="w-full p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-32 relative">
+    <section id="contact" className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-32 relative">
 			<div className="mx-auto max-w-7xl">
         <div className="flex flex-row justify-end items-end w-full pb-10">
           <h1
