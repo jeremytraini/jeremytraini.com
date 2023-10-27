@@ -12,6 +12,8 @@
     - Firebase
     - Axios
   imageUrl: /images/thumbnails/tekkerz.png
+  imageHeight: 1028
+  imageWidth: 1285
   figmaLink: >-
     https://www.figma.com/proto/gwVxjUEyHvdu57xiCYAhvl/TekkerzPDP?type=design&node-id=10-430&t=MG6oQ904BhGnZONF-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A430
   githubRepo: tekkerz
@@ -22,7 +24,7 @@
   id: churroflow
   subtitle: Warehousing Analytics
   description: >-
-    Lead a team to develop an innovative platform that transforms routine
+    Led a team to develop an innovative platform that transforms routine
     invoices into actionable business intelligence using data analytics, machine
     learning and AI.
     ChurroFlow was presented to a board of Macquarie Group engineers, securing 
@@ -39,6 +41,8 @@
     - Jira
     - Confluence
   imageUrl: /images/thumbnails/churroflow.png
+  imageHeight: 926
+  imageWidth: 1466
   githubRepo: churroflow
   liveLink: 'https://www.churroflow.com'
   isPrivate: false
@@ -56,6 +60,8 @@
     - Jira
     - Confluence
   imageUrl: /images/thumbnails/invested.png
+  imageHeight: 1200
+  imageWidth: 1600
   figmaLink: >-
     https://www.figma.com/proto/4NkA0TWj4Qlvk184gJcS4i/InvestEd-Prototypes?type=design&node-id=572-1315&t=pHSTL3OJaxbeOQHw-0&scaling=scale-down&page-id=572%3A1289&starting-point-node-id=572%3A1315
   hidden: false
@@ -72,6 +78,8 @@
     - Axios
     - TailwindCSS
   imageUrl: /images/thumbnails/jeremytraini.png
+  imageHeight: 400
+  imageWidth: 600
   liveLink: '#'
   githubRepo: jeremytraini.com
   isPrivate: false
@@ -194,6 +202,8 @@
     - Java
     - Greenfoot
   imageUrl: /images/thumbnails/collegeconnector.png
+  imageHeight: 698
+  imageWidth: 1197
   githubRepo: college-connector
   isPrivate: false
   hidden: false

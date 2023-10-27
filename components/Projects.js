@@ -8,6 +8,7 @@ import {
 } from "react-icons/tb";
 import AccessModal from './AccessModal';
 import { Tooltip, Button, useDisclosure, Image } from "@nextui-org/react";
+import NextImage from "next/image";
 
 const ProjectCard = ({ project, index, openModal }) => {
   const isOdd = index % 2 == 0;
@@ -15,19 +16,19 @@ const ProjectCard = ({ project, index, openModal }) => {
   return (
     <div id={project.id}>
       <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
-        <ProjectImage src={project.imageUrl} />
+        <ProjectImage src={project.imageUrl} height={project.imageHeight} width={project.imageWidth} />
         <ProjectDetails project={project} openModal={openModal} />
       </div>
       <div className="hidden md:flex md:flex-row mb-10 shadow-md rounded-xl">
         {isOdd ? (
           <>
-            <ProjectImage src={project.imageUrl} />
+            <ProjectImage src={project.imageUrl} height={project.imageHeight} width={project.imageWidth} />
             <ProjectDetails project={project} openModal={openModal} />
           </>
         ) : (
           <>
             <ProjectDetails project={project} openModal={openModal} />
-            <ProjectImage src={project.imageUrl} />
+            <ProjectImage src={project.imageUrl} height={project.imageHeight} width={project.imageWidth} />
           </>
         )}
       </div>
@@ -36,14 +37,18 @@ const ProjectCard = ({ project, index, openModal }) => {
   );
 }
 
-const ProjectImage = ({ src }) => {
+const ProjectImage = ({ src, height, width }) => {
   return (
-    <div className="flex-shrink flex flex-col justify-center">
+    <div className="flex-1 flex justify-center rounded-xl overflow-hidden">
       <Image
+        as={NextImage}
+        height={height}
+        width={width}
         src={src || "/images/thumbnails/placeholder.png"}
         alt="Project Image"
-        className="md:shadow-lg justify-center"
+        className="md:shadow-lg object-cover flex-1"
         removeWrapper
+        radius="none"
       />
     </div>
   );
@@ -51,7 +56,7 @@ const ProjectImage = ({ src }) => {
 
 const ProjectDetails = ({ project, openModal }) => {
   return (
-    <div className="p-6 flex flex-col w-full">
+    <div className="flex-1 p-6 flex flex-col">
       <div className="flex-grow flex flex-col justify-center">
         <h2 className="text-xl font-bold">{project.title}</h2>
         <h3 className="text-md text-gray-600 mb-2">{project.subtitle}</h3>
