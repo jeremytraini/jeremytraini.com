@@ -2,9 +2,13 @@
   id: tekkerz
   subtitle: Player Development Platform
   description: >-
-    A soccer coaching app that seamlessly integrates player engagement,
-    skill-building, and performance tracking, enabling players to master soccer
-    skills at home with real-time feedback from their coaches and peers.
+    An avant-garde soccer coaching application designed to revolutionise player 
+    training. Tekkerz PDP expertly builds player engagement and skills through 
+    performance tracking and feedback. It allows players to master soccer skills 
+    from the comfort of their own homes with real-time feedback from their 
+    coaches and peers.
+    Currently in its beta phase, the app is set for public release on both the 
+    App Store and Play Store in early 2024.
   technologies:
     - Figma
     - React Native
@@ -24,12 +28,11 @@
   id: churroflow
   subtitle: Warehousing Analytics
   description: >-
-    Led a team to develop an innovative platform that transforms routine
-    invoices into actionable business intelligence using data analytics, machine
-    learning and AI.
-    ChurroFlow was presented to a board of Macquarie Group engineers, securing 
-    first place for the Software Engineering Macquarie Prize.
-                      
+    A unique platform that transforms routine invoices into actionable business 
+    intelligence using data analytics, machine learning and AI.
+    This pioneering project was presented to a board of experienced Macquarie 
+    Group engineers, securing first place for the Software Engineering Macquarie 
+    Prize.              
   technologies:
     - React.js
     - Python
@@ -52,9 +55,10 @@
   id: invested
   subtitle: Gamified Financial Education App Prototype
   description: >-
-    Worked in a team to develop an innovative prototype for an educational
-    platform designed to empower university students with comprehensive
-    financial knowledge.
+    In collaboration with a passionate team of engineers, I played a pivotal 
+    role in the conceptualisation and design of a prototype for InvestEd – a 
+    gamified educational platform that empowers university students with 
+    comprehensive financial knowledge.
   technologies:
     - Figma
     - Jira
@@ -70,9 +74,8 @@
   id: jeremytraini
   subtitle: Personal Website
   description: >-
-    The website you're on right now. Powered by modern web technologies, this
-    website showcases my passion for engineering and design. Hope you're
-    enjoying it!
+    Powered by modern web technologies, this website showcases my passion for 
+    engineering and design.
   technologies:
     - Next.js
     - Axios
@@ -89,10 +92,11 @@
   id: quizzbuzz
   subtitle: Learning Platform
   description: >-
-    Over the course of several months, I build the frontend of QuizzBuzz, an
-    engaging and dynamic quiz platform. Adhering to modern design principles
-    with user-centric functionality, QuizzBuzz delivers a captivating experience
-    for students, making knowledge testing more interactive and enjoyable.
+    Built the frontend of QuizzBuzz, an engaging and dynamic quiz platform for 
+    students, adhering to modern design principles with user-centric 
+    functionality. The platform delivers a captivating experience for students, 
+    transforming the mundane task of knowledge testing into an enthralling and 
+    enjoyable experience.
   technologies:
     - React.js
     - Material UI
@@ -108,11 +112,10 @@
   id: auscal
   subtitle: Event Management API
   description: >-
-    Over a 3-month period, I developed AusCal, a specialised event management
-    platform for Australians. Merging real-time weather forecasts with public
-    holidays and location data, AusCal provides seamless event scheduling and
-    offers powerful API functionalities, ensuring an optimised event planning
-    experience.
+    Developed AusCal, a specialised event management platform for Australians. 
+    Merging real-time weather forecasts with public holidays and location data, 
+    AusCal provides seamless event scheduling and offers powerful API 
+    functionalities, ensuring an optimised event planning experience.
   technologies:
     - Flask
     - Python
@@ -126,10 +129,11 @@
   id: unswstreams
   subtitle: Digital Communication Tool
   description: >-
-    Drawing inspiration from Microsoft Teams, I worked in a team of 4 to create
-    a backend system that offers a seamless collaboration space. This project
-    not only allowed me to apply advanced software development practices but
-    also honed my ability to function effectively within a team setting.
+    Drawing inspiration from Microsoft Teams, I worked with a small team of 
+    like-minded students to create a backend system that offers a seamless 
+    collaboration space. This project not only allowed me to apply advanced 
+    software development practices but also honed my ability to function 
+    effectively within a team setting.
   technologies:
     - Python
     - Flask
@@ -143,11 +147,11 @@
   id: dungeonmania
   subtitle: Retro Game
   description: >-
-    In an era where web games are reigning supreme, I took on the exhilarating
-    challenge of developing the backend for "Dungeon Mania", an 80s-inspired
-    maze and puzzle game.  Tasked with crafting the backend Java application,
-    our team of 5 merged timeless gaming mechanics with contemporary software
-    design principles.
+    Venturing into the booming realm of web gaming, I embraced the thrilling 
+    task of engineering the backend for "Dungeon Mania". Set against an 80s 
+    backdrop, this maze and puzzle game combines timeless gaming mechanics with 
+    modern-day Object-Oriented design principles. Working alongside a team of 
+    four, we moulded a compelling and robust Java-based backend.
   technologies:
     - Java
     - Gradle
@@ -160,8 +164,8 @@
   id: backinblackout
   subtitle: Satellite Communication Simulator
   description: >-
-    A comprehensive challenge to model and manage satellite-to-device
-    communications, simulating a simplified yet futuristic version of the
+    A comprehensive challenge to model and manage satellite-to-device 
+    communications, simulating a simplified yet futuristic version of the 
     internet centred around file transfers.
   technologies:
     - Java
@@ -175,10 +179,10 @@
   id: edgenet
   subtitle: Decentralised Edge Network
   description: >-
-    Developed EdgeNet, an Python framework for edge devices, as part of an
-    exploration into decentralised networking. My robust solution facilitates
-    real-time data sharing and computation across devices, reflecting my
-    dedication to integrating advanced technologies with user-centric
+    Developed EdgeNet, a Python framework for edge devices, as part of an 
+    exploration into decentralised networking. My robust solution facilitates 
+    real-time data sharing and computation across devices, reflecting my 
+    dedication to integrating advanced technologies with user-centric 
     applications.
   technologies:
     - Python
@@ -191,13 +195,15 @@
   id: collegeconnector
   subtitle: Digital Wayfinding Solution
   description: >-
-    I created College Connector as a modern solution to an age-old problem:
-    navigating expansive school campuses. Recognising the need for a
-    user-friendly and precise tool, I integrated an intuitive touch interface
-    and incorporated the A* search algorithm for advanced pathfinding. This tool
-    not only streamlines the campus experience for students and parents but also
-    embodies my dedication to creating technology that's both impactful and
-    user-centric.
+    I created College Connector as a modern solution to an age-old problem: 
+    navigating expansive school campuses. Recognising the need for a 
+    user-friendly and precise tool, I integrated an intuitive touch interface 
+    and incorporated the A* search algorithm for advanced pathfinding. This tool 
+    not only streamlines the campus experience for students and parents but also 
+    embodies my dedication to creating technology that promote an equitable 
+    future.
+    I am currently liaising with key stakeholders to initiate a pilot program 
+    for the interactive kiosk within a school campus.
   technologies:
     - Java
     - Greenfoot

@@ -3,6 +3,7 @@ import {
   Inter as FontSans,
   Azeret_Mono as AzeretMono,
 } from "next/font/google"
+import "@fontsource/gabarito"
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -18,3 +19,7 @@ export const fontAzeretMono = AzeretMono({
   subsets: ["latin"],
   variable: "--font-azeret-mono",
 })
+
+export const fontGabarito = {
+  className: "gabarito",
+}
