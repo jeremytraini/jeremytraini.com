@@ -12,8 +12,7 @@ import Image from 'next/image';
 
 import {
 	GithubIcon,
-	LinkedinIcon,
-	DribbbleIcon
+	LinkedinIcon
 } from "@/components/Icons";
 
 import { Button } from "@nextui-org/react";
@@ -26,12 +25,12 @@ import ProfileCard from "@/components/ProfileCard";
 export default function Home() {
   return (
   <>
-    <section className="flex flex-col justify-evenly pb-32 h-screen max-h-[900px] min-h-[670px]">
+    <section className="flex flex-col justify-evenly pb-32 h-screen max-h-[900px] min-h-[790px]">
       <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center min-h-min">
         <div>
           <TypeAnimation
             sequence={[
-              'Jeremy Traini',
+              siteConfig.name,
             ]}
             speed={30}
             wrapper="div"
@@ -43,7 +42,13 @@ export default function Home() {
             style={{ paddingBottom: '3rem' }}
           />
         </div>
-        <p className="text-xl p-4 pb-8 text-white">Hi. I&apos;m a software engineering student at UNSW.</p>
+        <div
+          className="text-xl px-16 sm:px-20 text-left sm:text-center text-white pb-8"
+        >
+          <p className="">Trust me, I’m not a robot… but I speak their language.</p>
+          <p className="">Pursuing Software Engineering & Commerce at UNSW.</p>
+          <p className="">Always up for a challenge.</p>
+        </div>
         <div className="flex justify-center items-center gap-6 pb-10">
           <Link isExternal href={siteConfig.links.github} aria-label="Github">
             <GithubIcon size={32} className="text-white" />
@@ -51,9 +56,6 @@ export default function Home() {
           <Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
             <LinkedinIcon size={32} className="text-white" />
           </Link>
-          {/* <Link isExternal href={siteConfig.links.dribbble} aria-label="Dribbble">
-            <DribbbleIcon size={32} className="text-white" />
-          </Link> */}
           <Button
             radius="full"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
