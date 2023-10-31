@@ -45,7 +45,7 @@ export default function Home() {
         <div
           className="text-xl px-16 sm:px-20 text-left sm:text-center text-white pb-8"
         >
-          <p className="">Trust me, I’m not a robot… but I speak their language.</p>
+          <p className="">Trust me, I&rsquo;m not a robot… but I speak their language.</p>
           <p className="">Pursuing Software Engineering & Commerce at UNSW.</p>
           <p className="">Always up for a challenge.</p>
         </div>
