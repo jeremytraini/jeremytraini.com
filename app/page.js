@@ -3,7 +3,7 @@
 import { siteConfig } from "@/config/site";
 import projects from "../data/projects.yaml";
 import { Link } from "@nextui-org/link";
-import { fontAzeretMono } from "@/config/fonts";
+import { fontGabarito } from "@/config/fonts";
 import clsx from "clsx";
 import { TypeAnimation } from 'react-type-animation';
 import { Navbar } from "@/components/Navbar";
@@ -36,16 +36,16 @@ export default function Home() {
             wrapper="div"
             cursor={false}
             className={clsx(
-              "text-white text-5xl md:text-7xl",
-              // fontAzeretMono.className
+              "text-white text-6xl sm:text-7xl lg:text-8xl",
+              fontGabarito.className
             )}
             style={{ paddingBottom: '3rem' }}
           />
         </div>
         <div
-          className="text-xl px-16 sm:px-20 text-left sm:text-center text-white pb-8"
+          className="text-lg sm:text-xl px-16 sm:px-20 text-left sm:text-center text-white pb-8"
         >
-          <p className="">Trust me, I&rsquo;m not a robot… but I speak their language.</p>
+          <p className="pb-2">Trust me, I&rsquo;m not a robot… but I speak their language.</p>
           <p className="">Pursuing Software Engineering & Commerce at UNSW.</p>
           <p className="">Always up for a challenge.</p>
         </div>
