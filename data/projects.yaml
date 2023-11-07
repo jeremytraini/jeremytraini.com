@@ -104,9 +104,11 @@
     - Cypress
     - Express.js
   imageUrl: /images/thumbnails/quizzbuzz.png
+  imageHeight: 1920
+  imageWidth: 3840
   githubRepo: quizzbuzz
   isPrivate: true
-  hidden: true
+  hidden: false
 
 - title: AusCal
   id: auscal
@@ -121,9 +123,11 @@
     - Python
     - SQLite
   imageUrl: /images/thumbnails/auscal.png
+  imageHeight: 1920
+  imageWidth: 3840
   githubRepo: auscal
   isPrivate: false
-  hidden: true
+  hidden: false
 
 - title: UNSW Streams
   id: unswstreams
@@ -139,9 +143,11 @@
     - Flask
     - Pytest
   imageUrl: /images/thumbnails/unswstreams.png
+  imageHeight: 1920
+  imageWidth: 3840
   githubRepo: unsw-streams
   isPrivate: true
-  hidden: true
+  hidden: false
 
 - title: Dungeon Mania
   id: dungeonmania
@@ -156,9 +162,11 @@
     - Java
     - Gradle
   imageUrl: /images/thumbnails/dungeonmania.png
+  imageHeight: 1920
+  imageWidth: 3840
   githubRepo: dungeon-mania
   isPrivate: true
-  hidden: true
+  hidden: false
 
 - title: Back in Blackout
   id: backinblackout
@@ -171,9 +179,11 @@
     - Java
     - Gradle
   imageUrl: /images/thumbnails/backinblackout.png
+  imageHeight: 1920
+  imageWidth: 3840
   githubRepo: back-in-blackout
   isPrivate: true
-  hidden: true
+  hidden: false
 
 - title: EdgeNet
   id: edgenet
@@ -191,7 +201,7 @@
   imageWidth: 3840
   githubRepo: edge-net
   isPrivate: false
-  hidden: true
+  hidden: false
 
 - title: CollegeConnector
   id: collegeconnector
