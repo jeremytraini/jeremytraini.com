@@ -192,9 +192,10 @@ const Projects = ({ projects }) => {
           .filter((project) => !project.hidden)
           .map((project, index) => (
             <div
+              key={index}
               // variants={fadeIn('left', 'tween', 0.2, 1)}
             >
-              <ProjectCard key={index} project={project} index={index} openModal={openModal} />
+              <ProjectCard project={project} index={index} openModal={openModal} />
             </div>
           ))}
       </div>
