@@ -124,7 +124,11 @@ export default function Home() {
           <div
             className="invisible sm:visible relative w-[160px] h-[43.43px] ml-3"
           >
-            <Image src="/images/linkedin_full.png" fill />
+            <Image
+              src="/images/linkedin_full.png"
+              fill
+              alt="LinkedIn logo"
+            />
           </div>
         </div>
         <ProfileCard />

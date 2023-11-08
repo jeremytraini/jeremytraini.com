@@ -64,6 +64,7 @@ const ProjectImage = ({ title, src, height, width }) => {
         className="md:shadow-lg object-cover flex-1"
         removeWrapper
         radius="none"
+        priority
       />
     </div>
   );
