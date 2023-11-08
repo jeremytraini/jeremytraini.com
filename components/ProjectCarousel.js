@@ -77,19 +77,14 @@ const ProjectCarousel = ({ projects, ...props }) => {
       {content
         .filter(project => !project.hidden)
         .map((project, index) => (
-          <>
           <SwiperSlide
             key={index}
-            // className="h-full"
-            className="cursor-grab max-w-[33%]"
-            
+            className="cursor-grab"
           >
             <ProjectCard
               project={project}
             />
           </SwiperSlide>
-          
-          </>
         ))}
     </Swiper>
   )
