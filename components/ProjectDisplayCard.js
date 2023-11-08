@@ -23,6 +23,7 @@ export default function ProjectCard({ project, ...props }) {
             inline: "center"
           });
         }}
+        sizes="100vw"
         priority
       />
     </div>

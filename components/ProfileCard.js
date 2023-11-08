@@ -37,6 +37,7 @@ export default function ProfileCard() {
               src={"/images/timeline/unsw_logo.png"}
               style={{ objectFit: "contain", transform: `scale(0.7)` }}
               fill={true}
+              sizes="160px"
               alt="UNSW Logo"
             />
           </div>
