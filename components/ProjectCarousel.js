@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from './ProjectDisplayCard';
 
 // Import Swiper React components
@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 const ProjectCarousel = ({ projects, ...props }) => {
+  const [isSwiperInitialised, setSwiperInitialised] = useState(false);
+
   function wrapAroundList(list) {
     const wrapLength = 20;
 
@@ -28,7 +30,6 @@ const ProjectCarousel = ({ projects, ...props }) => {
   // Function to make it so that the projects alternate to the left and right of 
   // the centre one.
   // e.g. [1, 2, 3, 4, 5] -> [1, 2, 5, 4, 3]
-
   function alternateList(projects) {
     let result = [];
     let addToStart = true;
@@ -56,8 +57,8 @@ const ProjectCarousel = ({ projects, ...props }) => {
 
   return (
     <Swiper
+      onInit={() => setSwiperInitialised(true)}
       slidesPerView={4}
-      // spaceBetween={30}
       centeredSlides={true}
       loop
       breakpoints={{
@@ -71,20 +72,24 @@ const ProjectCarousel = ({ projects, ...props }) => {
           slidesPerView: 4,
         },
       }}
-      className="h-full"
+      className={"h-full transition transition-transform-opacity" + (isSwiperInitialised ? " opacity-100" : " opacity-0")}
     >
       {content
         .filter(project => !project.hidden)
         .map((project, index) => (
+          <>
           <SwiperSlide
             key={index}
             // className="h-full"
-            className="cursor-grab"
+            className="cursor-grab max-w-[33%]"
+            
           >
             <ProjectCard
               project={project}
             />
           </SwiperSlide>
+          
+          </>
         ))}
     </Swiper>
   )
