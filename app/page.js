@@ -126,8 +126,9 @@ export default function Home() {
           >
             <Image
               src="/images/linkedin_full.png"
-              fill
               alt="LinkedIn logo"
+              fill
+              sizes="320px"
             />
           </div>
         </div>
