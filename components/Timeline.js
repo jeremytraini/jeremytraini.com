@@ -54,8 +54,7 @@ function TimelineItem({ data }) {
             style={{ objectFit: "contain", transform: `scale(${data.scale})` }}
             fill={true}
             alt={"Logo for " + data.name}
-            sizes="80px"
-            quality={75}
+            sizes="160px"
           />
         )}
         {data.icon}
