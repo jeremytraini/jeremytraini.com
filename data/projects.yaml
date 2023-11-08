@@ -2,7 +2,7 @@
   id: tekkerz
   subtitle: Player Development Platform
   description: >-
-    An avant-garde soccer coaching application designed to revolutionise player 
+    An avant-garde soccer coaching application revolutionising player 
     training. Tekkerz PDP expertly builds player engagement and skills through 
     performance tracking and feedback. It allows players to master soccer skills 
     from the comfort of their own homes with real-time feedback from their 
@@ -28,9 +28,9 @@
   id: churroflow
   subtitle: Warehousing Analytics
   description: >-
-    A unique platform that transforms routine invoices into actionable business 
+    A platform that transforms invoices into actionable business 
     intelligence using data analytics, machine learning and AI.
-    This pioneering project was presented to a board of experienced Macquarie 
+    This unique project was presented to a board of experienced Macquarie 
     Group engineers, securing first place for the Software Engineering Macquarie 
     Prize.              
   technologies:
@@ -95,8 +95,8 @@
     Built the frontend of QuizzBuzz, an engaging and dynamic quiz platform for 
     students, adhering to modern design principles with user-centric 
     functionality. The platform delivers a captivating experience for students, 
-    transforming the mundane task of knowledge testing into an enthralling and 
-    enjoyable experience.
+    transforming the mundane task of knowledge testing into an enthralling 
+    experience.
   technologies:
     - React.js
     - Material UI
@@ -153,11 +153,11 @@
   id: dungeonmania
   subtitle: Retro Game
   description: >-
-    Venturing into the booming realm of web gaming, I embraced the thrilling 
-    task of engineering the backend for "Dungeon Mania". Set against an 80s 
-    backdrop, this maze and puzzle game combines timeless gaming mechanics with 
+    Venturing into the booming realm of web gaming, I embraced the task of 
+    engineering the backend for "Dungeon Mania". Set against an 80s backdrop, 
+    this maze and puzzle game combines timeless gaming mechanics with 
     modern-day Object-Oriented design principles. Working alongside a team of 
-    four, we moulded a compelling and robust Java-based backend.
+    four, I developed a robust Java-based backend.
   technologies:
     - Java
     - Gradle
@@ -172,9 +172,9 @@
   id: backinblackout
   subtitle: Satellite Communication Simulator
   description: >-
-    A comprehensive challenge to model and manage satellite-to-device 
-    communications, simulating a simplified yet futuristic version of the 
-    internet centred around file transfers.
+    A challenge to model and manage satellite-to-device communications in Java, 
+    simulating a simplified yet futuristic version of the internet centred 
+    around file transfers.
   technologies:
     - Java
     - Gradle
@@ -190,7 +190,7 @@
   subtitle: Decentralised Edge Network
   description: >-
     Developed EdgeNet, a Python framework for edge devices, as part of an 
-    exploration into decentralised networking. My robust solution facilitates 
+    exploration into decentralised networking. My solution facilitates 
     real-time data sharing and computation across devices, reflecting my 
     dedication to integrating advanced technologies with user-centric 
     applications.
@@ -203,7 +203,7 @@
   isPrivate: false
   hidden: false
 
-- title: CollegeConnector
+- title: College Connector
   id: collegeconnector
   subtitle: Digital Wayfinding Solution
   description: >-
