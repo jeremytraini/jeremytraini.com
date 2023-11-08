@@ -37,7 +37,8 @@ export default function Home() {
       />
       <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center min-h-min">
         <div>
-          <TypeAnimation
+          {/* <TypeAnimation
+
             sequence={[
               siteConfig.name,
             ]}
@@ -49,7 +50,16 @@ export default function Home() {
               fontGabarito.className
             )}
             style={{ paddingBottom: '3rem' }}
-          />
+          /> */}
+          <div
+            className={clsx(
+              "text-white text-6xl sm:text-7xl lg:text-8xl",
+              fontGabarito.className
+            )}
+            style={{ paddingBottom: '3rem' }}
+          >
+            {siteConfig.name}
+          </div>
         </div>
         <div
           className="text-lg sm:text-xl px-16 sm:px-20 text-left sm:text-center text-white pb-8"
