@@ -9,12 +9,42 @@ import {
 import AccessModal from './AccessModal';
 import { Tooltip, Button, useDisclosure, Image } from "@nextui-org/react";
 import NextImage from "next/image";
+import { motion, useAnimation } from 'framer-motion';
+
+const fadeIn = (direction, type, delay, duration) => ({
+  hidden: {
+    x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
+    y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: 'easeOut',
+    },
+  },
+});
+
+const staggeredContainer = (staggerChildren, delayChildren) => ({
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren,
+      delayChildren,
+    },
+  },
+});
 
 const ProjectCard = ({ project, index, openModal }) => {
   const isOdd = index % 2 == 0;
 
   return (
-    <div id={project.id}>
+    <div id={project.id} >
       <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
         <ProjectImage
           title={project.title}
@@ -152,11 +182,22 @@ const Projects = ({ projects }) => {
 
   return (
     <div className="py-4">
-      {projects
-        .filter((project) => !project.hidden)
-        .map((project, index) => (
-          <ProjectCard key={index} project={project} index={index} openModal={openModal} />
-        ))}
+      <div
+        // variants={staggeredContainer(0.1, 0.1)}
+        // initial="hidden"
+        // whileInView="show"
+        // viewport={{ once: false, amount: 0.25 }}
+      >
+        {projects
+          .filter((project) => !project.hidden)
+          .map((project, index) => (
+            <div
+              // variants={fadeIn('left', 'tween', 0.2, 1)}
+            >
+              <ProjectCard key={index} project={project} index={index} openModal={openModal} />
+            </div>
+          ))}
+      </div>
       <AccessModal project={currentProject} isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
   );
