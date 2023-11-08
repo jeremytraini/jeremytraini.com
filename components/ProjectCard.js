@@ -13,7 +13,7 @@ export default function ProjectCard({ project, ...props }) {
       <Image
         as={NextImage}
         fill
-        alt="Project Thumbnail"
+        alt={"Project thumbnail for " + project.title}
         className="object-cover h-full"
         src={project.imageUrl || "/images/thumbnails/placeholder.png"}
         isZoomed />

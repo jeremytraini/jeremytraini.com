@@ -52,9 +52,9 @@ function TimelineItem({ data }) {
         {data.imageUrl && (
           <Image
             src={"/images/timeline/" + data.imageUrl}
-            alt={data.type}
             style={{ objectFit: "contain", transform: `scale(${data.scale})` }}
             fill={true}
+            alt={"Logo for " + data.name}
           />
         )}
         {data.icon}

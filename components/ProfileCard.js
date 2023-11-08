@@ -13,7 +13,7 @@ export default function ProfileCard() {
           width={156}
           className="rounded-full object-cover border-4 border-white -mt-[138px]"
           src="/images/me.jpg" 
-          alt="Picture of me"
+          alt="Picture of Jeremy Traini"
         />
       </div>
       <div className="flex items-center justify-between mt-4">
@@ -37,6 +37,7 @@ export default function ProfileCard() {
               src={"/images/timeline/unsw_logo.png"}
               style={{ objectFit: "contain", transform: `scale(0.7)` }}
               fill={true}
+              alt="UNSW Logo"
             />
           </div>
           <Link
