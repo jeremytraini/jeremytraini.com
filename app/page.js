@@ -35,9 +35,6 @@ export default function Home() {
       <div
         className="-z-50 absolute w-[400px] h-[800px] right-[10%] top-[5%] bg-gradient-to-br from-blue-300 to-blue-600 opacity-10 lg:opacity-30 filter blur-[175px] transform rotate-[120deg]"
       />
-      {/* <div
-        className="visible md:invisible -z-50 absolute w-[200px] h-[400px] left-[10%] top-[5%] bg-gradient-to-br from-blue-300 to-blue-600 opacity-40 filter blur-[175px] transform rotate-[120deg]"
-      /> */}
       <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center min-h-min">
         <div>
           <TypeAnimation
