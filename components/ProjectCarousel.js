@@ -48,9 +48,7 @@ const ProjectCarousel = ({ projects, ...props }) => {
     for (let i = 0; i <= halfLength; i++) {
       result.unshift(result.pop());
     }
-
-    console.log(projects);
-    console.log(result);
+    
     return result;
   }
 

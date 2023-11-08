@@ -15,11 +15,9 @@ export const metadata = {
 		{ media: "(prefers-color-scheme: light)", color: "white" },
 		{ media: "(prefers-color-scheme: dark)", color: "black" },
 	],
-	// icons: {
-	// 	icon: "/favicon.ico",
-		// shortcut: "/favicon-16x16.png",
-		// apple: "/apple-touch-icon.png",
-	// },
+	icons: {
+		icon: "/favicon.ico",
+	},
 };
 
 
@@ -29,22 +27,20 @@ export default function RootLayout({ children }) {
     <html
 			lang="en"
 			suppressHydrationWarning
-			className="scroll-smooth"
+			className="scroll-smooth bg-black"
 		>
 			<head />
       <body className={clsx(
-					"min-h-screen bg-background antialiased",
+					"min-h-screen  antialiased",
 					fontSans.variable
 				)}
 			>
-        {/* <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}> */}
-          <div className="relative flex flex-col bg-black">
-						<main className="w-full pt-10 flex-grow">
-							{children}
-						</main>
-						<Footer />
-					</div>
-        {/* </Providers> */}
+				<div className="overflow-hidden relative flex flex-col">
+					<main className="w-full pt-10 flex-grow">
+						{children}
+					</main>
+					<Footer />
+				</div>
       </body>
     </html>
   )
