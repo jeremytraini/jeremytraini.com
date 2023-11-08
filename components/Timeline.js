@@ -1,14 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
 import { HiRocketLaunch } from "react-icons/hi2";
+import BarkerLogo from '../public/images/timeline/barker_logo.png';
+import UnswLogo from '../public/images/timeline/unsw_logo.png';
+import InfotrackLogo from '../public/images/timeline/infotrack_logo.png';
 
 const experiences = [
   {
     type: 'High School',
     name: 'Barker College',
     duration: '2013 - 2020',
-    // description: 'Description about my time at school',
-    imageUrl: 'barker_logo.png',
+    image: BarkerLogo,
     backgroundColor: '#e02725',
     scale: 0.8
   },
@@ -16,8 +18,7 @@ const experiences = [
     type: 'University',
     name: 'UNSW Sydney',
     duration: '2021 - Present',
-    // description: 'Description about your time at university',
-    imageUrl: 'unsw_logo.png',
+    image: UnswLogo,
     backgroundColor: '#fee600',
     scale: 0.7
   },
@@ -25,8 +26,7 @@ const experiences = [
     type: 'Internship',
     name: 'InfoTrack',
     duration: '2022 - 2023',
-    // description: 'Description about my work experience',
-    imageUrl: 'infotrack_logo.png',
+    image: InfotrackLogo,
     backgroundColor: '#ffffff',
     scale: 0.8
   },
@@ -34,7 +34,6 @@ const experiences = [
     type: 'Next',
     name: 'Your Company?',
     duration: '2023',
-    // description: 'Description about my work experience',
     icon: <HiRocketLaunch color="white" className="w-12 h-12" />,
     backgroundColor: '#ffa500',
     scale: 0.8
@@ -49,12 +48,13 @@ function TimelineItem({ data }) {
         className="w-20 h-20 rounded-xl relative shadow-xl flex justify-center items-center"
         style={{ backgroundColor: data.backgroundColor }}
       >
-        {data.imageUrl && (
+        {data.image && (
           <Image
-            src={"/images/timeline/" + data.imageUrl}
-            alt={data.type}
+            src={data.image}
             style={{ objectFit: "contain", transform: `scale(${data.scale})` }}
             fill={true}
+            alt={"Logo for " + data.name}
+            sizes="160px"
           />
         )}
         {data.icon}

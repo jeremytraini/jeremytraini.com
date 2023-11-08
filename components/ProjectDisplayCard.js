@@ -11,7 +11,7 @@ export default function ProjectCard({ project, ...props }) {
       <Image
         as={NextImage}
         fill
-        alt="Project Thumbnail"
+        alt={"Project thumbnail for " + project.title}
         className="object-cover"
         src={project.imageUrl || "/images/thumbnails/placeholder.png"}
         isZoomed
@@ -23,6 +23,7 @@ export default function ProjectCard({ project, ...props }) {
             inline: "center"
           });
         }}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         priority
       />
     </div>

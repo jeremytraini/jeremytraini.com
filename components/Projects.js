@@ -16,19 +16,34 @@ const ProjectCard = ({ project, index, openModal }) => {
   return (
     <div id={project.id}>
       <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
-        <ProjectImage src={project.imageUrl} height={project.imageHeight} width={project.imageWidth} />
+        <ProjectImage
+          title={project.title}
+          src={project.imageUrl}
+          height={project.imageHeight}
+          width={project.imageWidth}
+        />
         <ProjectDetails project={project} openModal={openModal} />
       </div>
       <div className="hidden md:flex md:flex-row mb-10 shadow-md rounded-xl">
         {isOdd ? (
           <>
-            <ProjectImage src={project.imageUrl} height={project.imageHeight} width={project.imageWidth} />
+            <ProjectImage
+              title={project.title}
+              src={project.imageUrl}
+              height={project.imageHeight}
+              width={project.imageWidth}
+            />
             <ProjectDetails project={project} openModal={openModal} />
           </>
         ) : (
           <>
             <ProjectDetails project={project} openModal={openModal} />
-            <ProjectImage src={project.imageUrl} height={project.imageHeight} width={project.imageWidth} />
+            <ProjectImage
+              title={project.title}
+              src={project.imageUrl}
+              height={project.imageHeight}
+              width={project.imageWidth}
+            />
           </>
         )}
       </div>
@@ -37,7 +52,7 @@ const ProjectCard = ({ project, index, openModal }) => {
   );
 }
 
-const ProjectImage = ({ src, height, width }) => {
+const ProjectImage = ({ title, src, height, width }) => {
   return (
     <div className="flex-1 flex justify-center rounded-xl overflow-hidden">
       <Image
@@ -45,10 +60,11 @@ const ProjectImage = ({ src, height, width }) => {
         height={height}
         width={width}
         src={src || "/images/thumbnails/placeholder.png"}
-        alt="Project Image"
+        alt={"Project thumbnail for " + title}
         className="md:shadow-lg object-cover flex-1"
         removeWrapper
         radius="none"
+        priority
       />
     </div>
   );
