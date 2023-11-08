@@ -8,14 +8,10 @@ export default function ProjectCard({ project, ...props }) {
       className="mx-4 px-4 h-64 w-[100%-4px] flex justify-center items-center relative overflow-hidden rounded-2xl"
       {...props}
     >
-      <Image
-        as={NextImage}
-        fill
+      <NextImage
+        src={project.imageUrl || "/images/thumbnails/placeholder.png"}
         alt={"Project thumbnail for " + project.title}
         className="object-cover"
-        src={project.imageUrl || "/images/thumbnails/placeholder.png"}
-        isZoomed
-        removeWrapper
         onClick={(e) => {
           e.preventDefault();
           document.getElementById(project.id).scrollIntoView({
@@ -23,7 +19,8 @@ export default function ProjectCard({ project, ...props }) {
             inline: "center"
           });
         }}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        fill
+        sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 50vw"
         priority
       />
     </div>

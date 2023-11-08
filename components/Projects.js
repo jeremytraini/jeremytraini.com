@@ -24,7 +24,7 @@ const ProjectCard = ({ project, index, openModal }) => {
         />
         <ProjectDetails project={project} openModal={openModal} />
       </div>
-      <div className="hidden md:flex md:flex-row mb-10 shadow-md rounded-xl">
+      <div className="hidden md:flex md:flex-row justify-center items-center mb-10 shadow-md rounded-xl relative">
         {isOdd ? (
           <>
             <ProjectImage
@@ -54,26 +54,27 @@ const ProjectCard = ({ project, index, openModal }) => {
 
 const ProjectImage = ({ title, src, height, width }) => {
   return (
-    <div className="flex-1 flex justify-center rounded-xl overflow-hidden">
-      <Image
-        as={NextImage}
-        height={height}
-        width={width}
-        src={src || "/images/thumbnails/placeholder.png"}
-        alt={"Project thumbnail for " + title}
-        className="md:shadow-lg object-cover flex-1"
-        removeWrapper
-        radius="none"
-        priority
-      />
+    <div className="w-full md:w-[50%] lg:w-[60%] h-[250px] md:h-[280px] lg:h-[450px] rounded-xl overflow-hidden relative">
+      <div
+        className="relative w-full h-full"
+      >
+        <NextImage
+          src={src || "/images/thumbnails/placeholder.png"}
+          alt={"Project thumbnail for " + title}
+          className="object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 100vw"
+          priority
+        />
+      </div>
     </div>
   );
 }
 
 const ProjectDetails = ({ project, openModal }) => {
   return (
-    <div className="flex-1 p-6 flex flex-col">
-      <div className="flex-grow flex flex-col justify-center">
+    <div className="md:w-[50%] lg:w-[40%] p-6 flex flex-col justify-between">
+      <div className="flex-grow flex flex-col justify-start">
         <h2 className="text-xl font-bold">{project.title}</h2>
         <h3 className="text-md text-gray-600 mb-2">{project.subtitle}</h3>
         <p className="text-sm text-gray-800 mb-2">{project.description}</p>
