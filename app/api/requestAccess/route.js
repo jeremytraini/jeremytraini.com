@@ -6,23 +6,24 @@ const octokit = new Octokit({
 })
 
 const addCollaborator = async (owner, repo, username) => {
-  const response = await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
-    owner: owner,
-    repo: repo,
-    username: username,
-    permission: 'read',
-    headers: {
-      'X-GitHub-Api-Version': '2022-11-28'
+    try {
+        await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
+            owner: owner,
+            repo: repo,
+            username: username,
+            permission: 'read',
+            headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
+            }
+        });
+        return new Response("Successfully added you to the repo!", { status: 201 });
+    } catch (error) {
+        if (error.status == 404) {
+            return new Response("Could not find your username on Github.", { status: 404 });
+        } else {
+            return new Response("There was a problem on Github's side so I couldn't add you to the repo.", { status: 500 });
+        }
     }
-  });
-
-  if (response.status == 201) {
-    return new Response("Successfully added you to the repo!", { status: 201 });
-  } else if (response.status == 404) {
-    return new Response("Could not find your username on Github.", { status: 404 });
-  } else {
-    return new Response("There was a problem on Github's side so I couldn't add you to the repo.", { status: 500 });
-  }
 }
 
 
