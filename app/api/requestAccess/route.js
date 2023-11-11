@@ -28,9 +28,9 @@ const addCollaborator = async (owner, repo, username) => {
 
 // API route for requesting access to the repo
 // POST /api/requestAccess
-// Request body: { username: string, code: string }
+// Request body: { repo: string, username: string, code: string }
 // Response: { message: string }
-// Status code: 201
+// Status code: 200
 export const POST = async (request) => {
     if (request == null) {
         return new Response("You must supply a request body!", { status: 400 });
@@ -40,21 +40,21 @@ export const POST = async (request) => {
         return new Response("You must supply a JSON request body!", { status: 400 });
     }
 
-    const { username, code } = await request.json();
-
-    // Require username and secret code
-    if (!username || !code) {
-        return new Response("You must supply your GitHub username and secret code!", { status: 400 });
+    const { repo, username, code } = await request.json();
+    
+    // Validation for required fields
+    if (!repo || !username || !code) {
+        return new Response("Missing required fields: repo, username, and/or secret code.", { status: 400 });
     }
 
-    if (code != process.env.REQUEST_ACCESS_CODE) {
+    if (!process.env.REQUEST_ACCESS_CODE.split(",").includes(code)) {
         return new Response("Invalid code!", { status: 401 });
     }
     
     try {
-        await addCollaborator("jeremytraini", "jeremytraini.com", username);
-        return new Response("Successfully added you to the repo!", { status: 201 });
+        await addCollaborator("jeremytraini", repo, username);
+        return new Response("Successfully added you to the repo!", { status: 200 });
     } catch (error) {
-        return new Response("Could not add you to the repo!", { status: 400 });
+        return new Response("There was a problem on Github's side so I couldn't add you to the repo.", { status: 500 });
     }
 }
