@@ -17,11 +17,11 @@ const addCollaborator = async (owner, repo, username) => {
   });
 
   if (response.status == 201) {
-    return `Successfully added ${username} as a collaborator.`;
+    return new Response("Successfully added you to the repo!", { status: 201 });
   } else if (response.status == 404) {
-    return `Could not find ${username}.`;
+    return new Response("Could not find your username on Github.", { status: 404 });
   } else {
-    return `Failed to add ${username}. Response: ${response.text}`;
+    return new Response("There was a problem on Github's side so I couldn't add you to the repo.", { status: 500 });
   }
 }
 
@@ -30,7 +30,7 @@ const addCollaborator = async (owner, repo, username) => {
 // POST /api/requestAccess
 // Request body: { repo: string, username: string, code: string }
 // Response: { message: string }
-// Status code: 200
+// Status code: 201
 export const POST = async (request) => {
     if (request == null) {
         return new Response("You must supply a request body!", { status: 400 });
@@ -51,10 +51,5 @@ export const POST = async (request) => {
         return new Response("Invalid code!", { status: 401 });
     }
     
-    try {
-        await addCollaborator("jeremytraini", repo, username);
-        return new Response("Successfully added you to the repo!", { status: 200 });
-    } catch (error) {
-        return new Response("There was a problem on Github's side so I couldn't add you to the repo.", { status: 500 });
-    }
+    return await addCollaborator("jeremytraini", repo, username);
 }
