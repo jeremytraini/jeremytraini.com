@@ -151,10 +151,10 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
               <ModalBody>
                 {isSuccess
                 ? (<>
-                    <p>You've been granted read access to the "{project.githubRepo}" repo.</p>
+                    <p>You&apos;ve been granted read access to the &quot;{project.githubRepo}&quot; repo.</p>
                     <p>You should receive an email from Github shortly.</p>
                   </>)
-                : <p>There was a problem on Github's side so I couldn't add you to the repo.</p>
+                : <p>There was a problem on Github&apos;s side so I couldn&apos;t add you to the repo.</p>
                 }
               </ModalBody>
               <ModalFooter>
