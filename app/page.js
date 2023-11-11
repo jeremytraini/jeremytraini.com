@@ -1,26 +1,21 @@
-"use client";
-
 import { siteConfig } from "@/config/site";
 import projects from "../data/projects.yaml";
 import { Link } from "@nextui-org/link";
 import { fontGabarito } from "@/config/fonts";
 import clsx from "clsx";
 import { TypeAnimation } from 'react-type-animation';
-import { Navbar } from "@/components/Navbar";
-import { MdEmail } from "react-icons/md";
 import Image from 'next/image';
 
-import {
-	GithubIcon,
-	LinkedinIcon
-} from "@/components/Icons";
-
-import { Button } from "@nextui-org/react";
-
+import { Navbar } from "@/components/Navbar";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Timeline from "@/components/Timeline";
 import Projects from "@/components/Projects";
 import ProfileCard from "@/components/ProfileCard";
+import EmailButton from "@/components/EmailButton";
+import {
+	GithubIcon,
+	LinkedinIcon
+} from "@/components/Icons";
 
 export default function Home() {
   return (
@@ -74,14 +69,7 @@ export default function Home() {
           <Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
             <LinkedinIcon size={32} className="text-white" />
           </Link>
-          <Button
-            radius="full"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold"
-            onPress={() => window.open(`mailto:${siteConfig.email}?subject=Hello Jeremy!`)}
-            endContent={<MdEmail size={18} />}
-          >
-            Email me
-          </Button>
+          <EmailButton />
         </div>
       </div>
       <div className="pb-10">

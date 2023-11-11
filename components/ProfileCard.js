@@ -1,10 +1,10 @@
-import React from "react";
-import { Link, Button } from "@nextui-org/react";
+import { Link } from "@nextui-org/link";
+import { Button } from "@nextui-org/button";
 import { LinkedinConnect, LinkedinVerified } from "./Icons";
 import { siteConfig } from "@/config/site";
 import Image from 'next/image';
 
-export default function ProfileCard() {
+const ProfileCard = () => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-md">
       <div className="flex justify-start w-full">
@@ -72,3 +72,5 @@ export default function ProfileCard() {
     </div>
   );
 }
+
+export default ProfileCard;
