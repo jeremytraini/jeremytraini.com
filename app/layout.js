@@ -1,5 +1,4 @@
 import './globals.css';
-import { Providers } from './providers';
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
