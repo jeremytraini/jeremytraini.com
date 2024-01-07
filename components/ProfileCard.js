@@ -25,7 +25,7 @@ const ProfileCard = () => {
             </div>
             <p className="mt-1 text-md">Software Engineering Student at UNSW</p>
             <p className="mt-2 text-sm text-gray-500">Sydney, New South Wales, Australia</p>
-            <p className="mt-2 text-sm text-gray-500"><span className="font-bold">323</span> connections</p>
+            <p className="mt-2 text-sm text-gray-500"><span className="font-bold">338</span> connections</p>
           </div>
         </div>
         <div className="hidden sm:flex w-[232px] items-center gap-2">
