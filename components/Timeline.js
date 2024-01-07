@@ -33,7 +33,7 @@ const experiences = [
   {
     type: 'Next',
     name: 'Your Company?',
-    duration: '2023',
+    duration: '2024',
     icon: <HiRocketLaunch color="white" className="w-12 h-12" />,
     backgroundColor: '#ffa500',
     scale: 0.8
