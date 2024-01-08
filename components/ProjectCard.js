@@ -28,7 +28,7 @@ const ProjectCard = ({ project, index, openModal }) => {
       }}
       initial="hidden"
       animate={mainControls}
-      transition={{ duration: 1, delay: 0.25, ease: "easeOut" }}
+      transition={{ duration: 0.8, delay: 0.20, ease: "easeOut" }}
     >
       <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
         <ProjectImage
