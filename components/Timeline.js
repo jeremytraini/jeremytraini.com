@@ -6,41 +6,7 @@ import UnswLogo from '../public/images/timeline/unsw_logo.png';
 import InfotrackLogo from '../public/images/timeline/infotrack_logo.png';
 import TimelineItem from './TimelineItem';
 import { motion, useInView, useAnimation } from "framer-motion";
-
-const experiences = [
-  {
-    type: 'High School',
-    name: 'Barker College',
-    duration: '2013 - 2020',
-    image: BarkerLogo,
-    backgroundColor: '#e02725',
-    scale: 0.8
-  },
-  {
-    type: 'University',
-    name: 'UNSW Sydney',
-    duration: '2021 - Present',
-    image: UnswLogo,
-    backgroundColor: '#fee600',
-    scale: 0.7
-  },
-  {
-    type: 'Internship',
-    name: 'InfoTrack',
-    duration: '2022 - 2023',
-    image: InfotrackLogo,
-    backgroundColor: '#ffffff',
-    scale: 0.8
-  },
-  {
-    type: 'Next',
-    name: 'Your Company?',
-    duration: '2024',
-    icon: <HiRocketLaunch color="white" className="w-12 h-12" />,
-    backgroundColor: '#ffa500',
-    scale: 0.8
-  }
-];
+import experiences from "../data/experiences.yaml";
 
 function Timeline() {
   const ref = useRef(null);
