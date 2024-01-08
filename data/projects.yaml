@@ -14,7 +14,9 @@
     - React Native
     - Express.js
     - Firebase
+    - Google Cloud
     - Axios
+    - Jest
   imageUrl: /images/thumbnails/tekkerz.png
   imageHeight: 1920
   imageWidth: 3840
