@@ -1,9 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
-import { HiRocketLaunch } from "react-icons/hi2";
-import BarkerLogo from '../public/images/timeline/barker_logo.png';
-import UnswLogo from '../public/images/timeline/unsw_logo.png';
-import InfotrackLogo from '../public/images/timeline/infotrack_logo.png';
 import TimelineItem from './TimelineItem';
 import { motion, useInView, useAnimation } from "framer-motion";
 import experiences from "../data/experiences.yaml";
