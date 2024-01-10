@@ -16,7 +16,7 @@ const ProjectCard = ({ project, index, openModal }) => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <motion.div

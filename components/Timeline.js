@@ -18,7 +18,7 @@ function Timeline() {
     if (isInView) {
       itemControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, itemControls]);
 
   return (
     <motion.div
