@@ -23,12 +23,12 @@ const ProjectCard = ({ project, index, openModal }) => {
       ref={ref}
       id={project.id}
       variants={{
-        hidden: { opacity: 0, y: 100 },
+        hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
       }}
       initial="hidden"
       animate={mainControls}
-      transition={{ duration: 0.8, delay: 0.20, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: 0, ease: "easeOut" }}
     >
       <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
         <ProjectImage

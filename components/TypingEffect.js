@@ -6,7 +6,7 @@ const TypingEffect = ({ className, sequence }) => {
   return (
     <TypeAnimation
       sequence={sequence}
-      speed={30}
+      speed={60}
       wrapper="div"
       className={className}
     />
