@@ -3,9 +3,7 @@ import projects from "../data/projects.yaml";
 import { Link } from "@nextui-org/link";
 import { fontGabarito } from "@/config/fonts";
 import clsx from "clsx";
-import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
-
 import { Navbar } from "@/components/Navbar";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Timeline from "@/components/Timeline";
@@ -16,6 +14,7 @@ import {
 	GithubIcon,
 	LinkedinIcon
 } from "@/components/Icons";
+import TypingEffect from "@/components/TypingEffect";
 
 export default function Home() {
   return (
@@ -32,20 +31,6 @@ export default function Home() {
       />
       <div className="flex flex-col justify-center items-center pt-2 md:pt-4 text-center min-h-min">
         <div>
-          {/* <TypeAnimation
-
-            sequence={[
-              siteConfig.name,
-            ]}
-            speed={30}
-            wrapper="div"
-            cursor={false}
-            className={clsx(
-              "text-white text-6xl sm:text-7xl lg:text-8xl",
-              fontGabarito.className
-            )}
-            style={{ paddingBottom: '3rem' }}
-          /> */}
           <div
             className={clsx(
               "text-white text-6xl sm:text-7xl lg:text-8xl pb-6",
@@ -58,9 +43,16 @@ export default function Home() {
         <div
           className="text-lg sm:text-xl px-16 sm:px-20 text-left text-white pb-8"
         >
-          <p className="pb-6 sm:text-xl md:text-2xl italic">Trust me, I&rsquo;m not a robot… but I speak their language.</p>
-          <p className="text-gray-200">Pursuing Software Engineering & Commerce at UNSW.</p>
-          <p className="text-gray-200">Always up for a challenge.</p>
+          <TypingEffect
+            className="sm:text-xl md:text-2xl italic h-12 leading-5 pb-8"
+            sequence={[
+              "Trust me, I’m not a robot...",
+              2000,
+              "Trust me, I’m not a robot... but I speak their language.",
+            ]}
+          />
+          <p className="text-gray-200 leading-5 pt-2">Pursuing Software Engineering & Commerce at UNSW.</p>
+          <p className="text-gray-200 leading-5 pt-2">Always up for a challenge.</p>
         </div>
         <div className="flex justify-center items-center gap-6 pb-10">
           <Link isExternal href={siteConfig.links.github} aria-label="Github">

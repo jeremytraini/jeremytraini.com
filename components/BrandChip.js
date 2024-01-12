@@ -39,6 +39,7 @@ import {
   SiJest,
   SiPytest,
   SiGradle,
+  SiGooglecloud,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import {
@@ -194,6 +195,10 @@ const BrandChip = ({ brand, ...props }) => {
     'Gradle': {
       color: "hover:bg-[#02303A]",
       icon: <SiGradle size={18} />,
+    },
+    'Google Cloud': {
+      color: "hover:bg-[#4285F4]",
+      icon: <SiGooglecloud size={16} />,
     },
   };
 
