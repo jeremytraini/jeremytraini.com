@@ -1,0 +1,23 @@
+- type: High School
+  name: Barker College
+  duration: 2013 - 2020
+  backgroundColor: "#e02725"
+  icon: barker
+
+- type: University
+  name: UNSW Sydney
+  duration: 2021 - Present
+  backgroundColor: "#fee600"
+  icon: unsw
+
+- type: Internship
+  name: InfoTrack
+  duration: 2022 - 2023
+  backgroundColor: "#ffffff"
+  icon: infotrack
+
+- type: Next
+  name: Your Company?
+  duration: '2024'
+  backgroundColor: "#ffa500"
+  icon: rocket

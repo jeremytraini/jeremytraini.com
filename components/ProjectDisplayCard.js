@@ -1,8 +1,6 @@
 "use client";
-
 import React, { useEffect } from "react";
 import NextImage from "next/image";
-
 
 const ProjectCard = ({ project, ...props }) => {
   useEffect(() => {

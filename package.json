@@ -13,7 +13,7 @@
     "@nextui-org/react": "^2.1.13",
     "axios": "^1.5.1",
     "flickity": "2.3.0",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.17.9",
     "js-yaml": "^4.1.0",
     "next": "latest",
     "next-themes": "^0.2.1",

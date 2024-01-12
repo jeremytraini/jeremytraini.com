@@ -18,7 +18,7 @@ export const Footer = () => {
 					</div>
 				</div>
 				<footer className="w-full flex items-center justify-left py-3">
-					<p className="text-default-500">© 2023 Jeremy Traini</p>
+					<p className="text-default-500">© 2024 Jeremy Traini</p>
 				</footer>
 			</div>
 		</section>
