@@ -16,8 +16,8 @@
   backgroundColor: "#ffffff"
   icon: infotrack
 
-- type: Next
-  name: Your Company?
-  duration: '2024'
-  backgroundColor: "#ffa500"
-  icon: rocket
+- type: Internship
+  name: CreditorWatch
+  duration: 2024 - Present
+  backgroundColor: "#d20e35"
+  icon: creditorwatch
