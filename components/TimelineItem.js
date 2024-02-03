@@ -5,6 +5,7 @@ import UnswLogo from '../public/images/timeline/unsw_logo.png';
 import InfotrackLogo from '../public/images/timeline/infotrack_logo.png';
 import CreditorWatchLogo from '../public/images/timeline/creditorwatch_logo.png';
 import TimelineLogo from './TimelineLogo';
+import { Link } from "@nextui-org/react";
 
 const icons = {
   "barker": <TimelineLogo src={BarkerLogo} organisation="Barker College" scale={0.8} />,
@@ -18,12 +19,16 @@ const TimelineItem = ({ data }) => {
   return (
     <div className="timeline-item flex space-x-4 my-8">
       <div className="-ml-2 mt-8 w-4 h-4 bg-default-600 rounded shadow-xl" />
-      <div
+      <Link
+        href={data.website}
+        isExternal
+        isBlock
+        color="foreground"
         className="w-20 h-20 rounded-xl relative shadow-xl flex justify-center items-center"
         style={{ backgroundColor: data.backgroundColor }}
       >
         {icons[data.icon]}
-      </div>
+      </Link>
       <div className="flex-1">
         <div>
           <h2 className="text-xl mb-2">{data.type}</h2>
