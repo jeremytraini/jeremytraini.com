@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/gabarito": "^5.0.1",
     "@nextui-org/react": "^2.1.13",
+    "@vercel/analytics": "^1.1.2",
     "axios": "^1.5.1",
     "flickity": "2.3.0",
     "framer-motion": "^10.17.9",
