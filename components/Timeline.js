@@ -61,6 +61,8 @@ function Timeline() {
             </motion.div>
           ))}
         </div>
+        {/* Arrow at the end of the timeline line */}
+        <div class="h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-default-400 ml-[-7.5px] -mb-[5px]"></div>
       </div>
     </motion.div>
   );
