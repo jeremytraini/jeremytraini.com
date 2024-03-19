@@ -3,7 +3,7 @@ import { HiRocketLaunch } from "react-icons/hi2";
 import BarkerLogo from '../public/images/timeline/barker_logo.png';
 import UnswLogo from '../public/images/timeline/unsw_logo.png';
 import InfotrackLogo from '../public/images/timeline/infotrack_logo.png';
-import CreditorWatchLogo from '../public/images/timeline/creditorwatch_logo.png';
+import SunswiftLogo from '../public/images/timeline/sunswift_logo.png';
 import TimelineLogo from './TimelineLogo';
 import { Link } from "@nextui-org/react";
 
@@ -11,7 +11,7 @@ const icons = {
   "barker": <TimelineLogo src={BarkerLogo} organisation="Barker College" scale={0.8} />,
   "unsw": <TimelineLogo src={UnswLogo} organisation="UNSW" scale={0.7} />,
   "infotrack": <TimelineLogo src={InfotrackLogo} organisation="InfoTrack" scale={0.8} />,
-  "creditorwatch": <TimelineLogo src={CreditorWatchLogo} organisation="CreditorWatch" scale={0.8} />,
+  "sunswift": <TimelineLogo src={SunswiftLogo} organisation="Sunswift Racing" scale={1} />,
   "rocket": <HiRocketLaunch color="white" className="w-12 h-12" />
 };
 
@@ -24,7 +24,7 @@ const TimelineItem = ({ data }) => {
         isExternal
         isBlock
         color="foreground"
-        className="w-20 h-20 rounded-xl relative shadow-xl flex justify-center items-center"
+        className="w-20 h-20 rounded-xl relative shadow-xl flex justify-center items-center overflow-hidden"
         style={{ backgroundColor: data.backgroundColor }}
       >
         {icons[data.icon]}
