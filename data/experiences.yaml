@@ -19,9 +19,9 @@
   website: "https://www.infotrack.com.au"
   icon: infotrack
 
-- type: Internship
-  name: CreditorWatch
+- type: Project
+  name: Sunswift Racing
   duration: 2024 - Present
-  backgroundColor: "#d20e35"
-  website: "https://www.creditorwatch.com.au"
-  icon: creditorwatch
+  backgroundColor: "#ffffff"
+  website: "https://www.sunswift.com/"
+  icon: sunswift
