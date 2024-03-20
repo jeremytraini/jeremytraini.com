@@ -15,6 +15,15 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
 
   const [isLoading, setIsLoading] = useState(false);
 
+  // Get code from query params if it exists
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    if (code) {
+      codeRef.current = code;
+    }
+  }, []);
+
   const clearForm = () => {
     setUsernameError("");
     setCodeError("");
@@ -121,6 +130,7 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
                     codeRef.current = e.target.value;
                     setCodeError("");
                   }}
+                  defaultValue={codeRef.current}
                   errorMessage={codeError}
                   isInvalid={codeError.length !== 0}
                 />

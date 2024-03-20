@@ -2,22 +2,26 @@
   name: Barker College
   duration: 2013 - 2020
   backgroundColor: "#e02725"
+  website: "https://www.barker.college"
   icon: barker
 
 - type: University
   name: UNSW Sydney
   duration: 2021 - Present
   backgroundColor: "#fee600"
+  website: "https://www.unsw.edu.au"
   icon: unsw
 
 - type: Internship
   name: InfoTrack
   duration: 2022 - 2023
   backgroundColor: "#ffffff"
+  website: "https://www.infotrack.com.au"
   icon: infotrack
 
-- type: Next
-  name: Your Company?
-  duration: '2024'
-  backgroundColor: "#ffa500"
-  icon: rocket
+- type: Project
+  name: Sunswift Racing
+  duration: 2024 - Present
+  backgroundColor: "#ffffff"
+  website: "https://www.sunswift.com/"
+  icon: sunswift

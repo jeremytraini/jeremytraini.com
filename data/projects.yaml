@@ -1,3 +1,19 @@
+- title: InsightTrader
+  id: insighttrader
+  subtitle: Financial News Analytics             
+  technologies:
+    - AWS Lambda
+    - AWS S3
+    - AWS DynamoDB
+    - AWS API Gateway
+    - AWS CloudWatch
+    - Next.js
+    - Python
+    - Jira
+    - Confluence
+  liveLink: https://insight-trader.net
+  hidden: true
+
 - title: Tekkerz PDP
   id: tekkerz
   subtitle: Player Development Platform

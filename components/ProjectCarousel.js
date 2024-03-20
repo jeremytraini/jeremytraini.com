@@ -5,9 +5,11 @@ import ProjectCard from './ProjectDisplayCard';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel } from "swiper/modules";
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/mousewheel';
 
 const ProjectCarousel = ({ projects, ...props }) => {
   const [isSwiperInitialised, setSwiperInitialised] = useState(false);
@@ -73,6 +75,12 @@ const ProjectCarousel = ({ projects, ...props }) => {
         1024: {
           slidesPerView: 4,
         },
+      }}
+      modules={[Mousewheel]}
+      mousewheel={{
+        forceToAxis: true,
+        releaseOnEdges: true,
+        sensitivity: 0.5,
       }}
       className={"h-full transition transition-transform-opacity" + (isSwiperInitialised ? " opacity-100" : " opacity-0")}
     >
