@@ -77,7 +77,7 @@ const ProfileCard = () => {
       </div>
       <div className="mt-4 flex gap-2">
         <Button
-          className="bg-[#0a66c2] hover:bg-[#004182] text-white font-bold transition"
+          className="bg-[#0a66c2] hover:bg-[#004182] hover:opacity-100 text-white font-bold transition"
           as={Link}
           radius="full"
           size="sm"
