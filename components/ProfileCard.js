@@ -12,7 +12,7 @@ const ProfileCard = () => {
           height={156}
           width={156}
           className="rounded-full object-cover border-4 border-white -mt-[138px]"
-          src="/images/me.jpg" 
+          src="/images/me.jpg"
           alt="Picture of Jeremy Traini"
         />
       </div>
@@ -29,23 +29,50 @@ const ProfileCard = () => {
           </div>
         </div>
         <div className="hidden sm:flex w-[232px] items-center gap-2">
-          <div
-            className="w-10 h-10 relative flex justify-center items-center"
-            style={{ backgroundColor: "#fee600" }}
-          >
-            <Image
-              src={"/images/timeline/unsw_logo.png"}
-              style={{ objectFit: "contain", transform: `scale(0.7)` }}
-              fill={true}
-              sizes="160px"
-              alt="UNSW Logo"
-            />
+          <div className="flex flex-col gap-2">
+            <Link
+              className="flex items-center gap-2"
+              href="https://www.linkedin.com/company/unsw-sunswift/"
+              isExternal
+            >
+              <div
+                className="w-10 h-10 relative flex justify-center items-center"
+                style={{ backgroundColor: "#ffffff" }}
+              >
+                <Image
+                  src={"/images/timeline/sunswift_logo.png"}
+                  style={{ objectFit: "contain" }}
+                  fill={true}
+                  sizes="160px"
+                  alt="Sunswift Logo"
+                />
+              </div>
+              <p className="text-sm font-semibold text-black hover:text-blue-700 hover:underline">
+                Sunswift Racing
+              </p>
+            </Link>
+            <Link
+              className="flex items-center gap-2"
+              href="https://www.linkedin.com/school/unsw/"
+              isExternal
+            >
+              <div
+                className="w-10 h-10 relative flex justify-center items-center"
+                style={{ backgroundColor: "#fee600" }}
+              >
+                <Image
+                  src={"/images/timeline/unsw_logo.png"}
+                  style={{ objectFit: "contain", transform: `scale(0.7)` }}
+                  fill={true}
+                  sizes="160px"
+                  alt="UNSW Logo"
+                />
+              </div>
+              <p className="text-sm font-semibold text-black hover:text-blue-700 hover:underline">
+                UNSW
+              </p>
+            </Link>
           </div>
-          <Link
-            className="text-sm font-semibold text-black hover:text-blue-700 hover:underline"
-            href="https://www.linkedin.com/school/unsw/"
-            isExternal
-          >UNSW</Link>
         </div>
       </div>
       <div className="mt-4 flex gap-2">
