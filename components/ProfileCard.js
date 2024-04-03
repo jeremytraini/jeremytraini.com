@@ -23,7 +23,7 @@ const ProfileCard = () => {
               <h1 className="text-2xl font-semibold">Jeremy Traini</h1>
               <div className="text-[#00000099]"><LinkedinVerified /></div>
             </div>
-            <p className="mt-1 text-md">Software Engineering Student at UNSW</p>
+            <p className="mt-1 text-md">{process.env.LINKEDIN_HEADLINE || "Software Engineer at Sunswift Racing"}</p>
             <p className="mt-2 text-sm text-gray-500">Sydney, New South Wales, Australia</p>
             <p className="mt-2 text-sm text-gray-500"><span className="font-bold">{process.env.NUM_LINKEDIN_CONNECTIONS || 361}</span> connections</p>
           </div>
