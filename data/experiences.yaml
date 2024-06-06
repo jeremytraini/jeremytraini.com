@@ -1,11 +1,4 @@
-- type: High School
-  name: Barker College
-  duration: 2013 - 2020
-  backgroundColor: "#e02725"
-  website: "https://www.barker.college"
-  icon: barker
-
-- type: University
+- type: Student
   name: UNSW Sydney
   duration: 2021 - Present
   backgroundColor: "#fee600"
@@ -19,7 +12,15 @@
   website: "https://www.infotrack.com.au"
   icon: infotrack
 
-- type: Project
+- type: Freelance
+  name: Progressive Sports Asia
+  duration: 2023 - Present
+  backgroundColor: "#ffffff"
+  website: "https://prosportsasia.com/tekkerz-football/"
+  icon: psa
+  hidden: true
+
+- type: Team Member
   name: Sunswift Racing
   duration: 2024 - Present
   backgroundColor: "#ffffff"
