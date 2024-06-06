@@ -82,7 +82,7 @@ const ProfileCard = () => {
           radius="full"
           size="sm"
           startContent={<LinkedinConnect />}
-          href={siteConfig.links.linkedin}
+          href={siteConfig.links.linkedin || "#"}
           isExternal
           variant="solid"
         >Connect</Button>
@@ -91,7 +91,7 @@ const ProfileCard = () => {
           as={Link}
           size="sm"
           radius="full"
-          href={siteConfig.links.linkedin}
+          href={siteConfig.links.linkedin || "#"}
           isExternal
           variant="solid"
         >Message</Button>

@@ -20,7 +20,7 @@ const ProjectCard = ({ project, ...props }) => {
         {...props}
       >
         <NextImage
-          src={project.imageUrl}
+          src={project.imageUrl || "/images/thumbnails/placeholder.png"}
           alt={"Project thumbnail for " + project.title}
           className="object-cover"
           onClick={(e) => {
