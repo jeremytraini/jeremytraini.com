@@ -20,7 +20,7 @@ const icons = {
 const TimelineItem = ({ data }) => {
   return (
     <div className="timeline-item flex space-x-4 my-8">
-      <div className="-ml-2 mt-8 w-4 h-4 bg-default-600 rounded shadow-xl" />
+      <div className="-ml-[9px] mt-8 w-4 h-4 bg-blue-300 rounded shadow-xl" />
       <Link
         href={data.website}
         isExternal
