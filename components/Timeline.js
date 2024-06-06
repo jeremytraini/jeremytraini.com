@@ -44,7 +44,7 @@ function Timeline() {
         <div className="hidden md:block border-l-3 border-t-3 border-blue-300 rounded-tl-lg h-1/2 w-1/2" />
       </div>
       <div className="hidden md:block border-t-3 border-r-3 border-blue-300 rounded-tr-lg w-10" />
-      <div className="flex-1 border-l-3 border-blue-300 md:border-none">
+      <div className="flex-1 border-l-3 border-blue-300 md:border-none mt-[-32px] md:mt-0">
         <div>
           {experiences.slice(2).map((experience, index) => (
             <motion.div
