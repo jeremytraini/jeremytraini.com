@@ -2,16 +2,17 @@
   id: insighttrader
   subtitle: Financial News Analytics             
   technologies:
-    - AWS Lambda
-    - AWS S3
-    - AWS DynamoDB
-    - AWS API Gateway
-    - AWS CloudWatch
+    - AWS
     - Next.js
     - Python
     - Jira
     - Confluence
+  imageUrl: /images/thumbnails/insighttrader.png
+  imageHeight: 1920
+  imageWidth: 3840
   liveLink: https://insight-trader.net
+  githubRepo: insight-trader
+  isPrivate: true
   hidden: true
 
 - title: Tekkerz PDP
@@ -73,8 +74,8 @@
   id: invested
   subtitle: Gamified Financial Education App Prototype
   description: >-
-    In collaboration with a passionate team of engineers, I played a pivotal 
-    role in the conceptualisation and design of a prototype for InvestEd – a 
+    In collaboration with a passionate team of engineers, I lead the 
+    conceptualisation and design of a prototype for InvestEd – a 
     gamified educational platform that empowers university students with 
     comprehensive financial knowledge.
   technologies:
@@ -86,24 +87,6 @@
   imageWidth: 3840
   figmaLink: >-
     https://www.figma.com/proto/4NkA0TWj4Qlvk184gJcS4i/InvestEd-Prototypes?type=design&node-id=572-1315&t=pHSTL3OJaxbeOQHw-0&scaling=scale-down&page-id=572%3A1289&starting-point-node-id=572%3A1315
-  hidden: false
-
-- title: jeremytraini.com
-  id: jeremytraini
-  subtitle: Personal Website
-  description: >-
-    Powered by modern web technologies, this website showcases my passion for 
-    engineering and design.
-  technologies:
-    - Next.js
-    - Axios
-    - TailwindCSS
-  imageUrl: /images/thumbnails/jeremytraini.png
-  imageHeight: 1920
-  imageWidth: 3840
-  liveLink: '#'
-  githubRepo: jeremytraini.com
-  isPrivate: false
   hidden: false
 
 - title: QuizzBuzz
@@ -144,6 +127,24 @@
   imageHeight: 1920
   imageWidth: 3840
   githubRepo: auscal
+  isPrivate: false
+  hidden: false
+
+- title: jeremytraini.com
+  id: jeremytraini
+  subtitle: Personal Website
+  description: >-
+    Powered by modern web technologies, this website showcases my passion for 
+    engineering and design.
+  technologies:
+    - Next.js
+    - Axios
+    - TailwindCSS
+  imageUrl: /images/thumbnails/jeremytraini.png
+  imageHeight: 1920
+  imageWidth: 3840
+  liveLink: '#'
+  githubRepo: jeremytraini.com
   isPrivate: false
   hidden: false
 
