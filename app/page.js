@@ -94,7 +94,7 @@ export default function Home() {
             "text-default-900 pb-10"
           )}
         >
-          What I&apos;m working on
+          {"What I’m working on"}
         </h1>
         <Projects projects={projects} />
 			</div>
