@@ -21,7 +21,7 @@ function Timeline() {
       ref={ref}
       className="px-6 pb-8 flex flex-col md:flex-row justify-center"
     >
-      <div className="border-l-3 md:border-b-3 border-blue-300 md:rounded-bl-lg flex-1">
+      <div className="border-l-3 md:border-b-3 border-blue-500 md:rounded-bl-lg flex-1">
         <motion.div>
           {experiences.slice(0,2).map((experience, index) => (
             <motion.div
@@ -40,11 +40,11 @@ function Timeline() {
         </motion.div>
       </div>
       <div className="hidden w-20 md:flex md:flex-row md:align-self mr-[-3px]">
-        <div className="hidden md:block border-b-3 border-r-3 border-blue-300 rounded-br-lg h-1/2 w-1/2 self-end mr-[-3px]" />
-        <div className="hidden md:block border-l-3 border-t-3 border-blue-300 rounded-tl-lg h-1/2 w-1/2" />
+        <div className="hidden md:block border-b-3 border-r-3 border-blue-500 rounded-br-lg h-1/2 w-1/2 self-end mr-[-3px]" />
+        <div className="hidden md:block border-l-3 border-t-3 border-blue-500 rounded-tl-lg h-1/2 w-1/2" />
       </div>
-      <div className="hidden md:block border-t-3 border-r-3 border-blue-300 rounded-tr-lg w-10" />
-      <div className="flex-1 border-l-3 border-blue-300 md:border-none mt-[-32px] md:mt-0">
+      <div className="hidden md:block border-t-3 border-r-3 border-blue-500 rounded-tr-lg w-10" />
+      <div className="flex-1 border-l-3 border-blue-500 md:border-none mt-[-32px] md:mt-0">
         <div>
           {experiences.slice(2).map((experience, index) => (
             <motion.div
@@ -62,7 +62,7 @@ function Timeline() {
           ))}
         </div>
         {/* Arrow at the end of the timeline line */}
-        <div className="h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-blue-300 ml-[-7.5px] -mb-[5px]"></div>
+        <div className="h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-blue-500 ml-[-7.5px] -mb-[5px]"></div>
       </div>
     </motion.div>
   );
