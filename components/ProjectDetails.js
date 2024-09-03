@@ -37,7 +37,7 @@ const ProjectDetails = ({ project, openModal }) => {
               tooltip="Request access to the source code of this project"
               onPress={() => openModal(project)}
               shortText="GitHub"
-              longText="Request Access"
+              longText="View on GitHub"
               endIcon={<TbLockCode color="gray" size={22} />}
               variant="ghost"
             />
