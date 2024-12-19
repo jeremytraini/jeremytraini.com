@@ -1,4 +1,3 @@
-'use client';
 import { Link } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 
@@ -18,7 +17,7 @@ export const Footer = () => {
 					</div>
 				</div>
 				<footer className="w-full flex items-center justify-left py-3">
-					<p className="text-default-500">© 2024 Jeremy Traini</p>
+					<p className="text-default-500">© {process.env.COPYRIGHT_YEAR || "2024"} Jeremy Traini</p>
 				</footer>
 			</div>
 		</section>
