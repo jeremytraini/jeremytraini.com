@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/gabarito": "^5.0.1",
+    "@next/third-parties": "^15.1.1",
     "@nextui-org/react": "^2.6.8",
     "@vercel/analytics": "^1.1.2",
     "axios": "^1.7.9",
