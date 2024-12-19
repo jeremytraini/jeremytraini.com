@@ -43,6 +43,7 @@ export default function RootLayout({ children }) {
         <div className="overflow-hidden relative flex flex-col">
           <main className="w-full pt-10 flex-grow">
             {children}
+            <SpeedInsights />
           </main>
           <Footer />
         </div>
