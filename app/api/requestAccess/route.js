@@ -20,11 +20,11 @@ const addCollaborator = async (owner, repo, username) => {
         return new Response("Successfully added you to the repo!", { status: 201 });
     } catch (error) {
         if (error.status == 404) {
-            console.log("Username not found on Github:", username);
-            return new Response("Could not find your username on Github.", { status: 404 });
+            console.log("Username not found on GitHub:", username);
+            return new Response("Could not find your username on GitHub.", { status: 404 });
         } else {
             console.log("Error adding collaborator:", error);
-            return new Response("There was a problem on Github's side so I couldn't add you to the repo.", { status: 500 });
+            return new Response("There was a problem on GitHub's side so I couldn't add you to the repo.", { status: 500 });
         }
     }
 }

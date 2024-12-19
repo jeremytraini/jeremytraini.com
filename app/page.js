@@ -55,10 +55,10 @@ export default function Home() {
           <p className="text-gray-200 leading-5 pt-2">Always up for a challenge.</p>
         </div>
         <div className="flex justify-center items-center gap-6 pb-10">
-          <Link isExternal href={siteConfig.links.github} aria-label="Github">
+          <Link isExternal href={siteConfig.links.github} aria-label="GitHub">
             <GithubIcon size={32} className="text-white" />
           </Link>
-          <Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
+          <Link isExternal href={siteConfig.links.linkedin} aria-label="LinkedIn">
             <LinkedinIcon size={32} className="text-white" />
           </Link>
           <EmailButton />

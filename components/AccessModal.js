@@ -45,7 +45,7 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
 
     // Check if username is valid
     if (usernameRef.current === "") {
-      setUsernameError("Please enter your Github username");
+      setUsernameError("Please enter your GitHub username");
       errorFlag = true;
     } else {
       setUsernameError("");
@@ -83,7 +83,7 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
       if (error.response.status === 401) {
         setCodeError("This code is not valid, please try again");
       } else if (error.response.status === 404) {
-        setUsernameError("This username was not found on Github, please try again");
+        setUsernameError("This username was not found on GitHub, please try again");
       } else {
         setIsSuccess(false);
         setIsStatusModalOpen(true);
@@ -103,11 +103,11 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
               <ModalHeader className="flex flex-col gap-1">Request access to the &quot;{project?.title}&quot; repository</ModalHeader>
               <ModalBody>
                 <p>This feature is only available if you have a secret access code from my resume.</p>
-                <p>You should also have a Github account.</p>
+                <p>You should also have a GitHub account.</p>
                 <Input
                   isRequired
                   label="Username"
-                  placeholder="Enter your Github username"
+                  placeholder="Enter your GitHub username"
                   labelPlacement="outside"
                   width="100%"
                   className="mt-4"
@@ -162,9 +162,9 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
                 {isSuccess
                 ? (<>
                     <p>You&apos;ve been granted read access to the &quot;{project.githubRepo}&quot; repo.</p>
-                    <p>You should receive an email from Github shortly.</p>
+                    <p>You should receive an email from GitHub shortly.</p>
                   </>)
-                : <p>There was a problem on Github&apos;s side so I couldn&apos;t add you to the repo.</p>
+                : <p>There was a problem on GitHub&apos;s side so I couldn&apos;t add you to the repo.</p>
                 }
               </ModalBody>
               <ModalFooter>
