@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import AccessModal from './AccessModal';
+import AccessModal from './EmailAccessModal';
 import { useDisclosure } from "@nextui-org/react";
 import ProjectCard from "./ProjectCard";
 
