@@ -29,5 +29,6 @@ export const siteConfig = {
 			label: "Contact",
 			href: "#contact",
 		},
-	]
+	],
+	timelineLineColour: "border-blue-900",
 };
