@@ -8,6 +8,9 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    "border-blue-900",
+  ],
   theme: {
     extend: {
       keyframes: {
