@@ -32,7 +32,7 @@ const ProfileCard = () => {
           <div className="flex flex-col gap-2">
             <Link
               className="flex items-center gap-2"
-              href="https://www.linkedin.com/company/unsw-sunswift/"
+              href="https://www.linkedin.com/company/commonwealthbank/"
               isExternal
             >
               <div
@@ -40,15 +40,15 @@ const ProfileCard = () => {
                 style={{ backgroundColor: "#ffffff" }}
               >
                 <Image
-                  src={"/images/timeline/sunswift_logo.png"}
+                  src={"/images/timeline/commbank_logo.png"}
                   style={{ objectFit: "contain" }}
                   fill={true}
                   sizes="160px"
-                  alt="Sunswift Logo"
+                  alt="Commonwealth Bank Logo"
                 />
               </div>
               <p className="text-sm font-semibold text-black hover:text-blue-700 hover:underline">
-                Sunswift Racing
+                Commonwealth Bank
               </p>
             </Link>
             <Link
