@@ -6,6 +6,7 @@ import UnswLogo from '../public/images/timeline/unsw_logo.png';
 import InfotrackLogo from '../public/images/timeline/infotrack_logo.png';
 import PSALogo from '../public/images/timeline/psa_logo.png';
 import SunswiftLogo from '../public/images/timeline/sunswift_logo.png';
+import CommbankLogo from '../public/images/timeline/commbank_logo.png';
 import TimelineLogo from './TimelineLogo';
 import { Link } from "@nextui-org/react";
 
@@ -15,6 +16,7 @@ const icons = {
   "infotrack": <TimelineLogo src={InfotrackLogo} organisation="InfoTrack" scale={0.8} />,
   "psa": <TimelineLogo src={PSALogo} organisation="Progressive Sports Asia Limited" scale={0.9} />,
   "sunswift": <TimelineLogo src={SunswiftLogo} organisation="Sunswift Racing" scale={1} />,
+  "commbank": <TimelineLogo src={CommbankLogo} organisation="Commonwealth Bank" scale={0.8} />,
   "rocket": <HiRocketLaunch color="white" className="w-12 h-12" />
 };
 
