@@ -6,39 +6,50 @@ import "flickity/css/flickity.css";
 const Carousel = ({ technologies }) => {
   const flickityRef = useRef(null);
   const requestId = useRef(null);
-
-  const play = useCallback(() => {
-    const mainTicker = flickityRef.current && flickityRef.current.flkty;
-    if (mainTicker) {
-      mainTicker.x -= 0.1;
-      mainTicker.settle(mainTicker.x);
-      requestId.current = window.requestAnimationFrame(play);
-    }
-  }, []);
+  const animationRef = useRef(null);
+  const animateFnRef = useRef(null);
 
   useEffect(() => {
+    // Define the animation function
+    animateFnRef.current = (mainTicker) => {
+      if (mainTicker) {
+        mainTicker.x -= 0.1;
+        mainTicker.settle(mainTicker.x);
+        animationRef.current = window.requestAnimationFrame(
+          () => animateFnRef.current(mainTicker)
+        );
+        requestId.current = animationRef.current;
+      }
+    };
+
     const pause = () => {
-      window.cancelAnimationFrame(requestId.current);
-      requestId.current = undefined;
+      if (animationRef.current) {
+        window.cancelAnimationFrame(animationRef.current);
+        animationRef.current = null;
+        requestId.current = null;
+      }
     };
 
     // Delay our logic to ensure Flickity has initialized
-    setTimeout(() => {
-      const mainTicker = flickityRef.current && flickityRef.current.flkty;
-      if (mainTicker) {
-        play();
+    const timeoutId = setTimeout(() => {
+      const mainTicker = flickityRef.current?.flkty;
+      if (mainTicker && animateFnRef.current) {
+        animateFnRef.current(mainTicker);
 
         mainTicker.on('dragStart', pause);
-        mainTicker.on('dragEnd', play);
+        mainTicker.on('dragEnd', () => {
+          if (animateFnRef.current) {
+            animateFnRef.current(mainTicker);
+          }
+        });
       }
     }, 200);
 
     return () => {
-      if (requestId.current) {
-        window.cancelAnimationFrame(requestId.current);
-      }
+      clearTimeout(timeoutId);
+      pause();
     };
-  }, [flickityRef, play]);
+  }, []);
 
   function wrapAroundList(list) {
     const wrapLength = 20;
