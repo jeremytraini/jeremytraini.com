@@ -5,3 +5,33 @@
 .gabarito {
   font-family: 'Gabarito', sans-serif;
 }
+
+/* Modern scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3a8a;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #64748b rgba(0, 0, 0, 0.1);
+}

@@ -33,7 +33,10 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
   }
 
   useEffect(() => {
-    clearForm();
+    if (!isOpen) {
+      usernameRef.current = "";
+      codeRef.current = "";
+    }
   }, [isOpen]);
 
   const onSubmit = () => {

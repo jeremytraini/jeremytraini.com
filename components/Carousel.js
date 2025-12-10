@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Flickity from 'react-flickity-component';
 import BrandChip from "./BrandChip";
 import "flickity/css/flickity.css";
@@ -7,38 +7,37 @@ const Carousel = ({ technologies }) => {
   const flickityRef = useRef(null);
   const requestId = useRef(null);
 
-  const play = useCallback(() => {
-    const mainTicker = flickityRef.current && flickityRef.current.flkty;
-    if (mainTicker) {
-      mainTicker.x -= 0.1;
-      mainTicker.settle(mainTicker.x);
-      requestId.current = window.requestAnimationFrame(play);
-    }
-  }, []);
-
   useEffect(() => {
+    function animate(mainTicker) {
+      if (mainTicker) {
+        mainTicker.x -= 0.1;
+        mainTicker.settle(mainTicker.x);
+        requestId.current = window.requestAnimationFrame(() => animate(mainTicker));
+      }
+    }
     const pause = () => {
-      window.cancelAnimationFrame(requestId.current);
-      requestId.current = undefined;
+      if (requestId.current) {
+        window.cancelAnimationFrame(requestId.current);
+        requestId.current = null;
+      }
     };
 
     // Delay our logic to ensure Flickity has initialized
-    setTimeout(() => {
-      const mainTicker = flickityRef.current && flickityRef.current.flkty;
+    const timeoutId = setTimeout(() => {
+      const mainTicker = flickityRef.current?.flkty;
       if (mainTicker) {
-        play();
+        animate(mainTicker);
 
         mainTicker.on('dragStart', pause);
-        mainTicker.on('dragEnd', play);
+        mainTicker.on('dragEnd', () => animate(mainTicker));
       }
     }, 200);
 
     return () => {
-      if (requestId.current) {
-        window.cancelAnimationFrame(requestId.current);
-      }
+      clearTimeout(timeoutId);
+      pause();
     };
-  }, [flickityRef, play]);
+  }, []);
 
   function wrapAroundList(list) {
     const wrapLength = 20;
