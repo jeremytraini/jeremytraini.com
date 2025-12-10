@@ -8,6 +8,22 @@ const nextConfig = {
 
     return config;
   },
+
+  turbopack: {
+    root: process.cwd(),
+    rules: {
+      '*.yaml': {
+        condition: { not: 'foreign' },
+        loaders: ['yaml-loader'],
+        as: '*.js'
+      },
+      '*.yml': {
+        condition: { not: 'foreign' },
+        loaders: ['yaml-loader'],
+        as: '*.js'
+      }
+    }
+  }
 }
 
 module.exports = nextConfig
