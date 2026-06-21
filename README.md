@@ -1,14 +1,14 @@
 # JeremyTraini.com
 
-This repository contains the code for my personal website, built to showcase my work, experience, and approach to software engineering.
+This repository contains the code for my personal website, built to showcase my work, experience and approach to software engineering.
 
 Access the website at [jeremytraini.com](https://jeremytraini.com).
 
 ## Features
-- **Responsive portfolio experience**: A polished landing page with project highlights, experience, and contact details.
+- **Responsive portfolio experience**: A polished landing page with project highlights, experience and contact details.
 - **Dynamic project content**: Project and timeline content is driven from structured data files for easy updates.
-- **Interactive UI**: Motion, carousels, and polished visual details help the site feel more alive without overwhelming the content.
-- **Private repo requests**: Selected private repositories can be requested by email, and the repository includes the API flow used to manage access.
+- **Interactive UI**: Motion, carousels and polished visual details help the site feel more alive without overwhelming the content.
+- **Private repo requests**: Selected private repositories can be requested by email and the repository includes the API flow used to manage access.
 
 ## Tech Stack
 - **Next.js 16**
@@ -33,7 +33,7 @@ If you want to run the optional private-repository access flow locally, create a
 ```bash
 REQUEST_ACCESS_CODE=example-code
 GITHUB_TOKEN=github-token-with-repo-access
-NUM_LINKEDIN_CONNECTIONS=500+
+NUM_LINKEDIN_CONNECTIONS=20
 LINKEDIN_HEADLINE=Software Engineer
 ```
 

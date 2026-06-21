@@ -1,30 +1,36 @@
-- title: InsightTrader
-  id: insighttrader
-  subtitle: Financial News Analytics             
+- id: insighttrader
+  title: InsightTrader
+  subtitle: Financial News Analytics
+  description: >-
+    A financial news analytics platform that turns breaking market coverage into more
+    usable signals for investors and researchers.
   technologies:
     - AWS
     - Next.js
     - Python
     - Jira
     - Confluence
-  imageUrl: /images/thumbnails/insighttrader.png
-  imageHeight: 1920
-  imageWidth: 3840
-  liveLink: https://insight-trader.net
-  githubRepo: insight-trader
-  isPrivate: true
-  hidden: true
-
-- title: Tekkerz PDP
-  id: tekkerz
+  media:
+    image:
+      src: /images/thumbnails/insighttrader.png
+      height: 1920
+      width: 3840
+  repository:
+    name: insight-trader
+    private: true
+  links:
+    live: https://insight-trader.net
+  visibility:
+    listed: false
+- id: tekkerz
+  title: Tekkerz PDP
   subtitle: Player Development Platform
   description: >-
-    An avant-garde soccer coaching application revolutionising player 
-    training. Tekkerz PDP expertly builds player engagement and skills through 
-    performance tracking and feedback. It allows players to master soccer skills 
-    from the comfort of their own homes with real-time feedback from their 
-    coaches and peers.
-    It is now available on App Store and is in use by players all across Hong Kong!
+    An avant-garde soccer coaching application revolutionising player training. Tekkerz
+    PDP expertly builds player engagement and skills through performance tracking and
+    feedback. It allows players to master soccer skills from the comfort of their own
+    homes with real-time feedback from their coaches and peers. It is now available on
+    App Store and is in use by players all across Hong Kong!
   technologies:
     - Figma
     - React Native
@@ -33,49 +39,54 @@
     - Google Cloud
     - Axios
     - Jest
-  imageUrl: /images/thumbnails/tekkerz.png
-  imageHeight: 1920
-  imageWidth: 3840
-  figmaLink: >-
-    https://www.figma.com/proto/gwVxjUEyHvdu57xiCYAhvl/TekkerzPDP?type=design&node-id=10-430&t=MG6oQ904BhGnZONF-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A430
-  appStoreUrl: https://apps.apple.com/app/tekkerz/id6476662497
-  githubRepo: tekkerz
-  isPrivate: true
-  hidden: false
-
-- title: Loopboard
-  id: loopboard
+  media:
+    image:
+      src: /images/thumbnails/tekkerz.png
+      height: 1920
+      width: 3840
+  repository:
+    name: tekkerz
+    private: true
+  links:
+    figma: >-
+      https://www.figma.com/proto/gwVxjUEyHvdu57xiCYAhvl/TekkerzPDP?type=design&node-id=10-430&t=MG6oQ904BhGnZONF-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=10%3A430
+    appStore: https://apps.apple.com/app/tekkerz/id6476662497
+  visibility:
+    listed: true
+- id: loopboard
+  title: Loopboard
   subtitle: Digital Signage Platform
   description: >-
-    A fully-featured digital signage platform engineered for venue
-    operators. Handles everything from content creation and scheduling
-    through to device management across a fleet of displays.
-    Supports a suite of live integrations and widgets from third-party
-    providers, including platforms such as HealthEngine, keeping
-    on-screen content accurate and up to date.
-    Currently running a closed pilot.
+    A fully-featured digital signage platform engineered for venue operators. Handles
+    everything from content creation and scheduling through to device management across
+    a fleet of displays. Supports a suite of live integrations and widgets from
+    third-party providers, including platforms such as HealthEngine, keeping on-screen
+    content accurate and up to date. Currently running a closed pilot.
   technologies:
     - React.js
     - Node.js
     - AWS
     - DynamoDB
     - Terraform
-  imageUrl: /images/thumbnails/placeholder.png
-  imageHeight: 1920
-  imageWidth: 3840
-  liveLink: https://loopboard.net
-  isPrivate: true
-  hidden: true
-
-- title: ChurroFlow.com
-  id: churroflow
+  media:
+    image:
+      src: /images/thumbnails/placeholder.png
+      height: 1920
+      width: 3840
+  repository:
+    private: true
+  links:
+    live: https://loopboard.net
+  visibility:
+    listed: false
+- id: churroflow
+  title: ChurroFlow.com
   subtitle: Warehousing Analytics
   description: >-
-    A platform that transforms invoices into actionable business 
-    intelligence using data analytics, machine learning and AI.
-    This unique project was presented to a board of experienced Macquarie 
-    Group engineers, securing first place for the Software Engineering Macquarie 
-    Prize.              
+    A platform that transforms invoices into actionable business intelligence using data
+    analytics, machine learning and AI. This unique project was presented to a board of
+    experienced Macquarie Group engineers, securing first place for the Software
+    Engineering Macquarie Prize.
   technologies:
     - React.js
     - Python
@@ -86,185 +97,215 @@
     - AWS
     - Jira
     - Confluence
-  imageUrl: /images/thumbnails/churroflow.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: churroflow
-  liveLink: 'https://www.churroflow.com'
-  isPrivate: false
-  hidden: false
-
-- title: InvestEd
-  id: invested
+  media:
+    image:
+      src: /images/thumbnails/churroflow.png
+      height: 1920
+      width: 3840
+  repository:
+    name: churroflow
+    private: false
+  links:
+    live: https://www.churroflow.com
+  visibility:
+    listed: true
+- id: invested
+  title: InvestEd
   subtitle: Gamified Financial Education App Prototype
   description: >-
-    In collaboration with a passionate team of engineers, I lead the 
-    conceptualisation and design of a prototype for InvestEd – a 
-    gamified educational platform that empowers university students with 
-    comprehensive financial knowledge.
+    In collaboration with a passionate team of engineers, I lead the conceptualisation
+    and design of a prototype for InvestEd – a gamified educational platform that
+    empowers university students with comprehensive financial knowledge.
   technologies:
     - Figma
     - Jira
     - Confluence
-  imageUrl: /images/thumbnails/invested.png
-  imageHeight: 1920
-  imageWidth: 3840
-  figmaLink: >-
-    https://www.figma.com/proto/4NkA0TWj4Qlvk184gJcS4i/InvestEd-Prototypes?type=design&node-id=572-1315&t=pHSTL3OJaxbeOQHw-0&scaling=scale-down&page-id=572%3A1289&starting-point-node-id=572%3A1315
-  hidden: false
-
-- title: QuizzBuzz
-  id: quizzbuzz
+  media:
+    image:
+      src: /images/thumbnails/invested.png
+      height: 1920
+      width: 3840
+  repository:
+    private: true
+  links:
+    figma: >-
+      https://www.figma.com/proto/4NkA0TWj4Qlvk184gJcS4i/InvestEd-Prototypes?type=design&node-id=572-1315&t=pHSTL3OJaxbeOQHw-0&scaling=scale-down&page-id=572%3A1289&starting-point-node-id=572%3A1315
+  visibility:
+    listed: true
+- id: quizzbuzz
+  title: QuizzBuzz
   subtitle: Learning Platform
   description: >-
-    Built the frontend of QuizzBuzz, an engaging and dynamic quiz platform for 
-    students, adhering to modern design principles with user-centric 
-    functionality. The platform delivers a captivating experience for students, 
-    transforming the mundane task of knowledge testing into an enthralling 
-    experience.
+    Built the frontend of QuizzBuzz, an engaging and dynamic quiz platform for students,
+    adhering to modern design principles with user-centric functionality. The platform
+    delivers a captivating experience for students, transforming the mundane task of
+    knowledge testing into an enthralling experience.
   technologies:
     - React.js
     - Material UI
     - Jest
     - Cypress
     - Express.js
-  imageUrl: /images/thumbnails/quizzbuzz.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: quizzbuzz
-  isPrivate: true
-  hidden: false
-
-- title: AusCal
-  id: auscal
+  media:
+    image:
+      src: /images/thumbnails/quizzbuzz.png
+      height: 1920
+      width: 3840
+  repository:
+    name: quizzbuzz
+    private: true
+  visibility:
+    listed: true
+- id: auscal
+  title: AusCal
   subtitle: Event Management API
   description: >-
-    Developed AusCal, a specialised event management platform for Australians. 
-    Merging real-time weather forecasts with public holidays and location data, 
-    AusCal provides seamless event scheduling and offers powerful API 
-    functionalities, ensuring an optimised event planning experience.
+    Developed AusCal, a specialised event management platform for Australians. Merging
+    real-time weather forecasts with public holidays and location data, AusCal provides
+    seamless event scheduling and offers powerful API functionalities, ensuring an
+    optimised event planning experience.
   technologies:
     - Flask
     - Python
     - SQLite
-  imageUrl: /images/thumbnails/auscal.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: auscal
-  isPrivate: false
-  hidden: false
-
-- title: jeremytraini.com
-  id: jeremytraini
+  media:
+    image:
+      src: /images/thumbnails/auscal.png
+      height: 1920
+      width: 3840
+  repository:
+    name: auscal
+    private: false
+  visibility:
+    listed: true
+- id: jeremytraini
+  title: jeremytraini.com
   subtitle: Personal Website
   description: >-
-    Powered by modern web technologies, this website showcases my passion for 
+    Powered by modern web technologies, this website showcases my passion for
     engineering and design.
   technologies:
     - Next.js
     - Axios
     - TailwindCSS
-  imageUrl: /images/thumbnails/jeremytraini.png
-  imageHeight: 1920
-  imageWidth: 3840
-  liveLink: '#'
-  githubRepo: jeremytraini.com
-  isPrivate: false
-  hidden: false
-
-- title: UNSW Streams
-  id: unswstreams
+  media:
+    image:
+      src: /images/thumbnails/jeremytraini.png
+      height: 1920
+      width: 3840
+  repository:
+    name: jeremytraini.com
+    private: false
+  links:
+    live: '#'
+  visibility:
+    listed: true
+- id: unswstreams
+  title: UNSW Streams
   subtitle: Digital Communication Tool
   description: >-
-    Drawing inspiration from Microsoft Teams, I worked with a small team of 
-    like-minded students to create a backend system that offers a seamless 
-    collaboration space. This project not only allowed me to apply advanced 
-    software development practices but also honed my ability to function 
-    effectively within a team setting.
+    Drawing inspiration from Microsoft Teams, I worked with a small team of like-minded
+    students to create a backend system that offers a seamless collaboration space. This
+    project not only allowed me to apply advanced software development practices but
+    also honed my ability to function effectively within a team setting.
   technologies:
     - Python
     - Flask
     - Pytest
-  imageUrl: /images/thumbnails/unswstreams.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: unsw-streams
-  isPrivate: true
-  hidden: false
-
-- title: Dungeon Mania
-  id: dungeonmania
+  media:
+    image:
+      src: /images/thumbnails/unswstreams.png
+      height: 1920
+      width: 3840
+  repository:
+    name: unsw-streams
+    private: true
+  visibility:
+    listed: true
+- id: dungeonmania
+  title: Dungeon Mania
   subtitle: Retro Game
   description: >-
-    Venturing into the booming realm of web gaming, I embraced the task of 
-    engineering the backend for "Dungeon Mania". Set against an 80s backdrop, 
-    this maze and puzzle game combines timeless gaming mechanics with 
-    modern-day Object-Oriented design principles. Working alongside a team of 
-    four, I developed a robust Java-based backend.
+    Venturing into the booming realm of web gaming, I embraced the task of engineering
+    the backend for "Dungeon Mania". Set against an 80s backdrop, this maze and puzzle
+    game combines timeless gaming mechanics with modern-day Object-Oriented design
+    principles. Working alongside a team of four, I developed a robust Java-based
+    backend.
   technologies:
     - Java
     - Gradle
-  imageUrl: /images/thumbnails/dungeonmania.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: dungeon-mania
-  isPrivate: true
-  hidden: false
-
-- title: Back in Blackout
-  id: backinblackout
+  media:
+    image:
+      src: /images/thumbnails/dungeonmania.png
+      height: 1920
+      width: 3840
+  repository:
+    name: dungeon-mania
+    private: true
+  visibility:
+    listed: true
+- id: backinblackout
+  title: Back in Blackout
   subtitle: Satellite Communication Simulator
   description: >-
-    A challenge to model and manage satellite-to-device communications in Java, 
-    simulating a simplified yet futuristic version of the internet centred 
-    around file transfers.
+    A challenge to model and manage satellite-to-device communications in Java,
+    simulating a simplified yet futuristic version of the internet centred around file
+    transfers.
   technologies:
     - Java
     - Gradle
-  imageUrl: /images/thumbnails/backinblackout.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: back-in-blackout
-  isPrivate: true
-  hidden: false
-
-- title: EdgeNet
-  id: edgenet
+  media:
+    image:
+      src: /images/thumbnails/backinblackout.png
+      height: 1920
+      width: 3840
+  repository:
+    name: back-in-blackout
+    private: true
+  visibility:
+    listed: true
+- id: edgenet
+  title: EdgeNet
   subtitle: Decentralised Edge Network
   description: >-
-    Developed EdgeNet, a Python framework for edge devices, as part of an 
-    exploration into decentralised networking. My solution facilitates 
-    real-time data sharing and computation across devices, reflecting my 
-    dedication to integrating advanced technologies with user-centric 
-    applications.
+    Developed EdgeNet, a Python framework for edge devices, as part of an exploration
+    into decentralised networking. My solution facilitates real-time data sharing and
+    computation across devices, reflecting my dedication to integrating advanced
+    technologies with user-centric applications.
   technologies:
     - Python
-  imageUrl: /images/thumbnails/edgenet.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: edge-net
-  isPrivate: false
-  hidden: false
-
-- title: College Connector
-  id: collegeconnector
+  media:
+    image:
+      src: /images/thumbnails/edgenet.png
+      height: 1920
+      width: 3840
+  repository:
+    name: edge-net
+    private: false
+  visibility:
+    listed: true
+- id: collegeconnector
+  title: College Connector
   subtitle: Digital Wayfinding Solution
   description: >-
-    I created College Connector as a modern solution to an age-old problem: 
-    navigating expansive school campuses. Recognising the need for a 
-    user-friendly and precise tool, I integrated an intuitive touch interface 
-    and incorporated the A* search algorithm for advanced pathfinding. This tool 
-    not only streamlines the campus experience for students and parents but also 
-    embodies my dedication to creating technology that promote an equitable 
-    future.
-    I am currently liaising with key stakeholders to initiate a pilot program 
-    for the interactive kiosk within a school campus.
+    I created College Connector as a modern solution to an age-old problem: navigating
+    expansive school campuses. Recognising the need for a user-friendly and precise
+    tool, I integrated an intuitive touch interface and incorporated the A* search
+    algorithm for advanced pathfinding. This tool not only streamlines the campus
+    experience for students and parents but also embodies my dedication to creating
+    technology that promote an equitable future. I am currently liaising with key
+    stakeholders to initiate a pilot program for the interactive kiosk within a school
+    campus.
   technologies:
     - Java
     - Greenfoot
-  imageUrl: /images/thumbnails/collegeconnector.png
-  imageHeight: 1920
-  imageWidth: 3840
-  githubRepo: college-connector
-  isPrivate: false
-  hidden: false
+  media:
+    image:
+      src: /images/thumbnails/collegeconnector.png
+      height: 1920
+      width: 3840
+  repository:
+    name: college-connector
+    private: false
+  visibility:
+    listed: true
