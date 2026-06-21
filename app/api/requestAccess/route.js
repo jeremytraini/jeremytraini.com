@@ -67,10 +67,10 @@ export const POST = async (request) => {
     }
 
     if (!process.env.REQUEST_ACCESS_CODE.split(",").includes(code)) {
-        console.log("Invalid code:", code);
+        console.log("Invalid access code supplied");
         return new Response("Invalid code!", { status: 401 });
     }
 
-    console.log("Adding collaborator", username, "to", repo, "using code", code);
+    console.log("Adding collaborator", username, "to", repo);
     return await addCollaborator("jeremytraini", repo, username);
 }
