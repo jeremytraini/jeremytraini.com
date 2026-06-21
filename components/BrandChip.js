@@ -207,6 +207,8 @@ const BrandChip = ({ brand, ...props }) => {
     icon: <TbDeviceDesktop size={18} />,
   };
 
+  const labelledIcon = React.cloneElement(icon, { 'aria-label': brand });
+
   return (
     <Chip
       classNames={{
@@ -214,7 +216,7 @@ const BrandChip = ({ brand, ...props }) => {
         content: ""
       }}
       color=""
-      startContent={icon}
+      startContent={labelledIcon}
       {...props}
     >
       {brand}

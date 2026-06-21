@@ -9,7 +9,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@fontsource/gabarito": "^5.0.1",
     "@next/third-parties": "16.0.8",
     "@nextui-org/react": "^2.6.8",
     "@vercel/analytics": "^1.1.2",
@@ -34,6 +33,19 @@
     "tinyglobby": "0.2.15",
     "typescript": "^5.7.2",
     "yaml-loader": "^0.8.0"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Safari versions",
+      "last 2 Edge versions"
+    ],
+    "development": [
+      "last 1 Chrome version",
+      "last 1 Firefox version",
+      "last 1 Safari version"
+    ]
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

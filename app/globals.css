@@ -14,7 +14,7 @@ body {
 }
 
 .gabarito {
-  font-family: 'Gabarito', sans-serif;
+  font-family: var(--font-gabarito), sans-serif;
 }
 
 .skeleton,

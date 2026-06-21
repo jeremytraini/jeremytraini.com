@@ -241,11 +241,6 @@
     "@eslint/core" "^0.17.0"
     levn "^0.4.1"
 
-"@fontsource/gabarito@^5.0.1":
-  version "5.2.8"
-  resolved "https://registry.npmjs.org/@fontsource/gabarito/-/gabarito-5.2.8.tgz"
-  integrity sha512-tBuGZMAWcV0GRuA3I62TQTnvJVUvNNVuJZ6x/iilGudrY4VgOpAhSsWyFCnbJ9e3zEy1tNPXMPcbZjQwzX0S/g==
-
 "@formatjs/ecma402-abstract@2.3.6":
   version "2.3.6"
   resolved "https://registry.npmjs.org/@formatjs/ecma402-abstract/-/ecma402-abstract-2.3.6.tgz"

@@ -5,9 +5,19 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/Footer";
 import ScrollBehaviorManager from "@/components/ScrollBehaviorManager";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { Inter, Gabarito } from "next/font/google";
 import { getWebsiteSchema } from "@/lib/structuredData";
 import clsx from "clsx";
+
+const fontSans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const fontGabarito = Gabarito({
+  subsets: ["latin"],
+  variable: "--font-gabarito",
+});
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -76,7 +86,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className="bg-black"
+      className={clsx("bg-black", fontGabarito.variable)}
     >
       <head />
       <body
