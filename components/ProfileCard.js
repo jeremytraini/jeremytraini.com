@@ -36,8 +36,7 @@ const ProfileCard = () => {
               isExternal
             >
               <div
-                className="w-10 h-10 relative flex justify-center items-center"
-                style={{ backgroundColor: "#ffffff" }}
+                className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full"
               >
                 <Image
                   src={"/images/timeline/pearler_logo.png"}
