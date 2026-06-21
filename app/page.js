@@ -173,7 +173,7 @@ export default function Home() {
     >
 			<div className="mx-auto max-w-7xl pb-20 sm:pb-24">
         <div className="flex w-full justify-end pb-10">
-          <div className="flex items-end gap-3 text-default-700">
+          <div className="hidden lg:flex items-end gap-3 text-default-700">
             <h2
               id="contact-heading"
               className={clsx(
