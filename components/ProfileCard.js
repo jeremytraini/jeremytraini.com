@@ -20,10 +20,10 @@ const ProfileCard = () => {
         <div className="flex items-center">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-2xl font-semibold">Jeremy Traini</h1>
+              <p className="text-2xl font-semibold">Jeremy Traini</p>
               <div className="text-[#00000099]"><LinkedinVerified /></div>
             </div>
-            <p className="mt-1 text-md">{process.env.LINKEDIN_HEADLINE || "B. Software Engineering & B. Commerce at UNSW"}</p>
+            <p className="mt-1 text-md">{process.env.LINKEDIN_HEADLINE || "Honours Thesis @ Pearler Investments"}</p>
             <p className="mt-2 text-sm text-gray-500">Sydney, New South Wales, Australia</p>
             <p className="mt-2 text-sm text-gray-500"><span className="font-bold">{process.env.NUM_LINKEDIN_CONNECTIONS || "500+"}</span> connections</p>
           </div>
@@ -32,23 +32,22 @@ const ProfileCard = () => {
           <div className="flex flex-col gap-2">
             <Link
               className="flex items-center gap-2"
-              href="https://www.linkedin.com/company/commonwealthbank/"
+              href="https://www.linkedin.com/company/pearler/"
               isExternal
             >
               <div
-                className="w-10 h-10 relative flex justify-center items-center"
-                style={{ backgroundColor: "#ffffff" }}
+                className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full"
               >
                 <Image
-                  src={"/images/timeline/commbank_logo.png"}
+                  src={"/images/timeline/pearler_logo.png"}
                   style={{ objectFit: "contain" }}
                   fill={true}
                   sizes="160px"
-                  alt="Commonwealth Bank Logo"
+                  alt="Pearler Logo"
                 />
               </div>
               <p className="text-sm font-semibold text-black hover:text-blue-700 hover:underline">
-                Commonwealth Bank
+                Pearler
               </p>
             </Link>
             <Link

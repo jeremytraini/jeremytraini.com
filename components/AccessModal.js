@@ -70,7 +70,7 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
     // Send request to backend
     axios.post(`/api/requestAccess`,
       {
-        repo: project.githubRepo,
+        repo: project.repository?.name || project.githubRepo,
         username: usernameRef.current,
         code: codeRef.current
       }
@@ -164,7 +164,7 @@ export default function AccessModal({ project, isOpen, onOpenChange }) {
               <ModalBody>
                 {isSuccess
                 ? (<>
-                    <p>You&apos;ve been granted read access to the &quot;{project.githubRepo}&quot; repo.</p>
+                    <p>You&apos;ve been granted read access to the &quot;{project.repository?.name || project.githubRepo}&quot; repo.</p>
                     <p>You should receive an email from GitHub shortly.</p>
                   </>)
                 : <p>There was a problem on GitHub&apos;s side so I couldn&apos;t add you to the repo.</p>

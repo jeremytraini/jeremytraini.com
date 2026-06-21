@@ -2,8 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #000;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), transparent 30%),
+    linear-gradient(180deg, #020617 0%, #000000 32%, #f8fafc 32%, #ffffff 100%);
+  color: #0f172a;
+}
+
 .gabarito {
   font-family: 'Gabarito', sans-serif;
+}
+
+.skeleton,
+.skeleton-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+}
+
+.skeleton-dark {
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.24) 0%, rgba(226, 232, 240, 0.12) 100%);
+}
+
+.skeleton::after,
+.skeleton-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 45%,
+    rgba(255, 255, 255, 0.48) 50%,
+    rgba(255, 255, 255, 0.18) 55%,
+    transparent 100%
+  );
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after,
+  .skeleton-dark::after {
+    animation: none;
+  }
 }
 
 /* Modern scrollbar styling */

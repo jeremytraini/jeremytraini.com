@@ -4,6 +4,8 @@ import { Link } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 
 export const Footer = () => {
+	const currentYear = new Date().getFullYear();
+
 	return (
     <section className="w-full p-12 sm:p-16 bg-black rounded-t-[4em] mt-[-4em] z-50">
 			<div className="mx-auto max-w-7xl">
@@ -19,10 +21,9 @@ export const Footer = () => {
 					</div>
 				</div>
 				<footer className="w-full flex items-center justify-left py-3">
-					<p className="text-default-500">© {process.env.COPYRIGHT_YEAR || "2025"} Jeremy Traini</p>
+					<p className="text-default-500">© {currentYear} Jeremy Traini</p>
 				</footer>
 			</div>
 		</section>
 	);
 };
-

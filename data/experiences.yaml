@@ -5,14 +5,6 @@
   website: "https://www.infotrack.com.au"
   icon: infotrack
 
-- type: Freelance
-  name: Progressive Sports Asia
-  duration: 2023 - 2025
-  backgroundColor: "#ffffff"
-  website: "https://prosportsasia.com/tekkerz-football/"
-  icon: psa
-  hidden: true
-
 - type: Department Lead (Technical Support Systems)
   name: Sunswift Racing
   duration: "2024 - 2024"
@@ -21,8 +13,23 @@
   icon: sunswift
 
 - type: Internship
-  name: Commonwealth Bank
-  duration: 2025 - Present
+  name: Commonwealth Bank of Australia
+  duration: 2025 - 2026
   backgroundColor: "#ffffff"
   website: "https://www.commbank.com.au"
   icon: commbank
+
+- type: Freelance
+  name: Progressive Sports Asia
+  duration: 2023 - Present
+  backgroundColor: "#ffffff"
+  website: "https://prosportsasia.com/tekkerz-football/"
+  icon: psa
+  hidden: true
+
+- type: Honours Thesis
+  name: Pearler
+  duration: 2026 - Present
+  backgroundColor: "#ffffff"
+  website: "https://pearler.com"
+  icon: pearler

@@ -22,6 +22,7 @@ const ProjectCard = ({ project, index, openModal }) => {
     <motion.div
       ref={ref}
       id={project.id}
+      data-scroll-anchor="center"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
@@ -33,10 +34,8 @@ const ProjectCard = ({ project, index, openModal }) => {
     >
       <div className="flex flex-col md:hidden mb-10 items-center shadow-md rounded-xl">
         <ProjectImage
-          title={project.title}
-          src={project.imageUrl}
-          height={project.imageHeight}
-          width={project.imageWidth}
+          project={project}
+          priority={index === 0}
         />
         <ProjectDetails project={project} openModal={openModal} />
       </div>
@@ -44,10 +43,8 @@ const ProjectCard = ({ project, index, openModal }) => {
         {isOdd ? (
           <>
             <ProjectImage
-              title={project.title}
-              src={project.imageUrl}
-              height={project.imageHeight}
-              width={project.imageWidth}
+              project={project}
+              priority={index === 0}
             />
             <ProjectDetails project={project} openModal={openModal} />
           </>
@@ -55,10 +52,8 @@ const ProjectCard = ({ project, index, openModal }) => {
           <>
             <ProjectDetails project={project} openModal={openModal} />
             <ProjectImage
-              title={project.title}
-              src={project.imageUrl}
-              height={project.imageHeight}
-              width={project.imageWidth}
+              project={project}
+              priority={index === 0}
             />
           </>
         )}
