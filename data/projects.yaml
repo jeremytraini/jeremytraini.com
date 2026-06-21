@@ -43,6 +43,30 @@
   isPrivate: true
   hidden: false
 
+- title: Loopboard
+  id: loopboard
+  subtitle: Digital Signage Platform
+  description: >-
+    A fully-featured digital signage platform engineered for venue
+    operators. Handles everything from content creation and scheduling
+    through to device management across a fleet of displays.
+    Supports a suite of live integrations and widgets from third-party
+    providers, including platforms such as HealthEngine, keeping
+    on-screen content accurate and up to date.
+    Currently running a closed pilot.
+  technologies:
+    - React.js
+    - Node.js
+    - AWS
+    - DynamoDB
+    - Terraform
+  imageUrl: /images/thumbnails/placeholder.png
+  imageHeight: 1920
+  imageWidth: 3840
+  liveLink: https://loopboard.net
+  isPrivate: true
+  hidden: true
+
 - title: ChurroFlow.com
   id: churroflow
   subtitle: Warehousing Analytics
