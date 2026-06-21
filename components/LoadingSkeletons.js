@@ -48,25 +48,48 @@ export function HeroSkeleton() {
   );
 }
 
+function SkeletonCard() {
+  return (
+    <div className="flex items-start gap-3">
+      <div className="-ml-[9px] mt-6 flex-shrink-0 w-4 h-4 rounded-full skeleton" />
+      <div className="flex-1 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div className="p-4">
+          <div className="flex items-start justify-between gap-3 mb-3">
+            <SkeletonBlock className="w-14 h-14 rounded-xl" />
+            <SkeletonBlock className="w-4 h-4 rounded mt-1" />
+          </div>
+          <SkeletonBlock className="h-4 w-32 rounded mb-2" />
+          <SkeletonBlock className="h-3 w-24 rounded mb-1" />
+          <SkeletonBlock className="h-3 w-16 rounded mt-2" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function TimelineSkeleton() {
   return (
-    <div className="px-6 pb-8">
-      <div className="grid gap-6 md:grid-cols-2">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <div
-            key={index}
-            className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.06)]"
-          >
-            <div className="flex items-start gap-4">
-              <SkeletonBlock className="h-14 w-14 rounded-2xl" />
-              <div className="flex-1">
-                <SkeletonBlock className="h-5 w-2/3 rounded-lg" />
-                <SkeletonBlock className="mt-3 h-4 w-1/2 rounded-lg" />
-                <SkeletonBlock className="mt-2 h-4 w-3/4 rounded-lg" />
-              </div>
-            </div>
-          </div>
-        ))}
+    <div className="px-6 pb-8 flex flex-col md:flex-row justify-center w-full">
+      {/* Left column — justify-between matches the live layout */}
+      <div className="border-l-3 border-gray-300 md:border-b-3 md:rounded-bl-[44px] flex-1 flex flex-col justify-between py-8">
+        <SkeletonCard />
+        <SkeletonCard />
+      </div>
+
+      {/* U-turn (desktop) */}
+      <div className="hidden w-20 md:flex md:flex-row mr-[-3px]">
+        <div className="border-b-3 border-r-3 border-gray-300 rounded-br-[44px] h-1/2 w-1/2 self-end mr-[-3px]" />
+        <div className="border-l-3 border-t-3 border-gray-300 rounded-tl-[44px] h-1/2 w-1/2" />
+      </div>
+      <div className="hidden md:block border-t-3 border-r-3 border-gray-300 rounded-tr-[44px] w-10" />
+
+      {/* Right column */}
+      <div className="flex-1 border-l-3 border-gray-300 md:border-none mt-[-32px] md:mt-0 py-8">
+        <div className="flex flex-col gap-8">
+          <SkeletonCard />
+          <SkeletonCard />
+          <SkeletonCard />
+        </div>
       </div>
     </div>
   );
