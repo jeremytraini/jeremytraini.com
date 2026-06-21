@@ -132,23 +132,23 @@ export default function Home() {
 		</section>
     <section id="contact" className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em]">
 			<div className="mx-auto max-w-7xl pb-20 sm:pb-24">
-        <div className="flex flex-row justify-end items-end w-full pb-10">
-          <h1
-            className={clsx(
-              "invisible sm:visible text-xl md:text-2xl pb-[1.1px] md:pb-[1px]",
-              "text-default-900"
-            )}
-          >
-            Contact me on
-          </h1>
-          <div
-            className="invisible sm:visible relative w-[160px] h-[43.43px] ml-3"
-          >
+        <div className="flex w-full justify-end pb-10">
+          <div className="flex items-end gap-3 text-default-700">
+            <h1
+              className={clsx(
+                "text-base leading-none md:text-lg",
+                "text-default-700"
+              )}
+            >
+              Contact me on
+            </h1>
             <Image
               src="/images/linkedin_full.png"
               alt="LinkedIn logo"
-              fill
-              sizes="320px"
+              width={104}
+              height={28}
+              sizes="220px"
+              className="h-[24px] w-auto self-end -translate-y-[2.5px] opacity-80 md:h-[28px]"
             />
           </div>
         </div>
