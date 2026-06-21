@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/Footer";
+import ScrollBehaviorManager from "@/components/ScrollBehaviorManager";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import clsx from "clsx";
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className="scroll-smooth bg-black"
+      className="bg-black"
     >
       <head />
       <body
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           fontSans.variable
         )}
       >
+        <ScrollBehaviorManager />
         <div className="overflow-hidden relative flex flex-col">
           <main className="w-full pt-10 flex-grow">
             {children}
