@@ -102,50 +102,61 @@ export default function Timeline() {
     if (isInView) controls.start("visible");
   }, [isInView, controls]);
 
-  // 3 left (InfoTrack, PSA, Sunswift) — natural flow, column is taller
-  // 2 right (CBA, Pearler) — justify-between so CBA sits at top and Pearler
-  // at bottom, with the arrow as the third flex child anchored at the very bottom
+  // Keep the single-column layout through medium widths.
+  // The two-column snake switches on at large screens, where there is enough
+  // room for the centre connectors and card widths to stay aligned.
   const leftItems  = experiences.slice(0, 3);
   const rightItems = experiences.slice(3);
 
   return (
-    <motion.div
-      ref={ref}
-      className="px-6 pb-8 flex flex-col md:flex-row justify-center w-full"
-    >
-      {/* ── Left column: 3 items, natural top-to-bottom flow ── */}
-      <div className={clsx(
-        "border-l-3 border-gray-300 flex-1",
-        "md:border-b-3 md:rounded-bl-[44px]",
-        "flex flex-col gap-6 py-6"
-      )}>
-        {leftItems.map((exp, i) => (
-          <ExperienceCard key={i} data={exp} index={i} controls={controls} />
-        ))}
+    <motion.div ref={ref} className="w-full px-6 pb-8">
+      <div className="md:hidden">
+        <div className="flex flex-col gap-6 border-l-3 border-gray-300 py-6">
+          {leftItems.map((exp, i) => (
+            <ExperienceCard key={i} data={exp} index={i} controls={controls} />
+          ))}
+        </div>
+
+        <div className="mt-[-24px] flex flex-col gap-6 border-l-3 border-blue-300 py-6">
+          {rightItems.map((exp, i) => (
+            <ExperienceCard key={i} data={exp} index={i + leftItems.length} controls={controls} />
+          ))}
+
+          <div className="self-start h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-blue-300 ml-[-7.5px]" />
+        </div>
       </div>
 
-      {/* ── U-turn (desktop only): first half gray, second half blue ── */}
-      <div className="hidden w-20 md:flex md:flex-row mr-[-3px] relative">
-        <div className="border-b-3 border-r-3 border-gray-300 rounded-br-[44px] h-1/2 w-1/2 self-end mr-[-3px]" />
-        <div className="border-l-3 border-t-3 border-blue-300 rounded-tl-[44px] h-1/2 w-1/2" />
-        {/* Arrow at the color-change point — midpoint where gray meets blue */}
-        <div className="absolute top-1/2 -translate-y-1/2 h-0 w-0 border-x-[5px] border-x-transparent border-b-[7px] border-b-blue-300" style={{left: 'calc(50% - 1.5px)', transform: 'translate(-50%, -50%)'}} />
-      </div>
+      <div className="hidden w-full justify-center md:flex">
+        {/* ── Left column: 3 items, natural top-to-bottom flow ── */}
+        <div className={clsx(
+          "min-w-0 flex-1 border-l-3 border-gray-300",
+          "md:border-b-3 md:rounded-bl-[44px]",
+          "flex flex-col gap-6 py-6"
+        )}>
+          {leftItems.map((exp, i) => (
+            <ExperienceCard key={i} data={exp} index={i} controls={controls} />
+          ))}
+        </div>
 
-      {/* ── Top-right connector — blue, carries into the active column ── */}
-      <div className="hidden md:block border-t-3 border-r-3 border-blue-300 rounded-tr-[44px] w-10" />
+        {/* ── U-turn (desktop only): first half gray, second half blue ── */}
+        <div className="relative mr-[-3px] flex w-12 flex-row lg:w-20">
+          <div className="border-b-3 border-r-3 border-gray-300 rounded-br-[44px] h-1/2 w-1/2 self-end mr-[-3px]" />
+          <div className="border-l-3 border-t-3 border-blue-300 rounded-tl-[44px] h-1/2 w-1/2" />
+          {/* Arrow at the color-change point — midpoint where gray meets blue */}
+          <div className="absolute top-1/2 -translate-y-1/2 h-0 w-0 border-x-[5px] border-x-transparent border-b-[7px] border-b-blue-300" style={{left: 'calc(50% - 1.5px)', transform: 'translate(-50%, -50%)'}} />
+        </div>
 
-      {/* ── Right column: 2 items + arrow ── */}
-      <div className={clsx(
-        "flex-1 border-l-3 border-blue-300 md:border-none",
-        "flex flex-col justify-between py-6",
-        "mt-[-32px] md:mt-0"
-      )}>
-        {rightItems.map((exp, i) => (
-          <ExperienceCard key={i} data={exp} index={i + leftItems.length} controls={controls} />
-        ))}
-        {/* Arrow anchored at the bottom of the snake */}
-        <div className="self-start h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-blue-300 ml-[-7.5px]" />
+        {/* ── Top-right connector — blue, carries into the active column ── */}
+        <div className="w-6 rounded-tr-[44px] border-t-3 border-r-3 border-blue-300 lg:w-10" />
+
+        {/* ── Right column: 2 items + arrow ── */}
+        <div className="mt-0 flex min-w-0 flex-1 flex-col justify-between gap-0 py-6">
+          {rightItems.map((exp, i) => (
+            <ExperienceCard key={i} data={exp} index={i + leftItems.length} controls={controls} />
+          ))}
+          {/* Arrow anchored at the bottom of the snake */}
+          <div className="self-start h-0 w-0 border-x-[6px] border-x-transparent border-t-[8px] border-t-blue-300 ml-[-7.5px]" />
+        </div>
       </div>
     </motion.div>
   );
