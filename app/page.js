@@ -3,18 +3,49 @@ import projects from "../data/projects.yaml";
 import { Link } from "@nextui-org/link";
 import { fontGabarito } from "@/config/fonts";
 import clsx from "clsx";
-import Image from 'next/image';
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
-import ProjectCarousel from "@/components/ProjectCarousel";
-import Timeline from "@/components/Timeline";
-import Projects from "@/components/Projects";
-import ProfileCard from "@/components/ProfileCard";
 import EmailButton from "@/components/EmailButton";
+import {
+  ProfileCardSkeleton,
+  ProjectsSkeleton,
+  TimelineSkeleton,
+} from "@/components/LoadingSkeletons";
 import {
 	GithubIcon,
 	LinkedinIcon
 } from "@/components/Icons";
 import TypingEffect from "@/components/TypingEffect";
+
+const ProjectCarousel = dynamic(() => import("@/components/ProjectCarousel"), {
+  loading: () => (
+    <div className="px-6 sm:px-10 lg:px-12">
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {Array.from({ length: 4 }).map((_, index) => (
+          <div
+            key={index}
+            className="rounded-[2rem] border border-white/10 bg-white/5 p-3 backdrop-blur-sm"
+          >
+            <div className="skeleton-dark h-56 w-full rounded-[1.5rem]" aria-hidden="true" />
+          </div>
+        ))}
+      </div>
+    </div>
+  ),
+});
+
+const Timeline = dynamic(() => import("@/components/Timeline"), {
+  loading: () => <TimelineSkeleton />,
+});
+
+const Projects = dynamic(() => import("@/components/Projects"), {
+  loading: () => <ProjectsSkeleton />,
+});
+
+const ProfileCard = dynamic(() => import("@/components/ProfileCard"), {
+  loading: () => <ProfileCardSkeleton />,
+});
 
 export default function Home() {
   return (
