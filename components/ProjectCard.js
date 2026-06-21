@@ -22,6 +22,7 @@ const ProjectCard = ({ project, index, openModal }) => {
     <motion.div
       ref={ref}
       id={project.id}
+      data-scroll-anchor="center"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },

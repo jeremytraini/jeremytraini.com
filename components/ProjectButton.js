@@ -1,11 +1,17 @@
+"use client";
+
 import React from 'react';
 import { Tooltip, Button } from "@nextui-org/react";
+import { Link } from "@nextui-org/link";
 
-const ProjectButton = ({ tooltip, className, onPress, shortText, longText, endIcon, ...props }) => {
+const ProjectButton = ({ tooltip, className, href, isExternal, onPress, shortText, longText, endIcon, ...props }) => {
   return (
     <Tooltip className="ml-1" showArrow={true} content={tooltip}>
       <Button
+        as={href ? Link : undefined}
         className={className}
+        href={href}
+        isExternal={isExternal}
         size="small"
         onPress={onPress}
         endContent={endIcon}

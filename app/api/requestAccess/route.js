@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/core";
-import projects from "@/data/projects.yaml";
+import { getAllProjects } from "@/lib/projects";
 
 
 const octokit = new Octokit({
@@ -7,7 +7,7 @@ const octokit = new Octokit({
 })
 
 const allowedRepos = new Set(
-    projects
+    getAllProjects()
         .filter((project) => project.isPrivate && project.githubRepo)
         .map((project) => project.githubRepo)
 );
@@ -58,7 +58,7 @@ export const POST = async (request) => {
     // Validation for required fields
     if (!repo || !username || !code) {
         console.log("Missing required fields");
-        return new Response("Missing required fields: repo, username, and/or secret code.", { status: 400 });
+        return new Response("Missing required fields: repo, username and/or secret code.", { status: 400 });
     }
 
     if (!allowedRepos.has(repo)) {

@@ -20,7 +20,7 @@ const ProfileCard = () => {
         <div className="flex items-center">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-2xl font-semibold">Jeremy Traini</h1>
+              <p className="text-2xl font-semibold">Jeremy Traini</p>
               <div className="text-[#00000099]"><LinkedinVerified /></div>
             </div>
             <p className="mt-1 text-md">{process.env.LINKEDIN_HEADLINE || "Honours Thesis @ Pearler Investments"}</p>
