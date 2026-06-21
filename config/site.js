@@ -6,6 +6,12 @@ export const siteConfig = {
 	url: "https://jeremytraini.com",
 	ogImage: "/images/thumbnails/jeremytraini.png",
 	email: "hi@jeremytraini.com",
+	jobTitle: "Software Engineer",
+	location: {
+		city: "Sydney",
+		region: "NSW",
+		country: "AU",
+	},
 	applicationName: "Jeremy Traini",
 	keywords: [
 		"Jeremy Traini",
@@ -29,10 +35,34 @@ export const siteConfig = {
 	],
 	authors: [{ name: 'Jeremy Traini' }],
 	creator: 'Jeremy Traini',
+	knowsAbout: [
+		"Full-stack software engineering",
+		"Product engineering",
+		"Mobile app development",
+		"Analytics platforms",
+		"Fintech products",
+		"Developer tooling",
+		"React Native",
+		"React",
+		"TypeScript",
+		"JavaScript",
+		"C#",
+		"Python",
+		"Firebase",
+		"AWS",
+		"Terraform",
+		"Machine learning pipelines",
+	],
+	awards: [
+		"UNSW Business School Dean's Award for Academic Excellence (2025)",
+		"Third Year Software Engineering Optiver Prize Finalist (2024)",
+		"Faculty of Engineering Dean's Honours List, Highly Commended (2025, 2023, 2021)",
+		"Macquarie Bank Second Year Software Engineering Prize (2023)",
+		"UNSW New College Academic Prize in Engineering (2022)",
+	],
 	links: {
 		github: "https://github.com/jeremytraini",
 		linkedin: "https://www.linkedin.com/in/jeremytraini",
-		dribbble: "https://dribbble.com/jeremytraini",
 	},
 	navItems: [
 		{
