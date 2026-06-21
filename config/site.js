@@ -4,7 +4,7 @@ export const siteConfig = {
 	title: "Jeremy Traini | Software Engineer in Sydney",
 	description: "Jeremy Traini is a Sydney-based software engineer and UNSW student building full-stack products across analytics, fintech, education and developer tooling.",
 	url: "https://jeremytraini.com",
-	ogImage: "/images/thumbnails/jeremytraini.png",
+	ogImage: "/images/me.jpg",
 	email: "hi@jeremytraini.com",
 	jobTitle: "Software Engineer",
 	location: {
