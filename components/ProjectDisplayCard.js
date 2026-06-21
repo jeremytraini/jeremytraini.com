@@ -19,7 +19,7 @@ const ProjectCard = ({ project, ...props }) => {
       <Link
         href={`/#${project.id}`}
         className="mx-4 h-64 flex justify-center items-center relative overflow-hidden rounded-2xl"
-        aria-label={`Jump to ${project.title}`}
+        aria-label={`View ${project.title}`}
         {...props}
       >
         <NextImage
@@ -28,7 +28,7 @@ const ProjectCard = ({ project, ...props }) => {
           className="object-cover"
           fill
           sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 50vw"
-          priority
+          priority={false}
         />
       </Link>
     );

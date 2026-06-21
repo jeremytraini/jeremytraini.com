@@ -19,7 +19,7 @@ const ProjectActionLinks = ({ project, openModal }) => {
         (!isPrivateRepository ? (
           <ProjectButton
             tooltip="View this project on github.com"
-            className="bg-black border-black hover:bg-gray-800 text-white"
+            className="bg-gray-900 border-gray-600 hover:bg-gray-800 text-white"
             href={githubBaseUrl + repositoryName}
             isExternal
             shortText="GitHub"
@@ -33,7 +33,7 @@ const ProjectActionLinks = ({ project, openModal }) => {
             shortText="GitHub"
             longText="View on GitHub"
             endIcon={<TbLockCode color="gray" size={22} />}
-            variant="ghost"
+            className="bg-white border border-gray-300 hover:bg-gray-100 text-gray-700"
           />
         ))}
       {figmaLink && (
@@ -50,7 +50,7 @@ const ProjectActionLinks = ({ project, openModal }) => {
       {appStoreLink && (
         <ProjectButton
           tooltip={`View ${project.title} on the App Store`}
-          className="bg-black border-black hover:bg-gray-800 text-white"
+          className="bg-gray-900 border-gray-600 hover:bg-gray-800 text-white"
           href={appStoreLink}
           isExternal
           shortText="App Store"

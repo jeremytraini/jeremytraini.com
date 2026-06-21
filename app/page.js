@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import EmailButton from "@/components/EmailButton";
 import { getAllProjects } from "@/lib/projects";
-import { getPersonSchema } from "@/lib/structuredData";
+import { getPersonSchema, getProfilePageSchema } from "@/lib/structuredData";
 import {
   ProfileCardSkeleton,
   ProjectsSkeleton,
@@ -58,9 +58,14 @@ const projects = getAllProjects();
 
 export default function Home() {
   const personSchema = getPersonSchema();
+  const profilePageSchema = getProfilePageSchema();
 
   return (
   <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+    />
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
