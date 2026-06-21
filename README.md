@@ -35,7 +35,6 @@ REQUEST_ACCESS_CODE=example-code
 GITHUB_TOKEN=github-token-with-repo-access
 NUM_LINKEDIN_CONNECTIONS=500+
 LINKEDIN_HEADLINE=Software Engineer
-COPYRIGHT_YEAR=2026
 ```
 
 Only `REQUEST_ACCESS_CODE` and `GITHUB_TOKEN` are required for the access-request API. The rest support content displayed in the UI.
