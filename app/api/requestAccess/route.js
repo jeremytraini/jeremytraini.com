@@ -1,9 +1,16 @@
 import { Octokit } from "@octokit/core";
+import projects from "@/data/projects.yaml";
 
 
 const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN
 })
+
+const allowedRepos = new Set(
+    projects
+        .filter((project) => project.isPrivate && project.githubRepo)
+        .map((project) => project.githubRepo)
+);
 
 const addCollaborator = async (owner, repo, username) => {
     try {
@@ -52,6 +59,11 @@ export const POST = async (request) => {
     if (!repo || !username || !code) {
         console.log("Missing required fields");
         return new Response("Missing required fields: repo, username, and/or secret code.", { status: 400 });
+    }
+
+    if (!allowedRepos.has(repo)) {
+        console.log("Repo is not eligible for access requests:", repo);
+        return new Response("This repository is not eligible for access requests.", { status: 400 });
     }
 
     if (!process.env.REQUEST_ACCESS_CODE.split(",").includes(code)) {
