@@ -13,6 +13,11 @@ const BackToHomepageButton = () => {
         radius="full"
         className="bg-blue-500 px-6 font-semibold text-white transition hover:bg-blue-600"
         startContent={<TbArrowLeft size={20} />}
+        data-analytics-click="navigation_click"
+        data-analytics-props={JSON.stringify({
+          destination: "/",
+          source: "back_to_home_button",
+        })}
       >
         Back to Home
       </Button>

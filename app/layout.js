@@ -2,6 +2,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import AnalyticsObserver from "@/components/AnalyticsObserver";
 import { Footer } from "@/components/Footer";
 import ScrollBehaviorManager from "@/components/ScrollBehaviorManager";
 import { siteConfig } from "@/config/site";
@@ -99,6 +100,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <AnalyticsObserver />
         <ScrollBehaviorManager />
         <div className="overflow-hidden relative flex flex-col">
           <main className="w-full pt-10 flex-grow">

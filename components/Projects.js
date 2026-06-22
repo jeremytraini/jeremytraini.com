@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import AccessModal from './EmailAccessModal';
 import { useDisclosure } from "@nextui-org/react";
 import ProjectCard from "./ProjectCard";
+import { trackEvent } from "@/lib/analytics";
 
 const Projects = ({ projects }) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
@@ -10,6 +11,14 @@ const Projects = ({ projects }) => {
 
   const openModal = (project) => {
     setCurrentProject(project);
+    trackEvent("request_access_open", {
+      project_id: project?.id,
+      project_title: project?.title,
+      source: "project_card",
+      intent: "request_private_repo_access",
+      destination_type: "modal",
+      destination_label: "request_access",
+    });
     onOpen();
   }
 

@@ -20,6 +20,16 @@ const ProjectCard = ({ project, ...props }) => {
         href={`/#${project.id}`}
         className="mx-4 h-64 flex justify-center items-center relative overflow-hidden rounded-2xl"
         aria-label={`View ${project.title}`}
+        data-analytics-click="project_open"
+        data-analytics-props={JSON.stringify({
+          project_id: project.id,
+          project_title: project.title,
+          source: "home_carousel",
+          intent: "jump_to_project_section",
+          destination_type: "in_page_anchor",
+          destination_label: project.id,
+          destination_url: `/#${project.id}`,
+        })}
         {...props}
       >
         <NextImage

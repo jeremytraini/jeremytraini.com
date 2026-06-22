@@ -73,6 +73,16 @@ export default function Home() {
     <section
       aria-labelledby="home-heading"
       className="relative flex flex-col justify-evenly pb-32 h-screen max-h-[900px] min-h-[790px]"
+      data-analytics-view="section_view"
+      data-analytics-key="home-hero"
+      data-analytics-threshold="0.35"
+      data-analytics-props={JSON.stringify({
+        section_id: "home-hero",
+        section_label: "Hero",
+        page_type: "home",
+      })}
+      data-analytics-engaged="section_engaged"
+      data-analytics-engaged-duration="4000"
     >
       <div
         className="-z-50 absolute w-[400px] h-[800px] left-[10%] top-[-50%] bg-gradient-to-br from-blue-300 to-blue-600 opacity-20 lg:opacity-[35%] filter blur-[175px] transform rotate-[-120deg]"
@@ -110,13 +120,37 @@ export default function Home() {
           <p className="text-gray-200 leading-5 pt-2">Always up for a challenge.</p>
         </div>
         <div className="flex justify-center items-center gap-6 pb-10">
-          <Link isExternal href={siteConfig.links.github} aria-label="GitHub">
+          <Link
+            isExternal
+            href={siteConfig.links.github}
+            aria-label="GitHub"
+            data-analytics-click="social_click"
+            data-analytics-props={JSON.stringify({
+              source: "home_hero",
+              intent: "view_profile",
+              destination_type: "external_profile",
+              destination_label: "github",
+              destination_url: siteConfig.links.github,
+            })}
+          >
             <GithubIcon size={32} className="text-white" />
           </Link>
-          <Link isExternal href={siteConfig.links.linkedin} aria-label="LinkedIn">
+          <Link
+            isExternal
+            href={siteConfig.links.linkedin}
+            aria-label="LinkedIn"
+            data-analytics-click="social_click"
+            data-analytics-props={JSON.stringify({
+              source: "home_hero",
+              intent: "view_profile",
+              destination_type: "external_profile",
+              destination_label: "linkedin",
+              destination_url: siteConfig.links.linkedin,
+            })}
+          >
             <LinkedinIcon size={32} className="text-white" />
           </Link>
-          <EmailButton />
+          <EmailButton analyticsSource="home_hero" />
         </div>
       </div>
       <div className="pb-10">
@@ -128,6 +162,15 @@ export default function Home() {
       id="timeline"
       aria-labelledby="timeline-heading"
       className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em] pb-24"
+      data-analytics-view="section_view"
+      data-analytics-key="timeline"
+      data-analytics-props={JSON.stringify({
+        section_id: "timeline",
+        section_label: "Timeline",
+        page_type: "home",
+      })}
+      data-analytics-engaged="section_engaged"
+      data-analytics-engaged-duration="3500"
     >
 			<div className="mx-auto max-w-7xl">
 				<h2
@@ -150,6 +193,15 @@ export default function Home() {
       id="work"
       aria-labelledby="work-heading"
       className="w-full p-12 sm:p-16 bg-white rounded-t-[4em] mt-[-4em] pb-[4em] min-h-screen"
+      data-analytics-view="section_view"
+      data-analytics-key="work"
+      data-analytics-props={JSON.stringify({
+        section_id: "work",
+        section_label: "What I'm working on",
+        page_type: "home",
+      })}
+      data-analytics-engaged="section_engaged"
+      data-analytics-engaged-duration="3500"
     >
 			<div className="mx-auto max-w-7xl pb-8 sm:pb-12">
         <div className="pb-10">
@@ -170,6 +222,15 @@ export default function Home() {
       id="contact"
       aria-labelledby="contact-heading"
       className="w-full p-12 sm:p-16 bg-gray-100 rounded-t-[4em] mt-[-4em]"
+      data-analytics-view="section_view"
+      data-analytics-key="contact"
+      data-analytics-props={JSON.stringify({
+        section_id: "contact",
+        section_label: "Contact",
+        page_type: "home",
+      })}
+      data-analytics-engaged="section_engaged"
+      data-analytics-engaged-duration="3500"
     >
 			<div className="mx-auto max-w-7xl pb-20 sm:pb-24">
         <div className="flex w-full justify-end pb-10">

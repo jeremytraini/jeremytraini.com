@@ -10,6 +10,16 @@ export const Navbar = () => {
 						<a
 							 href={item.href}
 							 className={`${index === 0 ? "outline outline-1 outline-[#323232]" : ""} py-2 px-4 rounded-full transition text-gray-300 hover:bg-[#292929]`}
+							 data-analytics-click="nav_click"
+							 data-analytics-props={JSON.stringify({
+							   label: item.label,
+							   href: item.href,
+							   source: "floating_nav",
+							   intent: "navigate_home_section",
+							   destination_type: "in_page_anchor",
+							   destination_label: item.label.toLowerCase(),
+							   destination_url: item.href,
+							 })}
 						>{item.label}</a>
 					</li>
 				))}
