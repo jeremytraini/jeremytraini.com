@@ -84,12 +84,26 @@ export default async function ProjectDetailPage({ params }) {
           backgroundImage:
             "radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 28%), linear-gradient(180deg, #020617 0%, #000814 45%, #020617 100%)",
         }}
+        data-analytics-view="project_detail_view"
+        data-analytics-key={`project-detail-${project.id}`}
+        data-analytics-threshold="0.25"
+        data-analytics-props={JSON.stringify({
+          project_id: project.id,
+          project_title: project.title,
+          page_type: "project_detail",
+        })}
       >
         <div className="mx-auto max-w-5xl">
           <div className="pb-4">
             <Link
               href="/projects"
               className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition hover:text-white"
+              data-analytics-click="navigation_click"
+              data-analytics-props={JSON.stringify({
+                destination: "/projects",
+                source: "project_detail_back_link",
+                project_id: project.id,
+              })}
             >
               <TbArrowLeft size={18} />
               Back to Projects
@@ -148,7 +162,7 @@ export default async function ProjectDetailPage({ params }) {
                 </div>
               </dl>
               <div className="pt-6">
-                <ProjectActionLinks project={project} />
+                <ProjectActionLinks project={project} surface="project_detail" />
               </div>
             </div>
           </div>

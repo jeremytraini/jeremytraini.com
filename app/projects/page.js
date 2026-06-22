@@ -34,12 +34,25 @@ export default function ProjectsPage() {
           backgroundImage:
             "radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 28%), linear-gradient(180deg, #020617 0%, #000814 45%, #020617 100%)",
         }}
+        data-analytics-view="section_view"
+        data-analytics-key="projects-archive"
+        data-analytics-threshold="0.25"
+        data-analytics-props={JSON.stringify({
+          section_id: "projects-archive",
+          section_label: "Project Archive",
+          page_type: "projects_archive",
+        })}
       >
         <div className="mx-auto max-w-5xl">
           <div className="pb-4">
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition hover:text-white"
+              data-analytics-click="navigation_click"
+              data-analytics-props={JSON.stringify({
+                destination: "/",
+                source: "projects_archive_back_link",
+              })}
             >
               <TbArrowLeft size={18} />
               Back to Home
@@ -73,6 +86,15 @@ export default function ProjectsPage() {
                 key={project.id}
                 href={getProjectUrl(project.id)}
                 className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
+                data-analytics-view="project_view"
+                data-analytics-key={`projects-archive-card-${project.id}`}
+                data-analytics-threshold="0.45"
+                data-analytics-click="project_open"
+                data-analytics-props={JSON.stringify({
+                  project_id: project.id,
+                  project_title: project.title,
+                  source: "projects_archive",
+                })}
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image

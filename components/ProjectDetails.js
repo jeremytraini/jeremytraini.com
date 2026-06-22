@@ -9,7 +9,20 @@ const ProjectDetails = ({ project, openModal }) => {
     <div className="md:w-[50%] lg:w-[40%] p-6 flex flex-col justify-between">
       <div className="flex-grow flex flex-col justify-start">
         <h2 className="text-xl font-bold">
-          <Link href={getProjectUrl(project.id)} className="transition hover:text-blue-700">
+          <Link
+            href={getProjectUrl(project.id)}
+            className="transition hover:text-blue-700"
+            data-analytics-click="project_open"
+            data-analytics-props={JSON.stringify({
+              project_id: project.id,
+              project_title: project.title,
+              source: "project_card_title",
+              intent: "view_project_detail",
+              destination_type: "internal_project_page",
+              destination_label: project.id,
+              destination_url: getProjectUrl(project.id),
+            })}
+          >
             {project.title}
           </Link>
         </h2>
@@ -20,7 +33,7 @@ const ProjectDetails = ({ project, openModal }) => {
           <Carousel technologies={project.technologies} />
         </div>
       </div>
-      <ProjectActionLinks project={project} openModal={openModal} />
+      <ProjectActionLinks project={project} openModal={openModal} surface="project_card" />
     </div>
   );
 }

@@ -23,6 +23,18 @@ const ProjectCard = ({ project, index, openModal }) => {
       ref={ref}
       id={project.id}
       data-scroll-anchor="center"
+      data-analytics-view="project_view"
+      data-analytics-key={`project-card-${project.id}`}
+      data-analytics-threshold="0.55"
+      data-analytics-props={JSON.stringify({
+        project_id: project.id,
+        project_title: project.title,
+        project_index: index,
+        source: "home_work_section",
+      })}
+      data-analytics-engaged="project_engaged"
+      data-analytics-engaged-duration="2500"
+      data-analytics-engaged-threshold="0.6"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },

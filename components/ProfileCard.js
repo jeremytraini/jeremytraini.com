@@ -34,6 +34,14 @@ const ProfileCard = () => {
               className="flex items-center gap-2"
               href="https://www.linkedin.com/company/pearler/"
               isExternal
+              data-analytics-click="profile_affiliation_click"
+              data-analytics-props={JSON.stringify({
+                source: "profile_card",
+                intent: "view_affiliation",
+                destination_type: "external_company_profile",
+                destination_label: "pearler",
+                destination_url: "https://www.linkedin.com/company/pearler/",
+              })}
             >
               <div
                 className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full"
@@ -54,6 +62,14 @@ const ProfileCard = () => {
               className="flex items-center gap-2"
               href="https://www.linkedin.com/school/unsw/"
               isExternal
+              data-analytics-click="profile_affiliation_click"
+              data-analytics-props={JSON.stringify({
+                source: "profile_card",
+                intent: "view_affiliation",
+                destination_type: "external_school_profile",
+                destination_label: "unsw",
+                destination_url: "https://www.linkedin.com/school/unsw/",
+              })}
             >
               <div
                 className="w-10 h-10 relative flex justify-center items-center"
@@ -84,6 +100,14 @@ const ProfileCard = () => {
           href={siteConfig.links.linkedin || "#"}
           isExternal
           variant="solid"
+          data-analytics-click="social_click"
+          data-analytics-props={JSON.stringify({
+            source: "profile_card",
+            intent: "connect_on_linkedin",
+            destination_type: "external_profile",
+            destination_label: "linkedin_connect",
+            destination_url: siteConfig.links.linkedin || "#",
+          })}
         >Connect</Button>
         <Button
           className="bg-white outline outline-1 -outline-offset-1 hover:-outline-offset-2 hover:bg-[#aad6ff] outline-[#0a66c2] font-medium text-[#0a66c2] hover:outline-2 transition"
@@ -93,6 +117,14 @@ const ProfileCard = () => {
           href={siteConfig.links.linkedin || "#"}
           isExternal
           variant="solid"
+          data-analytics-click="social_click"
+          data-analytics-props={JSON.stringify({
+            source: "profile_card",
+            intent: "message_on_linkedin",
+            destination_type: "external_profile",
+            destination_label: "linkedin_message",
+            destination_url: siteConfig.links.linkedin || "#",
+          })}
         >Message</Button>
       </div>
     </div>
